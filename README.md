@@ -1,2 +1,1 @@
-# KBOct.github.io
-Quantitative Finance Portfolio
+Quantitative Finance portfolio
