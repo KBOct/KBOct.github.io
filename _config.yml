@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kenny Bazile-Octuvon"
+title                    : "FineBlog"
 title_separator          : "-"
 name                     : "Kenny Bazile-Octuvon"
 description              : "Quantitative Finance portfolio"
