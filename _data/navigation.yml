@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Quantitative Finance"
     url: /quant-finance/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Data Science"
+    url: /data-science/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
