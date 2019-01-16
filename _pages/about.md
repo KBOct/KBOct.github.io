@@ -2,9 +2,11 @@
 title: "About"
 permalink: /about/
 header:
-  image: "/images/IMG_6039 copy.jpg"
+  image: "/images/ABOUT.jpg"
 ---
 
-I'm a student in the Master in Statistics, Probability and Finance of Paris Diderot University (French 2nd, European 3rd, and Worldwide top 5 MSc in Quantitative Finance).
+I'm a student in a French leading quant programme.
 
 I like to implement quantitative models in a variety of settings and programming languages.
+
+I also dabble in Data Science and Machine Learning (scored A on the exam)

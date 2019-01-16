@@ -4,5 +4,5 @@ permalink: /data-science/
 title: "Data Science Posts by Tags"
 author_profile: true
 header:
-  image: "/images/IMG_5987.JPG"
+  image: "/images/DS.jpg"
 ---
