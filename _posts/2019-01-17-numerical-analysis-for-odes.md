@@ -77,6 +77,16 @@ function price = EuPutExpl(SO,K,r,T,sigma,Smax,dS,dt)
 M=round(Smax/dS)
 dS=Smax/M
 ```
+scilab code block with line numbers
+{% highlight matlab linenos %}
+function y=I(d)
+    if d > 0 then
+        y=(0.5/d) * log(d/0.004);
+    else
+        disp("la variable d doit être strictement positive !");
+    end
+endfunction
+{% endhighlight %}
 
 Here's some inline code `x+y`
 
