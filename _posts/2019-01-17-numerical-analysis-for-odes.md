@@ -62,21 +62,22 @@ m=m++
 ```
 
 VBA code block:
-```vb
+{% highlight vb linenos %}
 Public Sub test()
 Dim a As String
 a="lol"
 MsgBox a
-```
+{% endhighlight %}
 
 matlab code block:
-```matlab
+{% highlight matlab linenos %}
 function price = EuPutExpl(SO,K,r,T,sigma,Smax,dS,dt)
 
 %set up grid and adjust increments if necessary
 M=round(Smax/dS)
 dS=Smax/M
-```
+{% endhighlight %}
+
 scilab code block with line numbers
 {% highlight matlab linenos %}
 function y=I(d)
