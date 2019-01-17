@@ -61,7 +61,7 @@ m=m++
 ```
 
 VBA code block:
-```vba
+```vb
 Public Sub test()
 Dim a As String
 a="lol"
@@ -71,3 +71,9 @@ MsgBox a
 Here's some inline code `x+y`
 
 Here's an image:
+<img src="{{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg" alt="scilab numerical analysis plot" class="full">
+
+
+Here's another image using Kramdown:
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg)
+{: .full}
