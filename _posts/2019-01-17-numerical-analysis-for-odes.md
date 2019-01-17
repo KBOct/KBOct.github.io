@@ -3,7 +3,7 @@ title: "Numerical Analysis for Ordinary Differential Equations : RBC agglomerati
 date: 2019-01-17
 tags: [numerical analysis, ode, scilab, data science]
 header:
-  image: "/images/1- numerical analysis for ODEs/RBC banner.jpg"
+  image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "Numerical Analysis, Scilab, RBC agglomeration"
 ---
 
@@ -66,6 +66,15 @@ Public Sub test()
 Dim a As String
 a="lol"
 MsgBox a
+```
+
+matlab code block:
+```matlab
+function price = EuPutExpl(SO,K,r,T,sigma,Smax,dS,dt)
+
+%set up grid and adjust increments if necessary
+M=round(Smax/dS)
+dS=Smax/M
 ```
 
 Here's some inline code `x+y`
