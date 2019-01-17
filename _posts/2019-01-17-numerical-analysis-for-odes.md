@@ -5,6 +5,7 @@ tags: [numerical analysis, ode, scilab, data science]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "Numerical Analysis, Scilab, RBC agglomeration"
+mathjax: true
 ---
 
 # H1 Heading
@@ -86,3 +87,9 @@ Here's an image:
 Here's another image using Kramdown:
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg)
 {: .full}
+
+Here's some math :
+
+$$z=x+y$$
+
+You can also put it inline $$z=x+y$$
