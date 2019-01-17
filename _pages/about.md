@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 permalink: /about/
 title: "About"
 header:
