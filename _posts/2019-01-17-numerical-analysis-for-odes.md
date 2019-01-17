@@ -4,7 +4,7 @@ date: 2019-01-17
 tags: [numerical analysis, ode, scilab, data science]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
-excerpt: "Numerical Analysis, Scilab, RBC agglomeration"
+excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab"
 mathjax: true
 ---
 
