@@ -7,6 +7,7 @@ header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab"
 mathjax: true
+author_profile: false
 ---
 
 # H1 Heading
