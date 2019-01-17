@@ -7,7 +7,7 @@ header:
   image: "/images/QUANT1.jpg"
 ---
 
-{% include group-by-array collection=site.posts field="tags" %}
+<!-- {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
@@ -15,4 +15,13 @@ header:
   {% for post in posts %}
     {% include archive-single.html %}
   {% endfor %}
+{% endfor %} -->
+
+{% for category in site.categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
