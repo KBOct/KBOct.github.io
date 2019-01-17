@@ -67,3 +67,7 @@ Dim a As String
 a="lol"
 MsgBox a
 ```
+
+Here's some inline code `x+y`
+
+Here's an image:
