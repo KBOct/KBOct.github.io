@@ -8,10 +8,10 @@ header:
 ---
 
 {% for category in site.categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
     {% for post in category[1] %}
-    {% assign posts = group_items[forloop.index0] %}
-      {% for post in posts %}
-        {% include archive-single.html %}
-        {% endfor %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+  </ul>
 {% endfor %}
