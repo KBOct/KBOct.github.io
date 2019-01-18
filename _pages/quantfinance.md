@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /quant-finance/
-title: "Quant Finance Posts by Tags"
+title: "Quant Finance Posts"
 author_profile: true
 header:
   image: "/images/QUANT1.jpg"
