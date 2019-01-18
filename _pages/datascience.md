@@ -6,9 +6,10 @@ author_profile: true
 header:
   image: "/images/DS.jpg"
 ---
-{% if category == 'data science'%}
+
 <div id="archives">
-{% for category in site.categories %}
+{% if category == 'data science'%}
+<!-- {% for category in site.categories %} -->
    <div class="archive-group">
      {% capture category_name %}{{ category | first }}{% endcapture %}
      <div id="#{{ category_name | slugize }}"></div>
@@ -22,6 +23,6 @@ header:
      </article>
      {% endfor %}
  </div>
-{% endfor %}
+<!-- {% endfor %} -->
 </div>
 {% endif %}
