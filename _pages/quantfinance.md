@@ -9,7 +9,7 @@ header:
 {% include group-by-array collection=site.posts field="categories" %}
 
 {% for category in group_names %}
-{% if category == 'data science'%}
+{% if category == 'quantitative finance'%}
   {% assign posts = group_items[forloop.index0] %}
   <!-- <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2> -->
   {% for post in posts %}
