@@ -24,5 +24,5 @@ header:
      {% endfor %}
  </div>
 <!-- {% endfor %} -->
-</div>
 {% endif %}
+</div>
