@@ -6,7 +6,3 @@ author_profile: true
 header:
   image: "/images/DS.jpg"
 ---
-
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
