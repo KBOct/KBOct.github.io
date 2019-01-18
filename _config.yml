@@ -210,6 +210,56 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+# Collections
+#collections_dir: my_collections
+collections:
+    data-science:
+        output: true
+        permalink: /:collection/:path/
+
+    quant-finance:
+        output: true
+        permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+  # _data-science
+  - scope:
+      path: "_data-science"
+      type: data-science
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+  # _quant-finance
+  - scope:
+      path: "_quant-finance"
+      type: quant-finance
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 # Sass/SCSS
 sass:
@@ -272,42 +322,10 @@ tag_archive:
 #     tag: /tags/:name/
 
 
-# Collections
-#collections_dir: my_collections
-collections:
-    data-science:
-        output: true
-        permalink: /data-science/
 
-    quant-finance:
-        output: true
-        permalink: /quant-finance/
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
-
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
