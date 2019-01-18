@@ -1,7 +1,7 @@
 ---
 title: "Numerical Analysis for Ordinary Differential Equations : RBC agglomeration"
 date: 2019-01-17[
-categories: [data]
+categories: [data science]
 tags: [numerical analysis, ode, scilab, data science]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"

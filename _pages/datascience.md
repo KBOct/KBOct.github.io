@@ -6,19 +6,20 @@ author_profile: true
 header:
   image: "/images/DS.jpg"
 ---
-{% capture written_label %}'data-science'{% endcapture %}
+<div id="archives">
+{% for category in site.categories %}
+ <div class="archive-group">
+   {% capture category_name %}{{ category | first }}{% endcapture %}
+   <div id="#{{ category_name | slugize }}"></div>
+   <p></p>
 
-{% for collection in site.collections %}
-  {% unless collection.output == false or collection.label == "posts" %}
-    {% capture label %}{{ collection.label }}{% endcapture %}
-    {% if label != written_label %}
-      <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label }}</h2>
-      {% capture written_label %}{{ label }}{% endcapture %}
-    {% endif %}
-  {% endunless %}
-  {% for post in collection.docs %}
-    {% unless collection.output == false or collection.label == "posts" %}
-      {% include archive-single.html %}
-    {% endunless %}
-  {% endfor %}
+   <h3 class="category-head">{{ category_name }}</h3>
+   <a name="{{ category_name | slugize }}"></a>
+   {% for post in site.categories[category_name] %}
+   <article class="archive-item">
+     <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+   </article>
+   {% endfor %}
+ </div>
 {% endfor %}
+</div>
