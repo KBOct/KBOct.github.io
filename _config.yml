@@ -210,16 +210,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Collections
-#collections_dir: my_collections
-collections:
-    data-science:
-        output: true
-        permalink: /:collection/:path/
-
-    quant-finance:
-        output: true
-        permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -243,23 +233,6 @@ defaults:
       layout: single
       author_profile: true
 
-  # _data-science
-  - scope:
-      path: "_data-science"
-      type: data-science
-    values:
-      layout: single
-      author_profile: false
-      share: true
-
-  # _quant-finance
-  - scope:
-      path: "_quant-finance"
-      type: quant-finance
-    values:
-      layout: single
-      author_profile: false
-      share: true
 
 # Sass/SCSS
 sass:
