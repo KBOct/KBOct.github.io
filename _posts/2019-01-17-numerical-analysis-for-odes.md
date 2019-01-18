@@ -8,7 +8,6 @@ header:
 excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab"
 mathjax: true
 author_profile: false
-layout: splash
 ---
 
 # H1 Heading
