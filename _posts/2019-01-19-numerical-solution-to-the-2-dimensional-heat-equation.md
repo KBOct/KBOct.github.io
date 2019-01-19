@@ -1,11 +1,11 @@
 ---
-title: "QUANT VERSION ! Numerical Analysis for Ordinary Differential Equations : RBC agglomeration"
-date: 2019-01-17[
-categories: [quantitative finance]
-tags: [numerical analysis, ode, scilab, data science]
+title: "Numerical solution to the 2-dimensional heat equation"
+date: 2019-01-19
+categories: [numerical analysis]
+tags: [numerical analysis, pde, finite elements, python]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
-excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab"
+excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
 mathjax: true
 author_profile: false
 ---
