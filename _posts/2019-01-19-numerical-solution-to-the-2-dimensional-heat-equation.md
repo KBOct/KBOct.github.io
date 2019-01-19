@@ -4,7 +4,7 @@ date: 2019-01-19
 categories: [numerical analysis]
 tags: [numerical analysis, pde, finite elements, python]
 header:
-  image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
+  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
 mathjax: true
 author_profile: false
