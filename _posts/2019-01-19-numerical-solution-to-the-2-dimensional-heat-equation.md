@@ -36,13 +36,13 @@ Here's a numbered list:
 3. Third
 
 Python code block:
-```python
+{% highlight python linenos %}
 import numpy as np
 
 def test_function(x,y):
   z=np.sum(x,y)
 return z
-```
+{% endhighlight %}
 
 R code block:
 {% highlight r linenos %}
