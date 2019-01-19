@@ -80,8 +80,8 @@ M=round(Smax/dS)
 dS=Smax/M
 {% endhighlight %}
 
-scilab code block with line numbers
-{% highlight matlab linenos %}
+scilab code block with line numbers:
+{% highlight scilab linenos %}
 function y=I(d)
     if d > 0 then
         y=(0.5/d) * log(d/0.004);
