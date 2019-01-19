@@ -36,32 +36,32 @@ Here's a numbered list:
 3. Third
 
 Python code block:
-```python
+{% highlight python linenos %}
 import numpy as np
 
 def test_function(x,y):
   z=np.sum(x,y)
 return z
-```
+{% endhighlight %}
 
 R code block:
-```r
+{% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")
 head(df)
-```
+{% endhighlight %}
 
 C code block:
-```c
+{% highlight c linenos %}
 include <stdio.h>
 # DEFINE code = 6
-```
+{% endhighlight %}
 
 C++ code block:
-```c++
+{% highlight c++ linenos %}
 int m,n,o;
-m=m++  
-```
+m=m++;  
+{% endhighlight %}
 
 VBA code block:
 {% highlight vb linenos %}
@@ -80,13 +80,13 @@ M=round(Smax/dS)
 dS=Smax/M
 {% endhighlight %}
 
-scilab code block with line numbers
+scilab code block with line numbers:
 {% highlight matlab linenos %}
 function y=I(d)
     if d > 0 then
         y=(0.5/d) * log(d/0.004);
     else
-        disp("la variable d doit être strictement positive !");
+        disp("d must be positive!");
     end
 endfunction
 {% endhighlight %}
