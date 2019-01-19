@@ -45,11 +45,11 @@ return z
 ```
 
 R code block:
-```r
+{% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")
 head(df)
-```
+{% endhighlight %}
 
 C code block:
 {% highlight c linenos %}
