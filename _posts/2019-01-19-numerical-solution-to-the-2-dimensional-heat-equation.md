@@ -52,10 +52,10 @@ head(df)
 ```
 
 C code block:
-```c
+{% highlight c linenos %}
 include <stdio.h>
 # DEFINE code = 6
-```
+{% endhighlight %}
 
 C++ code block:
 {% highlight c++ linenos %}
