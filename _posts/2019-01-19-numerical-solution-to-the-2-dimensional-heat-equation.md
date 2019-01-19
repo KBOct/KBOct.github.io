@@ -58,10 +58,10 @@ include <stdio.h>
 ```
 
 C++ code block:
-```c++
+{% highlight c++ linenos %}
 int m,n,o;
-m=m++  
-```
+m=m++;  
+{% endhighlight %}
 
 VBA code block:
 {% highlight vb linenos %}
