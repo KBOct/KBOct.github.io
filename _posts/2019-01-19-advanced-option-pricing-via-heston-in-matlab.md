@@ -3,8 +3,8 @@ title: "Advanced option pricing via Heston in Matlab"
 date: 2019-01-19
 categories: [quantitative finance]
 tags: [quantitative finance, Heston, pricing, matlab]
-header:
-  image: "/images/2 - heat equation/heat.jpg"
+#header:
+#  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Advanced option pricing via Heston in Matlab"
 mathjax: true
 author_profile: false
