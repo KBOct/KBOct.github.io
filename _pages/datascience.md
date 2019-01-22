@@ -5,6 +5,9 @@ title: "Data Science Posts"
 author_profile: true
 header:
   image: "/images/DS.jpg"
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
 {% include group-by-array collection=site.posts field="categories" %}
