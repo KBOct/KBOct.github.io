@@ -1,7 +1,7 @@
 ---
 title: "Brennan-Schwartz American put pricing in C"
 date: 2019-01-19
-categories: [quantitative finance]
+categories: [quantitative finance, option pricing]
 tags: [quantitative finance, Brennan-Schwartz, American put pricing, C, options, pricing]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

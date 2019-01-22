@@ -1,7 +1,7 @@
 ---
 title: "Binomial option pricing in Python"
 date: 2019-01-19
-categories: [quantitative finance]
+categories: [quantitative finance, option pricing]
 tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, options, pricing, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
