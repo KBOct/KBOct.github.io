@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 permalink: /data-science/
 title: "Data Science Posts"
 author_profile: true
