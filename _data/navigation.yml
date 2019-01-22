@@ -9,7 +9,7 @@ main:
     url: /data-science/
   - title: "Numerical Analysis"
     url: /numerical-analysis/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "Tags"
+    url: /tag-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
