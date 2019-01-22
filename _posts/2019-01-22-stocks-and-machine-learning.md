@@ -1,7 +1,7 @@
 ---
 title: "Stocks and Machine Learning"
 date: 2019-01-22
-categories: [data science]
+categories: [data science, stocks prediction]
 tags: [machine learning, stock, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
