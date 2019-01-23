@@ -20,7 +20,5 @@
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
   {% endif %}
-  {% elsif page.url == folderitem.url %}
-     <li class="active"><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
   </div>
 {% endif %}
