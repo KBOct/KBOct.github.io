@@ -1,7 +1,7 @@
 ---
 title: "Implementing APT in R"
 date: 2019-01-23
-categories: [quantitative finance]
+categories: [quantitative finance, factor models]
 tags: [arbitrage pricing theory, APT, model implementation, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
