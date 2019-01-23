@@ -17,7 +17,7 @@
   }
 
   @include breakpoint($large) {
-    float: left;
+    float: right;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -63,7 +63,7 @@
 
   img {
     width: 100%;
-    
+
     &.emoji {
       width: 20px;
       height: 20px;
@@ -315,4 +315,3 @@
     margin-right: initial;
   }
 }
-
