@@ -1,7 +1,7 @@
 ---
 title: "Implementing Fama-French Factor model in R"
 date: 2019-01-23
-categories: [quantitative finance]
+categories: [quantitative finance, factor models]
 tags: [factor model, Fama-French, model implementation, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
