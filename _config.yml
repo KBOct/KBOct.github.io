@@ -169,7 +169,7 @@ exclude:
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
-  - assets/js/featured-posts.js
+  #- assets/js/featured-posts.js
   - Capfile
   - CHANGELOG
   - config
