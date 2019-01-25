@@ -1,7 +1,7 @@
 ---
 title: "Stock prediction using Stocker"
 date: 2019-01-22
-categories: [data science, prediction]
+categories: [quantitative finance, data science, prediction]
 tags: [stock, prediction, Stocker, data science, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
