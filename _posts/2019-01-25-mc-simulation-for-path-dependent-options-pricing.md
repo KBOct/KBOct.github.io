@@ -1,6 +1,6 @@
 ---
 title: "Monte Carlo simulation for path-dependent options pricing in C++"
-date: 2019-01-21
+date: 2019-01-25
 categories: [quantitative finance, pricing]
 tags: [quantitative finance, pricing, Monte Carlo, path-dependent, options, C++, cpp]
 #header:

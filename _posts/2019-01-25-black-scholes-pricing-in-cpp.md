@@ -1,6 +1,6 @@
 ---
 title: "Black Scholes pricing in C++"
-date: 2019-01-21
+date: 2019-01-25
 categories: [quantitative finance, option pricing]
 tags: [quantitative finance, Black-Scholes, pricing, C++, cpp]
 #header:

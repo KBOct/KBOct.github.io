@@ -1,6 +1,6 @@
 ---
 title: "Pricing with random numbers in C++"
-date: 2019-01-21
+date: 2019-01-25
 categories: [quantitative finance, pricing]
 tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 #header:

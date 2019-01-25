@@ -1,6 +1,6 @@
 ---
 title: "Bonds in C++"
-date: 2019-01-19
+date: 2019-01-25
 categories: [quantitative finance, pricing, bonds]
 tags: [quantitative finance, bonds, t-bills, t-notes, treasury, yield, duration, C++, cpp]
 #header:

@@ -1,6 +1,6 @@
 ---
 title: "Binomial option pricing in C++"
-date: 2019-01-19
+date: 2019-01-25
 categories: [quantitative finance, option pricing]
 tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, options, pricing, C++, cpp]
 #header:
