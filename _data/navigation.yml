@@ -11,5 +11,5 @@ main:
     url: /numerical-analysis/
   - title: "Categories"
     url: /categories/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Browse"
+    url: /browse/
