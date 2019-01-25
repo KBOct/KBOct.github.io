@@ -1,11 +1,11 @@
 ---
-title: "Stock prediction using Stocker"
-date: 2019-01-22
-categories: [data science, stocks prediction]
-tags: [stock, prediction, Stocker, data science, analysis, python]
+  title: "Bonds in C++"
+date: 2019-01-19
+categories: [quantitative finance, pricing, bonds]
+tags: [quantitative finance, bonds, t-bills, t-notes, treasury, yield, duration, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Stock prediction using Stocker"
+excerpt: "Bonds in C++"
 mathjax: true
 author_profile: false
 ---

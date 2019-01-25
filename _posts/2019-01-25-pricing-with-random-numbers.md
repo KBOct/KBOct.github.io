@@ -1,11 +1,11 @@
 ---
-title: "Stock prediction using Stocker"
-date: 2019-01-22
-categories: [data science, stocks prediction]
-tags: [stock, prediction, Stocker, data science, analysis, python]
+title: "Pricing with random numbers in C++"
+date: 2019-01-21
+categories: [quantitative finance, pricing]
+tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Stock prediction using Stocker"
+excerpt: "Pricing with random numbers in C++"
 mathjax: true
 author_profile: false
 ---

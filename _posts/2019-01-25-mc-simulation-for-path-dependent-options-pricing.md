@@ -1,11 +1,11 @@
 ---
-title: "Stock prediction using Stocker"
-date: 2019-01-22
-categories: [data science, stocks prediction]
-tags: [stock, prediction, Stocker, data science, analysis, python]
+title: "Monte Carlo simulation for path-dependent options pricing in C++"
+date: 2019-01-21
+categories: [quantitative finance, pricing]
+tags: [quantitative finance, pricing, Monte Carlo, path-dependent, options, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Stock prediction using Stocker"
+excerpt: "Monte Carlo simulation for path-dependent options pricing in C++"
 mathjax: true
 author_profile: false
 ---
