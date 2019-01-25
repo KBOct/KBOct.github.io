@@ -1,8 +1,8 @@
 ---
 title: "Forecasting intra day trading volume in R"
 date: 2019-01-24
-categories: [quantitative finance, trading, prediction]
-tags: [forecasting, intra-day trading, trading volume, R, statistics]
+categories: [quantitative finance, prediction, trading]
+tags: [forecasting, prediction, intra-day trading, trading volume, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Forecasting intra day trading volume in R"
