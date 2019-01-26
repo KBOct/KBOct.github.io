@@ -1,7 +1,7 @@
 ---
 title: "Binomial pricing for American options in C"
 date: 2019-01-19
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, c]
 tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, american options, pricing, C]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
