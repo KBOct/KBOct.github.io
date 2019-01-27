@@ -2,7 +2,7 @@
 title: "Black Scholes pricing with Monte Carlo in Python"
 date: 2019-01-21
 categories: [quantitative finance, pricing]
-tags: [quantitative finance, Black-Scholes, option pricing, Monte-Carlo, python 3]
+tags: [quantitative finance, Black-Scholes, option pricing, Monte-Carlo, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Black Scholes pricing with Monte Carlo in Python"

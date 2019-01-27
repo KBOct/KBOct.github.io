@@ -2,7 +2,7 @@
 title: "Stock price simulation with Monte Carlo in Python"
 date: 2019-01-21
 categories: [quantitative finance, prediction]
-tags: [quantitative finance, stock price, stock prediction, simulation, Monte-Carlo, python 3]
+tags: [quantitative finance, stock price, stock prediction, simulation, Monte-Carlo, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Stock price simulation with Monte Carlo in Python"
