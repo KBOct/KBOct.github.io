@@ -1,7 +1,7 @@
 ---
 title: "Black Scholes pricing with Greeks in Python 2"
 date: 2019-01-21
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, python 2]
 tags: [quantitative finance, Black-Scholes, option pricing, greeks, python 2]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

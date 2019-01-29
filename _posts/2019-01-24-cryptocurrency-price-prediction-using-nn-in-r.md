@@ -1,7 +1,7 @@
 ---
 title: "Cryptocurrency price prediction using NN in R"
 date: 2019-01-24
-categories: [quantitative finance, data science, prediction]
+categories: [quantitative finance, data science, prediction, r]
 tags: [cryptocurrency, crypto, bitcoin, ethereum, price prediction, neural networks, nn, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

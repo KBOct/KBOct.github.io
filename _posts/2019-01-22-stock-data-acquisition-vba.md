@@ -1,7 +1,7 @@
 ---
 title: "Stock Data Acquisition using Excel VBA"
 date: 2019-01-22
-categories: [quantitative finance, data science, prediction]
+categories: [quantitative finance, data science, prediction, vba]
 tags: [stock, data, live stock data, updated stock data, analysis, acquisition, excel, spreadsheet, vba]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

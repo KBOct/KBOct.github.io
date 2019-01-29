@@ -1,7 +1,7 @@
 ---
 title: "Pricing FX derivatives in R"
 date: 2019-01-24
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, r]
 tags: [pricing, forex, FX, derivatives, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

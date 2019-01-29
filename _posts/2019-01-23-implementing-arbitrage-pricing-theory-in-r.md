@@ -1,7 +1,7 @@
 ---
 title: "Implementing Arbitrage Pricing Theory in R"
 date: 2019-01-23
-categories: [quantitative finance, pricing, factor models]
+categories: [quantitative finance, pricing, factor models, r]
 tags: [arbitrage pricing theory, APT, Arbitrage Pricing Theory, model implementation, asset pricing, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

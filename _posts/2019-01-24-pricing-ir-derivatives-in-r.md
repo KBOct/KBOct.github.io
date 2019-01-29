@@ -1,7 +1,7 @@
 ---
 title: "Pricing IR derivatives in R"
 date: 2019-01-24
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, r]
 tags: [pricing, interest rate, IR, derivatives, R, statistics]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

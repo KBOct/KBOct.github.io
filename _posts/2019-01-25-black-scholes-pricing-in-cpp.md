@@ -1,7 +1,7 @@
 ---
 title: "Black Scholes pricing in C++"
 date: 2019-01-25
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, cpp]
 tags: [quantitative finance, Black-Scholes, option pricing, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

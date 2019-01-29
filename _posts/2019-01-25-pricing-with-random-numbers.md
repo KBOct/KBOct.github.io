@@ -1,7 +1,7 @@
 ---
 title: "Pricing with random numbers in C++"
 date: 2019-01-25
-categories: [quantitative finance, pricing]
+categories: [quantitative finance, pricing, cpp]
 tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Stocks and Data Science"
 date: 2019-01-21
-categories: [quantitative finance, data science, prediction]
+categories: [quantitative finance, data science, prediction, python]
 tags: [data science, stock, stock prediction, time series, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
