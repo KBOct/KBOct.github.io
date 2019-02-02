@@ -10,15 +10,17 @@ mathjax: true
 author_profile: false
 ---
 
-# H1 Heading
+# Partie 1 : dynamique des populations
 
-$$f(z) = \left\{ \begin{array}{rcl}
-\overline{\overline{z^2}+\cos z} & \mbox{for}
-& |z|<3 \\ 0 & \mbox{for} & 3\leq|z|\leq5 \\
-\sin\overline{z} & \mbox{for} & |z|>5
+## Cas d’une seule population : l’équation logistique
+
+Soit à résoudre :
+$$\left\{ \begin{array}{rcl}
+x'(t)= \\
+x(0)=x^{ini}
 \end{array}\right.$$
 
-## H2 Heading
+
 
 ### H3 Heading
 
