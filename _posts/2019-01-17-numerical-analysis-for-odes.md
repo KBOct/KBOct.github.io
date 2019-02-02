@@ -1,16 +1,22 @@
 ---
-title: "Numerical Analysis for Ordinary Differential Equations : RBC agglomeration"
+title: "Numerical Analysis for Ordinary Differential Equations : Red Blood Cell agglomeration (French)"
 date: 2019-01-17
 categories: [numerical analysis, scilab]
 tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
-excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab"
+excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab. This was my Bachelor's thesis project for which I got a 18/20 (Grade A)"
 mathjax: true
 author_profile: false
 ---
 
 # H1 Heading
+
+$$f(z) = \left\{ \begin{array}{rcl}
+\overline{\overline{z^2}+\cos z} & \mbox{for}
+& |z|<3 \\ 0 & \mbox{for} & 3\leq|z|\leq5 \\
+\sin\overline{z} & \mbox{for} & |z|>5
+\end{array}\right.$$
 
 ## H2 Heading
 
