@@ -225,6 +225,7 @@ defaults:
       comments: # true
       share: true
       related: true
+      toc: true
 
   # _pages
   - scope:
