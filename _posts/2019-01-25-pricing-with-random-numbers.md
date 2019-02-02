@@ -6,11 +6,12 @@ tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Pricing with random numbers in C++"
-mathjax: true
 toc: true
 toc_label: "Unique Title"
 toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix
-author_profile: false
+mathjax: true
+
+#author_profile: false
 
 ---
 
