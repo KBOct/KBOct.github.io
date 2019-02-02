@@ -31,7 +31,7 @@ x(0)=x^{ini}
   On souhaite résoudre l'equation  : $\left\{ \begin{array}{c}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
 x(0)=x^{ini} \end{array}
-\right.\eqref{GrindEQ__1_}$
+\right.$
 
 
 
