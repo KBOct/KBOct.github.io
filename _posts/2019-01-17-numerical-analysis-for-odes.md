@@ -12,7 +12,7 @@ author_profile: false
 
 # Partie 1 : dynamique des populations
 
-## Cas d’une seule population : l’équation logistique
+<u> ## Cas d’une seule population : l’équation logistique </u>
 
 ### Question a
 
@@ -41,7 +41,6 @@ $$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
 
 Définition de la fonction de population solution non constante de l'EDO (1), obtenue par résolution analytique :
 
-scilab code block with line numbers:
 {% highlight matlab linenos %}
 function x=population(t,xini,a)
 x=xini./(xini+(1-xini)* exp(-a*t));
@@ -51,6 +50,10 @@ endfunction
 function [y]= f(t,x)
    y=a*x*(1-x);
 endfunction
+
+{% end highlight %}
+TEXTE
+{% highlight matlab linenos %}
 
 //Schéma d'Euler modifié dit méthode du point milieu
 function [t,x]=EulerModifie(f,tini,xini,h,N)
@@ -66,6 +69,10 @@ end
        x(:,j+1)=x(:,j)+h*f(t(j)+(h/2),x(:,j)+(h/2)* f(t(j),x(:,j)))
    end
 endfunction
+
+{% end highlight %}
+TEXTE
+{% highlight matlab linenos %}
 
 //paramètres
 a = 1.5;
@@ -84,8 +91,9 @@ function y =xconstante2(t)
 endfunction
 
 
-
-//Question c)
+{% end highlight %}
+### Question c
+{% highlight matlab linenos %}
 
 xtn1=zeros(1,N+1);
 xtn2=zeros(1,N+1);
@@ -118,40 +126,22 @@ cpt=1;
        cpt=cpt+1;
    end
 
+{% end highlight %}
+affichage de l'erreur en norme logarithmique. Si on a
+erreur(deltat)= A*deltat^p pour un certain A et un certain p, alors
+log(erreur(deltat))=p*log(deltat)+ log(A)
+ainsi si on trace log(erreur(deltat)) en fonction de log(deltat), on obtient une
+droite de coefficient directeur p. p est appelé l'ordre du schéma.
 
-// affichage de l'erreur en norme logarithmique. Si on a
-// erreur(deltat)= A*deltat^p pour un certain A et un certain p, alors
-// log(erreur(deltat))=p*log(deltat)+ log(A)
-// ainsi si on trace log(erreur(deltat)) en fonction de log(deltat), on obtient une
-// droite de coefficient directeur p. p est appelé l'ordre du schéma.
-scf(2)
-clf
-plot(log(DT), log(erreur1), "b")
-plot(log(DT), log(erreur2), "r")
-plot(log(DT), log(erreur3), "m")
-plot(log(DT), log(erreur4), "c")
+## Cas de deux populations avec interaction de type proie/prédateur
 
-plot(log(DT), log(DT.^2), 'k--')
-plot(log(DT), log(DT.^3), 'k-')
+### Question a
 
-ylabel('log(erreur)')
-xlabel('log(deltat)')
-title("Tracé des erreurs en échelle logarithmique", "log (deltat)", "log (erreur)")
-legend("Erreur numérique pour x(0)=0.1", "Erreur numérique pour x(0)=0.5", "Erreur numérique pour x(0)=1.1", "Erreur numérique pour x(0)=1.5","log(deltat^2) - pente 2","log(deltat^3) - pente 3",2)
-
-
-
-
-//#####################################################
-// Cas de deux populations avec interaction de type proie/prédateur
-//#####################################################
+{% highlight matlab linenos %}
 
 //-----------------------------------------------------
 // Analyse numérique
 //-----------------------------------------------------
-
-//Question a)
-
 
 function y=F(t,x)
    y=zeros(2,1);
@@ -163,8 +153,9 @@ function y=H(x)
    y=(x(1)-log(x(1)))+(x(2)-log(x(2)));
 endfunction
 
-
-//Question b)
+{% end highlight %}
+### Question b
+{% highlight matlab linenos %}
 
 
 function [TPS,X]= EulerExplicite(f,t0,x0,dt,T)
@@ -177,15 +168,11 @@ function [TPS,X]= EulerExplicite(f,t0,x0,dt,T)
    while time<T
        // calcul de x_{n+1} et de t_{n+1}
        x0=x0+dt*f(time,x0); // le x0 de gauche joue le role de x_{n+1}, celui de celui de x_n
-       time=time+dt;  // on ne peut pas intervertir la mise à jour de time et de x0, pourquoi ?
+       time=time+dt;  
 
        // stockage des résultats
-
-
        TPS=[TPS, time];
        X=[X, x0];
-
-
 end
 TPS(:,$)=[];
 X(:,$)=[];
@@ -201,25 +188,11 @@ Xini=[1/4;3/4]
 
 [TPSEE,XEE]= EulerExplicite(F,t0,Xini,deltat,T);
 [TPSEM,XEM]= EulerModifie(F,t0,Xini,deltat,N);
+{% end highlight %}
 
+### Question c
 
-
-// affichage des trajectoires
-// dans la fenêtre 3
-
-scf(3);
-clf;
-
-plot(XEE(1,:), XEE(2,:), "b-");
-plot(XEM(1,:), XEM(2,:), "r--");
-
-ylabel('x2')
-xlabel('x1')
-title("Tracé des solutions pour les schémas Euler explicite et point milieu")
-legend("Euler explicite","point milieu",4)
-
-//Question c)
-
+{% highlight matlab linenos %}
 for j=1:size(XEE,2)
    phiEE(j)=H(XEE(:,j));
 end
@@ -228,17 +201,9 @@ for j=1:size(XEM,2)
    phiEM(j)=H(XEM(:,j));
 end
 
-scf(4);
-clf;
-
-plot(TPSEE, phiEE, "b-");
-plot(TPSEM, phiEM, "r-");
-
-
-ylabel('phi(t)')
-xlabel('t')
-title("Evolution de la fonction phi au cours du temps")
-legend("phi via Euler explicite", "phi via le point milieu",4)
+{% end highlight %}
+### Question d
+{% highlight matlab linenos %}
 
 //Schéma de Crank-Nicolson
 function [t,x]=CrankNicolson(f,tini,xini,h,T)
@@ -268,9 +233,11 @@ end
    end
 endfunction
 
+{% end highlight %}
 
 
-//Question e)
+### Question e
+{% highlight matlab linenos %}
 
 
 // Changement de paramètres à cause d'erreurs générées par les paramètres de l'énoncé
@@ -281,36 +248,5 @@ t0=0;
 Xini=[1/4;3/4]
 
 [TPSCN,XCN]= CrankNicolson(F,t0,Xini,deltat,T);
-
-// affichage des trajectoires
-// dans la fenêtre 5
-
-scf(5);
-clf;
-
-plot(XCN(1,:), XCN(2,:), "m-");
-
-
-ylabel('x2')
-xlabel('x1')
-title("Tracé des solutions pour le schéma de Crank-Nicolson")
-legend("Crank-Nicolson",1)
-
-
-for j=1:size(XCN,2)
-   phiCN(j)=H(XCN(:,j));
-end
-
-scf(6);
-clf;
-
-plot(TPSEE, phiEE, "b-");
-plot(TPSCN, phiCN, "k-");
-
-ylabel('phi(t)')
-xlabel('t')
-title("Evolution de la fonction phi au cours du temps")
-legend("phi via Euler explicite","phi via le schéma de Crank-Nicolson",1)
-
 
 {% endhighlight %}
