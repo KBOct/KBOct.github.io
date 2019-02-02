@@ -8,6 +8,7 @@ tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 excerpt: "Pricing with random numbers in C++"
 mathjax: true
 author_profile: false
+toc: true
 ---
 
 # H1 Heading
