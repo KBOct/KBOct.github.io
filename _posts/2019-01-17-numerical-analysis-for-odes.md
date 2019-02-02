@@ -14,7 +14,7 @@ author_profile: false
 
 ## Cas d’une seule population : l’équation logistique
 
-### H3 Heading
+### Question a
 
 On souhaite résoudre l'equation  : $$\left\{ \begin{array}{rcl}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
@@ -37,19 +37,12 @@ $$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
 
  en posant $$g\left(t\right)=a$$ et $$\ h\left(x\right)=x\left(1-x\right)$$. $$f$$ est donc à variables séparées.
 
+### Question b
 
+Définition de la fonction de population solution non constante de l'EDO (1), obtenue par résolution analytique :
 
 scilab code block with line numbers:
 {% highlight matlab linenos %}
-//#####################################################
-//Cas d'une seule population : l'équation logistique
-//#####################################################
-
-//Question b)
-
-clear   // efface toutes les variables
-
-//Définition de la fonction de population solution non constante de l'EDO (1), obtenue par résolution analytique
 function x=population(t,xini,a)
 x=xini./(xini+(1-xini)* exp(-a*t));
 endfunction
@@ -58,7 +51,6 @@ endfunction
 function [y]= f(t,x)
    y=a*x*(1-x);
 endfunction
-
 
 //Schéma d'Euler modifié dit méthode du point milieu
 function [t,x]=EulerModifie(f,tini,xini,h,N)
@@ -91,34 +83,7 @@ function y =xconstante2(t)
    y=0;
 endfunction
 
-xe1=population(t,0.1,a)
-[tps1,xa1]= EulerModifie(f,0,0.1,deltat,N);
-xe2=population(t,0.5,a)
-[tps2,xa2]= EulerModifie(f,0,0.5,deltat,N);
-xe3=population(t,1.1,a)
-[tps3,xa3]= EulerModifie(f,0,1.1,deltat,N);
-xe4=population(t,1.5,a)
-[tps4,xa4]= EulerModifie(f,0,1.5,deltat,N);
 
-
-scf(1)
-clf
-
-plot(t,xconstante1,'k--')
-plot(t,xconstante2,'ko')
-plot(t,xe1,'b^')
-plot(tps1, xa1, 'b')
-plot(t,xe2,'r^')
-plot(tps2, xa2, 'r')
-plot(t,xe3,'m^')
-plot(tps3, xa3, 'm')
-plot(t,xe4,'c^')
-plot(tps4, xa4, 'c')
-
-ylabel('x')
-xlabel('t')
-title("Tracé des solutions et de leurs approximations")
-legend("Solution constante égale à 1","Solution constante égale à 0","Solution exacte pour x(0)=0.1","Solution approchée pour x(0)=0.1", "Solution exacte pour x(0)=0.5","Solution approchée pour x(0)=0.5","Solution exacte pour x(0)=1.1","Solution approchée pour x(0)=1.1","Solution exacte pour x(0)=1.5","Solution approchée pour x(0)=1.5",[19,0.85])
 
 //Question c)
 
