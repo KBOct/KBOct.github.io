@@ -14,6 +14,8 @@ author_profile: false
 
 ## Cas d’une seule population : l’équation logistique
 
+### H3 Heading
+
 Soit à résoudre :
 $$\left\{ \begin{array}{rcl}
 x'(t)= \\
@@ -22,7 +24,7 @@ x(0)=x^{ini}
 
 
 
-### H3 Heading
+
 
 Here's some basic text
 
