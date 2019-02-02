@@ -41,12 +41,12 @@ x(0)=x^{ini} \end{array}
 
 
  Soit $$x$$ une solution (non constante) sur un intervalle $$I$$ de $$\mathbb{R}$$ contenant 0 et sur lequel $$x(t)\ \in \ \left]0,1\right[$$  pour tout $$t\ \in \ I$$. Alors on peut écrire :
-\[f(t,x(t))=\frac{d}{dt}x\left(t\right)=ax\left(t\right)\left(1-x\left(t\right)\right)\]
+$$f(t,x(t))=\frac{d}{dt}x\left(t\right)=ax\left(t\right)\left(1-x\left(t\right)\right)$$
 
  où $$f$$ est la fonction second membre de l'EDO qui peut être écrite~:
 
 
-\[f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)\]
+$$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
 
 
  en posant $$g\left(t\right)=a$$ et $$\ h\left(x\right)=x\left(1-x\right)$$. $$f$$ est donc à variables séparées.
