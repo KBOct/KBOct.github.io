@@ -16,7 +16,7 @@ author_profile: false
 
 ### Question a
 
-On souhaite résoudre l'equation  : $$\left\{ \begin{array}{lcl}
+On souhaite résoudre l'equation  : $$\left\{ \begin{array}{cl}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
 x(0)=x^{ini} \end{array}
 \right\label{eq:1}$$
