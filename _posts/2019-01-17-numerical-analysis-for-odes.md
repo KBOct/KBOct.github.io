@@ -103,10 +103,16 @@ function y =xconstante2(t)
 endfunction
 {% endhighlight %}
 
+Solutions de l'EDO (1) et leurs approximations :
+
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
 {: .full}
 
+Les solutions tendent toutes vers la solution constante de valeur 1 et l'approximation par la méthode du point milieu de chacune des solutions est très bonne avec les paramètres utilisés .
+
 ### Question c
+
+Déterminons l'ordre de la méthode du point milieu en traçant l'erreur de consistance en échelle logarithmique :
 
 {% highlight matlab linenos %}
 
@@ -146,6 +152,10 @@ end
 {% endhighlight %}
 
 Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2.jpg)
+{: .full}
+
 Si on a :
 $$erreur(\delta t)= A * {\delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
 alors :
