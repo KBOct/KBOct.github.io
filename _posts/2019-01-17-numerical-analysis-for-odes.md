@@ -139,7 +139,7 @@ cpt=1;
    end
 
 {% endhighlight %}
-Ici on affiche l'erreur {% \n %} en norme logarithmique calculée ci-dessus. Si on a
+Ici on affiche l'erreur {{newline_to_br}} en norme logarithmique calculée ci-dessus. Si on a
 erreur(deltat)= A * deltat^p pour un certain A et un certain p, alors
 log(erreur(deltat))= p * log(deltat) + log(A)
 ainsi si on trace log(erreur(deltat)) en fonction de log(deltat), on obtient une
