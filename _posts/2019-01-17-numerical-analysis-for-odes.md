@@ -103,10 +103,11 @@ function y =xconstante2(t)
 endfunction
 {% endhighlight %}
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1_1.jpg)
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
 {: .full}
 
 ### Question c
+
 {% highlight matlab linenos %}
 
 xtn1=zeros(1,N+1);
@@ -174,7 +175,9 @@ function y=H(x)
 endfunction
 
 {% endhighlight %}
+
 ### Question b
+
 {% highlight matlab linenos %}
 
 
@@ -187,7 +190,7 @@ function [TPS,X]= EulerExplicite(f,t0,x0,dt,T)
    // boucle en temps
    while time<T
        // calcul de x_{n+1} et de t_{n+1}
-       x0=x0+dt*f(time,x0); // le x0 de gauche joue le role de x_{n+1}, celui de celui de x_n
+       x0=x0+dt*f(time,x0); // le x0 de gauche joue le role de x_{n+1}, celui de droite celui de x_n
        time=time+dt;  
 
        // stockage des résultats
@@ -223,7 +226,9 @@ for j=1:size(XEM,2)
 end
 
 {% endhighlight %}
+
 ### Question d
+
 {% highlight matlab linenos %}
 
 //Schéma de Crank-Nicolson
