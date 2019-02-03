@@ -141,11 +141,11 @@ cpt=1;
 {% endhighlight %}
 
 Ici on affiche l'erreur en norme logarithmique calculée ci-dessus. Si on a
-$$erreur(\delta t)= A * deltat^p$$ pour un certain $$A$$ et un certain $$p$$, alors :
-$$log(erreur(deltat))= p * log(deltat) + log(A)$$
-ainsi si on trace $$log(erreur(deltat))$$ en fonction de $$log(deltat)$$, on obtient une droite de coefficient directeur $$p$$.
+$$erreur(\delta t)= A * {\delta t}^p$$ pour un certain $$A$$ et un certain $$p$$, alors :
+$$log(erreur(\delta t))= p * log(\delta t) + log(A)$$
+ainsi si on trace $$log(erreur(\delta t))$$ en fonction de $$log(\delta t)$$, on obtient une droite de coefficient directeur $$p$$.
 
-p est appelé l'ordre du schéma.
+$$p$$ est appelé l'ordre du schéma.
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
@@ -192,7 +192,8 @@ TPS(:,$)=[];
 X(:,$)=[];
 endfunction
 
-// Changement de paramètres à cause d'erreurs générées par les paramètres de l'énoncé
+// Paramètres
+
 T = 100;
 deltat = 0.01;
 N=T/deltat;
@@ -237,10 +238,7 @@ end
        // définition de la fonction g telle que x_{n+1} est solution de g(x_{n+1})=0
        deff('[y]=g(x)','y=x-x0-(h/2)* (f(time,x)+f(time+h,x0))');
        x0=fsolve(x0, g); // le x0 de gauche joue le role de x_{n+1}, celui de celui de x_n
-//        if size(x0,1) < size(x0,2) then
-//            x0=x0'
-//        end
-       time=time+h;  // attention cette fois time doit être actualisé avant x0 pourquoi ?
+       time=time+h;
        // stockage des résultats
        t($+1)=time;
        x(:,$+1)=x0;
