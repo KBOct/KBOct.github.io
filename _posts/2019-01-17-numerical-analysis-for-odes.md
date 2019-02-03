@@ -139,11 +139,13 @@ cpt=1;
    end
 
 {% endhighlight %}
-Ici on affiche l'erreur {{newline_to_br}} en norme logarithmique calculée ci-dessus. Si on a
-erreur(deltat)= A * deltat^p pour un certain A et un certain p, alors
-log(erreur(deltat))= p * log(deltat) + log(A)
-ainsi si on trace log(erreur(deltat)) en fonction de log(deltat), on obtient une
-droite de coefficient directeur p. p est appelé l'ordre du schéma.
+
+Ici on affiche l'erreur en norme logarithmique calculée ci-dessus. Si on a
+$$erreur(deltat)= A * deltat^p$$ pour un certain $$A$$ et un certain $$p$$, alors :
+$$log(erreur(deltat))= p * log(deltat) + log(A)$$
+ainsi si on trace $$log(erreur(deltat))$$ en fonction de $$log(deltat)$$, on obtient une droite de coefficient directeur $$p$$.
+
+\n p est appelé l'ordre du schéma.
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
