@@ -16,24 +16,35 @@ author_profile: false
 
 ### Question a
 
-On souhaite résoudre l'equation  : $$\left\{ \begin{array}{rcl}
+On souhaite résoudre l'equation  : $$\left\{ \begin{array}{lcl}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
 x(0)=x^{ini} \end{array}
-\right.$$
+\right\label{eq:1}$$
 
 Cherchons d'abord les solutions constantes. Si $$x(t)\ =\ C\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ alors $$x'(t)\ =\ 0$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ et l'EDO devient $$0\ =\ aC(1-C)$$.
 
 Par conséquent $$C\ =\ 0\ ou\ C=1$$. Mais, la fonction constante $$x_1(t)\ =\ 0\ $$ne vérifie pas  $$x_1(0)\ =\ x^{ini}>0$$ donc $$x_2(t)\ =\ 1$$ est la seule solution sur $$\mathbb{R}$$ de l'EDO avec la condition initiale $$x(0)\ =\ x^{ini}>0$$.
 
-
 Soit $$x$$ une solution (non constante) sur un intervalle $$I$$ de $$\mathbb{R}$$ contenant 0 et sur lequel $$x(t)\ \in \ \left]0,1\right[$$  pour tout $$t\ \in \ I$$. Alors on peut écrire :
 $$f(t,x(t))=\frac{d}{dt}x\left(t\right)=ax\left(t\right)\left(1-x\left(t\right)\right)$$
-
 où $$f$$ est la fonction second membre de l'EDO qui peut être écrite :
-
 $$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
-
 en posant $$g\left(t\right)=a$$ et $$\ h\left(x\right)=x\left(1-x\right)$$. $$f$$ est donc à variables séparées.
+
+Puisque $$x(t)\neq 0\ et\ x(t)\neq 1\ $$on peut diviser les deux membres de l'équation par $$x\left(1-x\right)$$, on obtient :
+$$\frac{dx}{x(1-x)}=a\ dt$$
+
+En intégrant les deux membres, on obtient :
+$$\int{\frac{dx}{x(1-x)}}=\int{a\ dt}$$
+
+or par décomposition en éléments simples on obtient :
+$$\int{(\frac{1}{x}}+\frac{1}{1-x})\ dx=\int{a\ dt}$$
+
+puis :
+$$ln(\frac{x}{x^{ini}})-ln(\frac{1-x}{1-x^{ini}})=at$$
+
+Donc, pour $$t\ \in \ I$$ :
+$$x(t)=\frac{x^{ini}}{x^{ini}+({1-x}^{ini})e^{-at}}$$
 
 ### Question b
 
