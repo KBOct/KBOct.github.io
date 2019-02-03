@@ -157,16 +157,20 @@ Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
 {: .full}
 
 Si on a :
-$$erreur(\delta t)= A * {\delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
+$$erreur(\Delta t)= A * {\Delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
 alors :
-$$log(erreur(\delta t))= p * log(\delta t) + log(A)$$.
-Ainsi, si on trace $$log(erreur(\delta t))$$ en fonction de $$log(\delta t)$$, on obtient une droite de coefficient directeur $$p$$.
+$$log(erreur(\Delta t))= p * log(\Delta t) + log(A)$$.
+Ainsi, si on trace $$log(erreur(\Delta t))$$ en fonction de $$log(\Delta t)$$, on obtient une droite de coefficient directeur $$p$$.
 
 $$p$$ est appelé l'ordre du schéma.
+
+Comme toutes les courbes d'erreurs sont parallèles à la courbe O({\Delta t}^2) , elles ont la même pente de 2 donc la méthode du point milieu est d'ordre 2.
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
 ### Question a
+
+#### test
 
 {% highlight matlab linenos %}
 
@@ -258,7 +262,7 @@ end
 
        // définition de la fonction g telle que x_{n+1} est solution de g(x_{n+1})=0
        deff('[y]=g(x)','y=x-x0-(h/2)* (f(time,x)+f(time+h,x0))');
-       x0=fsolve(x0, g); // le x0 de gauche joue le role de x_{n+1}, celui de celui de x_n
+       x0=fsolve(x0, g); // le x0 de gauche joue le role de x_{n+1}, celui de droite celui de x_n
        time=time+h;
        // stockage des résultats
        t($+1)=time;
