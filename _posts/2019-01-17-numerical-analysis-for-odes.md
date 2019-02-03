@@ -12,7 +12,7 @@ author_profile: false
 
 # Partie 1 : dynamique des populations
 
-<u> ## Cas d’une seule population : l’équation logistique </u>
+## Cas d’une seule population : l’équation logistique
 
 ### Question a
 
