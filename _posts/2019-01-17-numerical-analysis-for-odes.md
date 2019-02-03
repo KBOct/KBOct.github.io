@@ -10,7 +10,7 @@ mathjax: true
 author_profile: false
 ---
 
-# Partie 1 : dynamique des populations
+# Partie 1 : Dynamique des populations
 
 ## Cas d’une seule population : l’équation logistique
 
@@ -139,9 +139,9 @@ cpt=1;
    end
 
 {% endhighlight %}
-affichage de l'erreur en norme logarithmique. Si on a
-erreur(deltat)= A*deltat^p pour un certain A et un certain p, alors
-log(erreur(deltat))=p*log(deltat)+ log(A)
+Ici on affiche l'erreur \n en norme logarithmique calculée ci-dessus. Si on a
+erreur(deltat)= A * deltat^p pour un certain A et un certain p, alors
+log(erreur(deltat))= p * log(deltat) + log(A)
 ainsi si on trace log(erreur(deltat)) en fonction de log(deltat), on obtient une
 droite de coefficient directeur p. p est appelé l'ordre du schéma.
 
