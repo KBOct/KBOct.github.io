@@ -64,8 +64,8 @@ endfunction
 
 {% endhighlight %}
 TEXTE
-{% highlight matlab linenos %}
 
+```matlab
 //Schéma d'Euler modifié dit méthode du point milieu
 function [t,x]=EulerModifie(f,tini,xini,h,N)
 if size(xini,1) < size(xini,2) then
@@ -80,8 +80,8 @@ end
        x(:,j+1)=x(:,j)+h*f(t(j)+(h/2),x(:,j)+(h/2)* f(t(j),x(:,j)))
    end
 endfunction
+```
 
-{% endhighlight %}
 TEXTE
 {% highlight matlab linenos %}
 
