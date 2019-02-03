@@ -16,7 +16,7 @@ author_profile: false
 
 ### Question a
 
-On souhaite résoudre l'equation  : $$\left\{ \begin{array}{cl}
+On souhaite résoudre l'equation  : $$\left\{ \begin{array}{l}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
 x(0)=x^{ini} \end{array}
 \right\label{eq:1}$$
@@ -32,9 +32,11 @@ $$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
 en posant $$g\left(t\right)=a$$ et $$\ h\left(x\right)=x\left(1-x\right)$$. $$f$$ est donc à variables séparées.
 
 Puisque $$x(t)\neq 0\ et\ x(t)\neq 1\ $$on peut diviser les deux membres de l'équation par $$x\left(1-x\right)$$, on obtient :
+
 $$\frac{dx}{x(1-x)}=a\ dt$$
 
 En intégrant les deux membres, on obtient :
+
 $$\int{\frac{dx}{x(1-x)}}=\int{a\ dt}$$
 
 or par décomposition en éléments simples on obtient :
