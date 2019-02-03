@@ -101,9 +101,11 @@ endfunction
 function y =xconstante2(t)
    y=0;
 endfunction
-
-
 {% endhighlight %}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1_1.jpg)
+{: .full}
+
 ### Question c
 {% highlight matlab linenos %}
 
@@ -113,37 +115,41 @@ xtn3=zeros(1,N+1);
 xtn4=zeros(1,N+1);
 
 cpt=1;
-       for deltat=[0.1, 0.01, 0.001]
-       N=T/deltat;
-       [tps1,xa1]= EulerModifie(f,0,0.1,deltat,N);
-       [tps2,xa2]= EulerModifie(f,0,0.5,deltat,N);
-       [tps3,xa3]= EulerModifie(f,0,1.1,deltat,N);
-       [tps4,xa4]= EulerModifie(f,0,1.5,deltat,N);
 
-       for i =1:N+1
-       xtn1(i)=population(tps1(i),0.1,a);
-       xtn2(i)=population(tps2(i),0.5,a);
-       xtn3(i)=population(tps3(i),1.1,a);
-       xtn4(i)=population(tps4(i),1.5,a);
-       end
+for deltat=[0.1, 0.01, 0.001]
+  N=T/deltat;
+  [tps1,xa1]= EulerModifie(f,0,0.1,deltat,N);
+  [tps2,xa2]= EulerModifie(f,0,0.5,deltat,N);
+  [tps3,xa3]= EulerModifie(f,0,1.1,deltat,N);
+  [tps4,xa4]= EulerModifie(f,0,1.5,deltat,N);
 
+  for i =1:N+1
+    xtn1(i)=population(tps1(i),0.1,a);
+    xtn2(i)=population(tps2(i),0.5,a);
+    xtn3(i)=population(tps3(i),1.1,a);
+    xtn4(i)=population(tps4(i),1.5,a);
+  end
 
-       // stockage du pas de temps et de l'erreur correspondante
-       DT(cpt)=deltat;
-       erreur1(cpt)=max(abs(xtn1-xa1))
-       erreur2(cpt)=max(abs(xtn2-xa2))
-       erreur3(cpt)=max(abs(xtn3-xa3))
-       erreur4(cpt)=max(abs(xtn4-xa4))
+  // stockage du pas de temps et de l'erreur correspondante
+  DT(cpt)=deltat;
 
-       cpt=cpt+1;
-   end
+  erreur1(cpt)=max(abs(xtn1-xa1))
+  erreur2(cpt)=max(abs(xtn2-xa2))
+  erreur3(cpt)=max(abs(xtn3-xa3))
+  erreur4(cpt)=max(abs(xtn4-xa4))
+
+cpt=cpt+1;
+
+end
 
 {% endhighlight %}
 
-Ici on affiche l'erreur en norme logarithmique calculée ci-dessus. Si on a
-$$erreur(\delta t)= A * {\delta t}^p$$ pour un certain $$A$$ et un certain $$p$$, alors :
-$$log(erreur(\delta t))= p * log(\delta t) + log(A)$$
-ainsi si on trace $$log(erreur(\delta t))$$ en fonction de $$log(\delta t)$$, on obtient une droite de coefficient directeur $$p$$.
+Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
+Si on a :
+$$erreur(\delta t)= A * {\delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
+alors :
+$$log(erreur(\delta t))= p * log(\delta t) + log(A)$$.
+Ainsi, si on trace $$log(erreur(\delta t))$$ en fonction de $$log(\delta t)$$, on obtient une droite de coefficient directeur $$p$$.
 
 $$p$$ est appelé l'ordre du schéma.
 
