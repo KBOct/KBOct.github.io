@@ -163,8 +163,7 @@ Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
 Si on a :
 $$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$
 ^
-et un certain $$p$$, alors :
-^
+et un certain $$p$$, alors : ^
 $$log(erreur(\Delta t))= p * log(\Delta t) + log(A)$$.
 Ainsi, si on trace $$log(erreur(\Delta t))$$ en fonction de $$log(\Delta t)$$, on obtient une droite de coefficient directeur $$p$$.
 
