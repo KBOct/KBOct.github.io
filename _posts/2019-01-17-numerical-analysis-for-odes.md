@@ -12,14 +12,26 @@ author_profile: false
 
 # Partie 1 : Dynamique des populations
 
+Dans cette première partie, on s’intéresse à des modèles de dynamique des populations, qui servent à
+décrire l’évolution conjointe de plusieurs espèces ou populations (d’animaux ou de cellules par exemple).
+
 ## Cas d’une seule population : l’équation logistique
 
-### Question a
-
-On souhaite résoudre l'equation  : $$\left\{ \begin{array}{l}
+Si l’on s’intéresse au nombre d’individus $$x$$ et en particulier à sa dynamique temporelle, un modèle naïf
+est donné par $$x′ = bx − dx$$ où $$b$$ et $$d$$ sont respectivement les taux de reproduction et de mort des
+individus. Si $$b − d > 0$$, le nombre d’individus tend vers $$+\inf$$ exponentiellement, et si $$b − d < 0$$, la
+population s’éteint. Celui-ci ne permet donc pas de prendre en compte toutes les situations biologiques
+où la population ne s’éteint pas sans pour autant se multiplier à l’infini.
+Le modèle logistique consiste à garder un comportement de croissance exponentielle lorsqu’il y a peu
+d’individus (il y a assez de ressources pour tout le monde !), avec limitation lorsque le nombre d’individus
+s’approche d’une valeur prescrite (il y alors trop d’individus pour la quantité limitée d’espace
+et/ou de ressources à disposition). Dans la suite, on normalise cette valeur prescrite à 1.
+Ce modèle s’écrit : $$\left\{ \begin{array}{l}
 x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
 x(0)=x^{ini} \end{array}
 \right.\label{eq:1}$$
+
+### Résoudre analytiquement l’équation par la méthode de séparation des variables
 
 Cherchons d'abord les solutions constantes. Si $$x(t)\ =\ C\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ alors $$x'(t)\ =\ 0$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ et l'EDO devient $$0\ =\ aC(1-C)$$.
 
@@ -50,7 +62,7 @@ $$x(t)=\frac{x^{ini}}{x^{ini}+({1-x}^{ini})e^{-at}}$$
 
 ### Question b
 
-Définition de la fonction de population solution non constante de l'EDO (1), obtenue par résolution analytique :
+Définition de la fonction de population solution non constante de l'EDO (1), obtenue précédemment par résolution analytique :
 
 {% highlight matlab linenos %}
 function x=population(t,xini,a)
