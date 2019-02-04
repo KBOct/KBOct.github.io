@@ -158,7 +158,8 @@ end
 Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2.jpg)
-{: .full}
+{:class="img-responsive"}
+<!-- {: .full} -->
 
 Si on a :
 $$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$ \\
