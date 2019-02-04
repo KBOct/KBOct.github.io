@@ -161,8 +161,7 @@ Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
 {: .full}
 
 Si on a :
-$$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$
-^
+$$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$ \\
 et un certain $$p$$, alors :
 ^
 $$log(erreur(\Delta t))= p * log(\Delta t) + log(A)$$.
