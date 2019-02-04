@@ -157,14 +157,14 @@ Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
 {: .full}
 
 Si on a :
-$$erreur(\Delta t)= A * {\Delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
+$$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$ et un certain $$p$$,
 alors :
 $$log(erreur(\Delta t))= p * log(\Delta t) + log(A)$$.
 Ainsi, si on trace $$log(erreur(\Delta t))$$ en fonction de $$log(\Delta t)$$, on obtient une droite de coefficient directeur $$p$$.
 
 $$p$$ est appelé l'ordre du schéma.
 
-Comme toutes les courbes d'erreurs sont parallèles à la courbe O({\Delta t}^2) , elles ont la même pente de 2 donc la méthode du point milieu est d'ordre 2.
+Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^2)$$ , elles ont la même pente de 2 donc la méthode du point milieu est d'ordre 2.
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
@@ -277,7 +277,7 @@ endfunction
 {% highlight matlab linenos %}
 
 
-// Changement de paramètres à cause d'erreurs générées par les paramètres de l'énoncé
+// Paramètres
 T = 5000;
 deltat = 0.1;
 t0=0;
