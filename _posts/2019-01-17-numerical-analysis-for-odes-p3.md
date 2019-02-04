@@ -1,5 +1,5 @@
 ---
-title: "Numerical Analysis for Ordinary Differential Equations : Red Blood Cell agglomeration (French)"
+title: "Numerical Analysis for Ordinary Differential Equations : Red Blood Cell agglomeration (French) - Part 3"
 date: 2019-01-17
 categories: [numerical analysis, scilab]
 tags: [numerical analysis, ode, scilab]
