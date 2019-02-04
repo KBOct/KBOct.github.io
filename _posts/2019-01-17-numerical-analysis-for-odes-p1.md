@@ -69,11 +69,6 @@ function [y]= f(t,x)
    y=a*x*(1-x);
 endfunction
 
-{% endhighlight %}
-TEXTE
-
-{% highlight matlab linenos %}
-
 //Schéma d'Euler modifié dit méthode du point milieu
 function [t,x]=EulerModifie(f,tini,xini,h,N)
 if size(xini,1) < size(xini,2) then
@@ -90,7 +85,9 @@ end
 endfunction
 
 {% endhighlight %}
-TEXTE
+
+Puis on définit les solutions constantes :
+
 {% highlight matlab linenos %}
 
 //paramètres
