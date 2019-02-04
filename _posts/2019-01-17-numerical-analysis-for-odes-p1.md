@@ -8,6 +8,7 @@ header:
 excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab. This was my Bachelor's thesis project for which I got a 18/20 (Grade A)"
 mathjax: true
 author_profile: false
+toc : true
 ---
 
 # Partie 1 : Dynamique des populations
