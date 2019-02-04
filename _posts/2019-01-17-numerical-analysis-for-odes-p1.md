@@ -110,7 +110,8 @@ endfunction
 Solutions de l'EDO (1) et leurs approximations :
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
-{: .full}
+{:class="img-responsive"}
+<!-- {: .full} -->
 
 Les solutions tendent toutes vers la solution constante de valeur 1 et l'approximation par la méthode du point milieu de chacune des solutions est très bonne avec les paramètres utilisés .
 
