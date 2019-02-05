@@ -176,9 +176,7 @@ Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
-### Question a
-
-#### test
+### Analyse théorique
 
 {% highlight matlab linenos %}
 
@@ -199,6 +197,8 @@ endfunction
 {% endhighlight %}
 
 ### Question b
+
+IMAGE 3
 
 {% highlight matlab linenos %}
 
