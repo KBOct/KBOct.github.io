@@ -20,7 +20,7 @@ Le but de cette partie est d’étudier un modèle où deux espèces sont en com
 Quand $$b_1=b_2=0$$ :
 
 $$ (2) \Leftrightarrow  \left\{ \begin{array}{c}
-\prime{x}_1 \left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
+x^\prime_1 \left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
 \prime{x}_2 \left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
 \left(x_1(0),x_2(0)\right)=(x^{ini}_1,x^{ini}_2) \end{array}
 \right.$$
