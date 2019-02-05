@@ -54,6 +54,11 @@ title("Champ de vecteurs associé au premier jeu de paramètres",'fontsize',2)
 
 {% endhighlight %}
 
+Pour les premiers paramètres, on obtient le champ de vecteurs associé à G suivant :
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-1.jpg)
+{:class="img-responsive"}
+
 {% highlight matlab linenos %}
 
 [a1,b1,a2,b2]=(0.5,0.8,1,0.6);
@@ -65,11 +70,6 @@ title("Champ de vecteurs associé au deuxième jeu de paramètres",'fontsize',2)
 
 {% endhighlight %}
 
-Pour les premiers paramètres, on obtient le champ de vecteurs associé à G suivant :
-
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-1.jpg)
-{:class="img-responsive"}
-
 Pour le deuxième jeu de paramètres, on a :
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-2.jpg)
@@ -77,7 +77,7 @@ Pour le deuxième jeu de paramètres, on a :
 
 ### Question d
 
-Dans le premier cas, le point attracteur est (0;1). Dans le deuxième cas, le point attracteur est (3/8;3/4). Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
+Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{8} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
 
 ### Question e
 
