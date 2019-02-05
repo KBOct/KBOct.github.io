@@ -30,6 +30,7 @@ et on retrouve le modèle logistique de la première partie. Les espèces n'ont 
 
 Une fonction $$G : \mathbb{R} \times  \mathbb{R}^2 \rightarrow \mathbb{R}^2$$ telle que $$({x_1}^′(t), {x_2}^′(t)) = G(t, (x_1(t), x_2(t)))$$
 est donnée par :
+
 $$G(t,\left(\genfrac{}{}{0pt}{}{x_1(t)}{x_2(t)}\right))=\left(\genfrac{}{}{0pt}{}{a_1x_1(t)(1-{x_1\left(t\right)-b}_1x_2(t))}{a_2x_2(t)(1-{x_2\left(t\right)-b}_2x_1(t))}\right)$$
 
 ### Question c
