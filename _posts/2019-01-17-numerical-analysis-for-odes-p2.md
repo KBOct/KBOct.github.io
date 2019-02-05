@@ -13,7 +13,7 @@ toc : true
 
 # Partie 2 : Dynamique des populations en compétition
 
-Le but de cette partie est d’étudier un modèle où deux espèces sont en compétition. Dans la suite $$x_1$$ et $$x_2$$ correspondent à la population des deux espèces. On considère le modèle : 
+Le but de cette partie est d’étudier un modèle où deux espèces sont en compétition. Dans la suite $$x_1$$ et $$x_2$$ correspondent à la population des deux espèces. On considère le modèle :
 
 $$ (3) \left\{ \begin{array}{c}
 x^\prime_1 \left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)-b_2x_1\left(t\right)) \\
@@ -30,9 +30,6 @@ x^\prime_1 \left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
 x^\prime_2 \left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
 \left(x_1(0),x_2(0)\right)=(x^{ini}_1,x^{ini}_2) \end{array}
 \right.$$
-
-
-<!-- \label{"1"}$$ -->
 
 et on retrouve le modèle logistique de la première partie. Les espèces n'ont aucune influence mutuelle.
 
