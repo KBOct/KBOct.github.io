@@ -19,10 +19,11 @@ Le but de cette partie est d’étudier un modèle où deux espèces sont en com
 
 Quand $$b_1=b_2=0$$ :
 
-$$ (2) \Leftrightarrow  \left\{ \begin{array}{c}
-\text{ } {x^'}_1\left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
-\text{ } {x^'}_2\left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
-{(x}_1\left(0\right),x_1\left(0\right))=(x^{ini}_1,x^{ini}_2) \end{array}
+$$ (2) \Leftrightarrow  \left\{
+\begin{array}{c}
+ {x^'}_1 \left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
+ {x^'}_2 \left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
+ {(x}_1 \left(0\right),x_1\left(0\right))=(x^{ini}_1,x^{ini}_2) \end{array}
 \right.$$
 
 <!-- \label{"1"}$$ -->
@@ -34,7 +35,7 @@ et on retrouve le modèle logistique de la première partie. Les espèces n'ont 
 Une fonction $$G : \mathbb{R} \times  \mathbb{R}^2 \rightarrow \mathbb{R}^2$$ telle que $$({x_1}^′(t), {x_2}^′(t)) = G(t, (x_1(t), x_2(t)))$$
 est donnée par :
 
-$$G(t,\left(\genfrac{}{}{0pt}{}{x_1(t)}{x_2(t)}\right))=\left(\genfrac{}{}{0pt}{}{a_1x_1(t)(1-{x_1\left(t\right)-b}_1x_2(t))}{a_2x_2(t)(1-{x_2\left(t\right)-b}_2x_1(t))}\right)$$
+$$G\left(t,\left(\genfrac{}{}{0pt}{}{x_1(t)}{x_2(t)}\right)\right)=\left(\genfrac{}{}{0pt}{}{a_1x_1(t)(1-{x_1\left(t\right)-b}_1x_2(t))}{a_2x_2(t)(1-{x_2\left(t\right)-b}_2x_1(t))}\right)$$
 
 ### Question c
 
