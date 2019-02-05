@@ -19,17 +19,13 @@ Le but de cette partie est d’étudier un modèle où deux espèces sont en com
 
 Quand $$b_1=b_2=0$$ :
 
-$$ 2 =  \left\{ \begin{array}{c}
-x_1\left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
-x_2\left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
-{(x}_1\left(0\right),x_1\left(0\right))=(x^{ini}_1,x^{ini}_2) \end{array}
-\right.\label{eq:1}$$
-
-<!-- $$ 2 =  \left\{ \begin{array}{c}
-{x^'}_1\left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
+$$ (2) \Leftrightarrow  \left\{ \begin{array}{c}
+\1em {x^'}_1\left(t\right)=a_1x_1\left(t\right)(1-x_1\left(t\right)) \\
 {x^'}_2\left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
 {(x}_1\left(0\right),x_1\left(0\right))=(x^{ini}_1,x^{ini}_2) \end{array}
-\right.\label{eq:1}$$ -->
+\right.$$
+
+<!-- \label{"1"}$$ -->
 
 et on retrouve le modèle logistique de la première partie. Les espèces n'ont aucune influence mutuelle.
 
