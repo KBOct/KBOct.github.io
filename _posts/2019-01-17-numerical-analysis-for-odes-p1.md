@@ -178,11 +178,21 @@ Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^
 
 ### Analyse théorique
 
-{% highlight matlab linenos %}
+#### Question a
+rajouter TEX
 
-//-----------------------------------------------------
-// Analyse numérique
-//-----------------------------------------------------
+#### Question b
+rajouter TEX
+
+#### Question c
+rajouter TEX
+
+### Analyse numérique
+
+#### Question a
+voir CR
+
+{% highlight matlab linenos %}
 
 function y=F(t,x)
    y=zeros(2,1);
@@ -198,10 +208,9 @@ endfunction
 
 ### Question b
 
-IMAGE 3
+Solutions graphiques du système différentiel ordinaire (2) pour les schémas d'Euler explicite et du point milieu :
 
 {% highlight matlab linenos %}
-
 
 function [TPS,X]= EulerExplicite(f,t0,x0,dt,T)
    // initialisation
@@ -236,7 +245,13 @@ Xini=[1/4;3/4]
 [TPSEM,XEM]= EulerModifie(F,t0,Xini,deltat,N);
 {% endhighlight %}
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3.jpg)
+{:class="img-responsive"}
+
 ### Question c
+
+Le schéma du point milieu préserve mieux la périodicité (comme en atteste la figure précédente) que le schéma d'Euler explicite. En effet, la solution approchée par Euler, une fois implémentée dans la définition de la fonction φ (voir code) fait qu'elle n'est pas constante contrairement à ce qui a été démontré précédemment (et des changements de paramètres n'influent que très peu sur le résultat obtenu et rendent les calculs très coûteux, ce qui justifie le choix du changement de schéma).
+Par contre en calculant $$\phi$$ par la méthode du point milieu, on obtient une valeur "quasi-constante" :
 
 {% highlight matlab linenos %}
 for j=1:size(XEE,2)
@@ -249,7 +264,12 @@ end
 
 {% endhighlight %}
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/4.jpg)
+{:class="img-responsive"}
+
 ### Question d
+
+On retrace l'approximation des solutions par le schéma de Crank-Nicolson cette fois-ci :
 
 {% highlight matlab linenos %}
 
@@ -277,13 +297,16 @@ end
        x(:,$+1)=x0;
    end
 endfunction
-
 {% endhighlight %}
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/5.jpg)
+{:class="img-responsive"}
 
 ### Question e
-{% highlight matlab linenos %}
 
+L'approximation des solutions est meilleure avec le nouveau schéma. L'erreur faite sur la valeur constante de φ est infime par rapport à celle du point milieu avec le schéma de Crank-Nicolson, même avec T=5000 :
+
+{% highlight matlab linenos %}
 
 // Paramètres
 T = 5000;
@@ -295,3 +318,6 @@ Xini=[1/4;3/4]
 [TPSCN,XCN]= CrankNicolson(F,t0,Xini,deltat,T);
 
 {% endhighlight %}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/6.jpg)
+{:class="img-responsive"}
