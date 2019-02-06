@@ -49,7 +49,7 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 
 $$\begin{array}{l}
 I : \quad \mathbb{R}^{+}&\to\ \quad \mathbb{R}\\
-\quad d &\mapsto \quad (\frac{c}{d}) \ln  (\frac{d}{r})
+\quad d &\mapsto (\frac{c}{d}) \ln  (\frac{d}{r})
 \end{array}
 $$
 
@@ -95,7 +95,7 @@ x^0_1=\ x^{ini}_1 \\
 x^1_1=\ x^0_1+\Delta tv^{ini}_1 \\
 w^k_1=I\left(x^k_2-x^k_1\right)-I\left(x^k_1-x^k_0\right) \\
 x^{k+1}_1={2x}^k_1-x^{k-1}_1+{\Delta t}^2w^k_1-\alpha \Delta t(x^k_1-x^{k-1}_1) \end{array}
-\right.$$ 
+\right.$$
 
 $$\left\{ \begin{array}{c}
 x^0_2=\ x^{ini}_2 \\
