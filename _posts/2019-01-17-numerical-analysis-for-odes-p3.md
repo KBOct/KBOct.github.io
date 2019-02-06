@@ -44,6 +44,8 @@ I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
 d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$
 
+$$f_2:\begin{cases}\mathbb{N}\to \mathbb{R}\\x\mapsto x^3\end{cases}$$
+
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
 Les forces exercées sur l’hématie i comportent
