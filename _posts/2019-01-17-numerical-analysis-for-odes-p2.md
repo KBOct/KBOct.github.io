@@ -83,9 +83,11 @@ Pour le deuxième jeu de paramètres, on a :
 
 Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{4} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
 
-### Question e
+### Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres
 
 Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres :
+
+Les coordonnées du premier attracteur correspond aux asymptotes de chacune des courbes représentant les évolutions respectives de $$x_1$$ et $$x_2$$ .
 
 {% highlight matlab linenos %}
 
@@ -143,7 +145,7 @@ title("Evolution de x2 en fonction du temps pour le premier jeu de paramètres",
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-3.jpg)
 {:class="img-responsive"}
 
-Les coordonnées du premier attracteur correspond aux asymptotes de chacune des courbes représentant les évolutions respectives de $$x_1$$ et $$x_2$$ .
+Pour le deuxième jeu, on remarque la même chose, une asymptote en $$x_1\ \ =\ 3/8\ $$ et $$\ x_2\ =\ 3/4 $$ qui correspondent aux coordonnées du deuxième attracteur :
 
 {% highlight matlab linenos %}
 
@@ -179,5 +181,3 @@ title("Evolution de x2 en fonction du temps pour le deuxième jeu de paramètres
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-4.jpg)
 {:class="img-responsive"}
-
-Pour le deuxième jeu, on remarque la même chose, une asymptote en $$x_1\ \ =\ 3/8\ $$ et $$\ x_2\ =\ 3/4 $$ qui correspondent aux coordonnées du deuxième attracteur :

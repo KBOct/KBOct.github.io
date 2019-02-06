@@ -5,7 +5,7 @@ categories: [numerical analysis, scilab]
 tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
-excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab. This was my Bachelor's thesis project for which I got a 18/20 (Grade A)"
+excerpt: "Third and last part of the series on the Red Blood Cell agglomeration model through Numerical Analysis of Ordinary Differential Equations"
 mathjax: true
 author_profile: false
 toc : true
@@ -13,8 +13,25 @@ toc : true
 
 # Partie 3 : Modélisation des globules rouges
 
-Dans cette première partie, on s’intéresse à des modèles de dynamique des populations, qui servent à
-décrire l’évolution conjointe de plusieurs espèces ou populations (d’animaux ou de cellules par exemple).
+## Description du modèle
+
+On considère M+2 globules rouges (aussi appelés hématies), représentés par des particules ponctuelles placées sur l’intervalle $$[0, 1]$$. Chaque globule rouge subit l’influence de ses deux voisins, sauf les deux 3 globules des extrémités, qui sont placés respectivement en 0 et en 1. On note $$x_i(t)$$ la position de l’hématie $$i$$ au temps $$t$$. L’indice varie entre $$0$$ et $$M + 1$$.
+On a donc :
+$$0 = x_0(t) < x_1(t) < ... < x_M(t) \lt< x_{M+1}(t) = 1$$
+
+La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers 0 lorsque cette distance tend vers l’infini. De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur r, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie. Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers 0 à l’infini, qui sera positive pour une distance d > r et négative pour une distance $$d < r$$.
+On choisit ici la fonction suivante :
+
+$$ I : \begin{array}{c} \mathbb{R}^+ \rightarrow \mathbb{R} \\
+d \mapsto \frac{c}{d} \ln \left\( \frac{d}{r}\right)  \end{array}
+\right.$$
+
+
+où $$c$$ est un paramètre qui caractérise l’intensité de la force. Les forces exercées sur l’hématie i comportent
+donc la force exercée par l’hématie i + 1, qui est $$I(x_{i+1 = − xi)$$, la force exercée par l’hématie
+i − 1, qui est −I(xi − xi−1), ainsi qu’une force de frottement qui est proportionnelle à la vitesse de
+l’hématie, et s’oppose au mouvement de la particule : −x˙i, où est appelé coefficient de frottement.
+Les équations du mouvement associées à ce système s’écrivent donc :
 
 ## Cas d’une seule population : l’équation logistique
 
