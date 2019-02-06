@@ -41,7 +41,7 @@ d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
 
 I : $$\begin{align*}
 \mathbb{R}^+ &\rightarrow \mathbb{R} \\
-d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
+d &\mapsto j
 \end{align*}$$
 
 
