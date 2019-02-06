@@ -48,7 +48,7 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$ -->
 
 $$I : \begin{array}{l}
-\mathbb{R}^{+}&\to\ \quad mathbb{R}\\
+\mathbb{R}^{+}&\to\ \quad \mathbb{R}\\
 d &\mapsto \quad (\frac{c}{d}) \ln  (\frac{d}{r})
 \end{array}
 $$
