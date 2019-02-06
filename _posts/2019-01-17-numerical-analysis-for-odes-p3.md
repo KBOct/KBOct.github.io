@@ -41,7 +41,7 @@ d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
 
 $$\begin{align*}
 I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
-d &\mapsto \frac{c}{d}  \left\( \frac{d}{r}\right)
+d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$
 
 
