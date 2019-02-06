@@ -29,9 +29,9 @@ De plus, pour prendre en compte la taille des globules, on considère que la for
 
 On choisit ici la fonction suivante :
 
-$$\begin{align*}
+I : $$\begin{align*}
 A&\rightarrow B\\
-a&\mapsto b
+a&\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
 \end{align*}$$
 
 $$\begin{align*}
