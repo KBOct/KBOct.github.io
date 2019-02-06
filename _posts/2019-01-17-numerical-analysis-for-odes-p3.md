@@ -90,7 +90,7 @@ On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 1
 
 ### Equations du schéma numérique pour M=3
 
-Nous allons nous interesser au cas particulier du modèle restreint à 3 hématies $(M =3)$. Les équations sont donc les suivantes :
+Nous allons nous interesser au cas particulier du modèle restreint à 3 hématies $$(M =3)$$. Les équations sont donc les suivantes :
 
 $$\left\{ \begin{array}{c}
 x^0_1=\ x^{ini}_1 \\
@@ -113,7 +113,7 @@ w^k_3=I\left(x^k_4-x^k_3\right)-I\left(x^k_3-x^k_2\right) \\
 x^{k+1}_3={2x}^k_3-x^{k-1}_3+{\Delta t}^2w^k_3-\alpha \Delta t(x^k_3-x^{k-1}_3) \end{array}
 \right.$$
 
-Implémenter le schéma dans le cas où M = 3.
+### Implémentation du schéma dans le cas où $$M = 3$$
 
 On commencera par implémenter la fonction I, puis on codera une fonction TroisGlobules qui prend en argument, outre les paramètres définis
 plus haut, les données initiales colonnes $$x^{ini}$$ et $$v^{ini}$$, et qui renvoie comme résultats la discrétisation en temps $$TPS$$ et le tableau suivant :
