@@ -13,15 +13,18 @@ toc : true
 
 # Partie 3 : Modélisation des globules rouges
 
+NB : **Cette partie est indépendante des précédentes.** On s’intéresse à la modélisation du phénomène d’agglomération des globules rouges. Ces derniers vont être modélisés par des particules ponctuelles
+interagissant par une force d’interaction liée à la distance entre deux globules rouges voisins.
+
 ## Description du modèle
 
-On considère $$M+2$$ globules rouges (aussi appelés hématies), représentés par des particules ponctuelles placées sur l’intervalle $$[0, 1]$$. Chaque globule rouge subit l’influence de ses deux voisins, sauf les deux globules des extrémités, qui sont placés respectivement en 0 et en 1. On note $$x_i(t)$$ la position de l’hématie $$i$$ au temps $$t$$. L’indice varie entre $$0$$ et $$M + 1$$.
+On considère $$M+2$$ globules rouges (aussi appelés hématies), représentés par des particules ponctuelles placées sur l’intervalle $$[0, 1]$$. Chaque globule rouge subit l’influence de ses deux voisins, sauf les deux globules des extrémités, qui sont placés respectivement en $$0$$ et en $$1$$. On note $$x_i(t)$$ la position de l’hématie $$i$$ au temps $$t$$. L’indice varie entre $$0$$ et $$M + 1$$.
 
 On a donc :
 
 $$0 = x_0(t) < x_1(t) < ... < x_M(t) < x_{M+1}(t) = 1$$
 
-La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers $$0$$ lorsque cette distance tend vers l’infini. De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie. Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
+La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers $$0$$ lorsque cette distance tend vers l’infini. \\ De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie.\\ Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
 
 On choisit ici la fonction suivante :
 
@@ -36,282 +39,55 @@ donc la force exercée par l’hématie $$i + 1$$, qui est $$I(x_{i+1} - x_i)$$,
 
 Les équations du mouvement associées à ce système s’écrivent donc :
 
-$$ \forall \i \ = 1,\dots, M,  \left\{ \begin{array}{c}
+$$ \forall \i \ = 1,\dots, M,  \left\{ \begin{array}{l}
 m \ddot{x_i} = I(x_{i+1} - x_i) - I(x_i - x_{i-1}) -\alpha \dot{x_i}\ \\
-x_i \left(0\right)=x^i_ini \\
-x^\prime_i \left(0\right)=v^i_ini \end{array}
+x_i \left(0\right)=x^i_{ini} \\
+x^\prime_i \left(0\right)=v^i_{ini} \end{array}
 \right.$$
 
-
-##  Equations du schéma numérique pour M=3
-
+où $$m$$ est la masse d’un globule rouge (prise égale à $$1$$ dans la suite).
 
 
-### Résolution analytique de l’équation par la méthode de séparation des variables
 
-Cherchons d'abord les solutions constantes. Si $$x(t)\ =\ C\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ alors $$x'(t)\ =\ 0$$ pour tout $$t\mathrm{\ }\in \mathrm{\ }\mathbb{R}$$ et l'EDO devient $$0\ =\ aC(1-C)$$.
+## Schéma numérique de base
 
-Par conséquent $$C\ =\ 0\ ou\ C=1$$. Mais, la fonction constante $$x_1(t)\ =\ 0\ $$ne vérifie pas  $$x_1(0)\ =\ x^{ini}>0$$ donc $$x_2(t)\ =\ 1$$ est la seule solution sur $$\mathbb{R}$$ de l'EDO avec la condition initiale $$x(0)\ =\ x^{ini}>0$$.
+### Equations du schéma numérique pour M=3
 
-Soit $$x$$ une solution (non constante) sur un intervalle $$I$$ de $$\mathbb{R}$$ contenant 0 et sur lequel $$x(t)\ \in \ \left]0,1\right[$$  pour tout $$t\ \in \ I$$. Alors on peut écrire :
-$$f(t,x(t))=\frac{d}{dt}x\left(t\right)=ax\left(t\right)\left(1-x\left(t\right)\right)$$
-où $$f$$ est la fonction second membre de l'EDO qui peut être écrite :
-$$f(t,x)=\frac{dx}{dt}=ax(1-x)=g(t)h(x)$$
-en posant $$g\left(t\right)=a$$ et $$\ h\left(x\right)=x\left(1-x\right)$$. $$f$$ est donc à variables séparées.
+On souhaite simuler numériquement le modèle précédent. On commence par définir T le temps final
+de la simulation. On discrétise l’intervalle [0, T] en K intervalles égaux [tk, tk+1] pour k allant de 0 à
+K − 1 avec tk = kh, et h = T
+K.
+On s’intéresse au schéma suivant (k désigne un entier positif ou nul)
+
+
+x0
+i = xini
+i ,
+x1
+i = x0
+i + tvini
+i ,
+wk
+i = I(xk
+i+1 − xk
+i ) − I(xk
+i − xk
+i−1),
+xk+1
+i = 2xk
+i − xk−1
+i + t2wk
+i −t(xk
+i − xk−1
+i ).
+On utilisera les paramètres suivants : K = 1500, t = 0.002,  = 10, c = 0.5, r = 0.004.
 
-Puisque $$x(t)\neq 0\ et\ x(t)\neq 1\ $$on peut diviser les deux membres de l'équation par $$x\left(1-x\right)$$, on obtient :
-
-$$\frac{dx}{x(1-x)}=a\ dt$$
-
-En intégrant les deux membres, on obtient :
-
-$$\int{\frac{dx}{x(1-x)}}=\int{a\ dt}$$
-
-or par décomposition en éléments simples on obtient :
-$$\int{(\frac{1}{x}}+\frac{1}{1-x})\ dx=\int{a\ dt}$$
-
-puis :
-$$ln(\frac{x}{x^{ini}})-ln(\frac{1-x}{1-x^{ini}})=at$$
-
-Donc, pour $$t\ \in \ I$$ :
-$$x(t)=\frac{x^{ini}}{x^{ini}+({1-x}^{ini})e^{-at}}$$
-
-### Question b
-
-Définition de la fonction de population solution non constante de l'EDO (1), obtenue précédemment par résolution analytique :
-
-{% highlight matlab linenos %}
-function x=population(t,xini,a)
-x=xini./(xini+(1-xini)* exp(-a*t));
-endfunction
-
-//f : fonction second membre associée à l'EDO (1)
-function [y]= f(t,x)
-   y=a*x*(1-x);
-endfunction
-
-//Schéma d'Euler modifié dit méthode du point milieu
-function [t,x]=EulerModifie(f,tini,xini,h,N)
-if size(xini,1) < size(xini,2) then
-   xini=xini'
-end
-   t=zeros(1,N+1)
-   x=zeros(length(xini),N+1)
-   t(1)=tini
-   x(:,1)=xini
-   for j = 1:N
-       t(j+1)=t(j)+h
-       x(:,j+1)=x(:,j)+h*f(t(j)+(h/2),x(:,j)+(h/2)* f(t(j),x(:,j)))
-   end
-endfunction
-
-{% endhighlight %}
-
-Puis on définit les solutions constantes :
-
-{% highlight matlab linenos %}
-
-//paramètres
-a = 1.5;
-T = 5;
-deltat = 0.1;
-N=T/deltat;
-t = linspace(0,N,2*(N+1))
-
-//solutions constantes de l'EDO (1)
-function y =xconstante1(t)
-   y=1;
-endfunction
-
-function y =xconstante2(t)
-   y=0;
-endfunction
-{% endhighlight %}
-
-Solutions de l'EDO (1) et leurs approximations :
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
 {:class="img-responsive"}
 <!-- {: .full} -->
 
-Les solutions tendent toutes vers la solution constante de valeur 1 et l'approximation par la méthode du point milieu de chacune des solutions est très bonne avec les paramètres utilisés .
-
-### Question c
-
-Déterminons l'ordre de la méthode du point milieu en traçant l'erreur de consistance en échelle logarithmique :
 
 {% highlight matlab linenos %}
-
-xtn1=zeros(1,N+1);
-xtn2=zeros(1,N+1);
-xtn3=zeros(1,N+1);
-xtn4=zeros(1,N+1);
-
-cpt=1;
-
-for deltat=[0.1, 0.01, 0.001]
-  N=T/deltat;
-  [tps1,xa1]= EulerModifie(f,0,0.1,deltat,N);
-  [tps2,xa2]= EulerModifie(f,0,0.5,deltat,N);
-  [tps3,xa3]= EulerModifie(f,0,1.1,deltat,N);
-  [tps4,xa4]= EulerModifie(f,0,1.5,deltat,N);
-
-  for i =1:N+1
-    xtn1(i)=population(tps1(i),0.1,a);
-    xtn2(i)=population(tps2(i),0.5,a);
-    xtn3(i)=population(tps3(i),1.1,a);
-    xtn4(i)=population(tps4(i),1.5,a);
-  end
-
-  // stockage du pas de temps et de l'erreur correspondante
-  DT(cpt)=deltat;
-
-  erreur1(cpt)=max(abs(xtn1-xa1))
-  erreur2(cpt)=max(abs(xtn2-xa2))
-  erreur3(cpt)=max(abs(xtn3-xa3))
-  erreur4(cpt)=max(abs(xtn4-xa4))
-
-cpt=cpt+1;
-
-end
-
-{% endhighlight %}
-
-Ici on affiche l'erreur en norme logarithmique calculée ci-dessus.
-
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2.jpg)
-{:class="img-responsive"}
-<!-- {: .full} -->
-
-Si on a :
-$$erreur(\Delta t) = A * {\Delta t}^p$$ pour un certain $$A$$ \\
-et un certain $$p$$, alors :
-^
-$$log(erreur(\Delta t))= p * log(\Delta t) + log(A)$$.
-Ainsi, si on trace $$log(erreur(\Delta t))$$ en fonction de $$log(\Delta t)$$, on obtient une droite de coefficient directeur $$p$$.
-
-$$p$$ est appelé l'ordre du schéma.
-
-Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^2)$$ , elles ont la même pente de 2 donc la méthode du point milieu est d'ordre 2.
-
-## Cas de deux populations avec interaction de type proie/prédateur
-
-### Question a
-
-#### test
-
-{% highlight matlab linenos %}
-
-//-----------------------------------------------------
-// Analyse numérique
-//-----------------------------------------------------
-
-function y=F(t,x)
-   y=zeros(2,1);
-   y(1)=x(1)* (1-x(2));
-   y(2)=x(2)* (-1+x(1));
-endfunction
-
-function y=H(x)
-   y=(x(1)-log(x(1)))+(x(2)-log(x(2)));
-endfunction
-
-{% endhighlight %}
-
-### Question b
-
-{% highlight matlab linenos %}
-
-
-function [TPS,X]= EulerExplicite(f,t0,x0,dt,T)
-   // initialisation
-   time=t0;
-   TPS=[t0];
-   X=[x0];
-
-   // boucle en temps
-   while time<T
-       // calcul de x_{n+1} et de t_{n+1}
-       x0=x0+dt*f(time,x0); // le x0 de gauche joue le role de x_{n+1}, celui de droite celui de x_n
-       time=time+dt;  
-
-       // stockage des résultats
-       TPS=[TPS, time];
-       X=[X, x0];
-end
-TPS(:,$)=[];
-X(:,$)=[];
-endfunction
-
-// Paramètres
-
-T = 100;
-deltat = 0.01;
-N=T/deltat;
-t0=0;
-
-Xini=[1/4;3/4]
-
-[TPSEE,XEE]= EulerExplicite(F,t0,Xini,deltat,T);
-[TPSEM,XEM]= EulerModifie(F,t0,Xini,deltat,N);
-{% endhighlight %}
-
-### Question c
-
-{% highlight matlab linenos %}
-for j=1:size(XEE,2)
-   phiEE(j)=H(XEE(:,j));
-end
-
-for j=1:size(XEM,2)
-   phiEM(j)=H(XEM(:,j));
-end
-
-{% endhighlight %}
-
-### Question d
-
-{% highlight matlab linenos %}
-
-//Schéma de Crank-Nicolson
-function [t,x]=CrankNicolson(f,tini,xini,h,T)
-
-if size(xini,1) < size(xini,2) then
-   xini=xini'
-end
-       // initialisation
-   t(1)=tini
-   x(:,1)=xini
-   time=tini;
-   x0=xini;
-   // boucle en temps
-   while time<T
-       // calcul de x_{n+1} et de t_{n+1}
-
-       // définition de la fonction g telle que x_{n+1} est solution de g(x_{n+1})=0
-       deff('[y]=g(x)','y=x-x0-(h/2)* (f(time,x)+f(time+h,x0))');
-       x0=fsolve(x0, g); // le x0 de gauche joue le role de x_{n+1}, celui de droite celui de x_n
-       time=time+h;
-       // stockage des résultats
-       t($+1)=time;
-       x(:,$+1)=x0;
-   end
-endfunction
-
-{% endhighlight %}
-
-
-### Question e
-{% highlight matlab linenos %}
-
-
-// Paramètres
-T = 5000;
-deltat = 0.1;
-t0=0;
-
-Xini=[1/4;3/4]
-
-[TPSCN,XCN]= CrankNicolson(F,t0,Xini,deltat,T);
 
 {% endhighlight %}
