@@ -90,6 +90,8 @@ On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 1
 
 ### Equations du schéma numérique pour M=3
 
+Nous allons nous interesser au cas particulier du modèle restreint à 3 hématies $(M =3)$. Les équations sont donc les suivantes :
+
 $$\left\{ \begin{array}{c}
 x^0_1=\ x^{ini}_1 \\
 x^1_1=\ x^0_1+\Delta tv^{ini}_1 \\
@@ -110,6 +112,24 @@ x^1_3=\ x^0_3+\Delta tv^{ini}_3 \\
 w^k_3=I\left(x^k_4-x^k_3\right)-I\left(x^k_3-x^k_2\right) \\
 x^{k+1}_3={2x}^k_3-x^{k-1}_3+{\Delta t}^2w^k_3-\alpha \Delta t(x^k_3-x^{k-1}_3) \end{array}
 \right.$$
+
+Implémenter le schéma dans le cas où M = 3.
+
+On commencera par implémenter la fonction I, puis on codera une fonction TroisGlobules qui prend en argument, outre les paramètres définis
+plus haut, les données initiales colonnes x^{ini} et v^{ini}, et qui renvoie comme résultats une matricee la discrétisation en temps TPS et le tableau suivant :
+
+TRAJ = $$\left( \begin{array}{cc} 2\tau & 7\phi-frac5{12} \\
+3\psi & \frac{\pi}8 \end{array} \right)
+\left( \begin{array}{c} x \\ y \end{array} \right)
+\mbox{~and~} \left[ \begin{array}{cc|r}
+3 & 4 & 5 \\ 1 & 3 & 729 \end{array} \right]$$
+
+
+$$\left[
+\begin{array}{* {20}c}
+ 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0
+\end{array}
+\right]$$
 
 {% highlight matlab linenos %}
 
