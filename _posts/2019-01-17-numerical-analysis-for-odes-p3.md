@@ -41,8 +41,8 @@ Les équations du mouvement associées à ce système s’écrivent donc :
 
 $$ \forall \ i \ = 1,\dots, M,  \left\{ \begin{array}{l}
 m \ddot{x_i} = I(x_{i+1} - x_i) - I(x_i - x_{i-1}) -\alpha \dot{x_i}\ \\
-x_i \left(0\right)=x^i_{ini} \\
-x^\prime_i \left(0\right)=v^i_{ini} \end{array}
+x_i \left(0\right)=x^{ini}_i \\
+x^\prime_i \left(0\right)=v^{ini}_i \end{array}
 \right.$$
 
 où $$m$$ est la masse d’un globule rouge (prise égale à $$1$$ dans la suite).
