@@ -5,7 +5,7 @@ categories: [numerical analysis, scilab]
 tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
-excerpt: "Third and last part of the series on the Red Blood Cell agglomeration model through Numerical Analysis of Ordinary Differential Equations"
+excerpt: "Third and last part of the series, wherein the actual numerical scheme to model RBC agglomeration is introduced and implemented"
 mathjax: true
 author_profile: false
 toc : true
@@ -15,15 +15,18 @@ toc : true
 
 ## Description du modèle
 
-On considère M+2 globules rouges (aussi appelés hématies), représentés par des particules ponctuelles placées sur l’intervalle $$[0, 1]$$. Chaque globule rouge subit l’influence de ses deux voisins, sauf les deux 3 globules des extrémités, qui sont placés respectivement en 0 et en 1. On note $$x_i(t)$$ la position de l’hématie $$i$$ au temps $$t$$. L’indice varie entre $$0$$ et $$M + 1$$.
-On a donc :
-$$0 = x_0(t) < x_1(t) < ... < x_M(t) \lt< x_{M+1}(t) = 1$$
+On considère $$M+2$$ globules rouges (aussi appelés hématies), représentés par des particules ponctuelles placées sur l’intervalle $$[0, 1]$$. Chaque globule rouge subit l’influence de ses deux voisins, sauf les deux globules des extrémités, qui sont placés respectivement en 0 et en 1. On note $$x_i(t)$$ la position de l’hématie $$i$$ au temps $$t$$. L’indice varie entre $$0$$ et $$M + 1$$.
 
-La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers 0 lorsque cette distance tend vers l’infini. De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur r, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie. Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers 0 à l’infini, qui sera positive pour une distance d > r et négative pour une distance $$d < r$$.
+On a donc :
+
+$$0 = x_0(t) < x_1(t) < ... < x_M(t) < x_{M+1}(t) = 1$$
+
+La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers $$0$$ lorsque cette distance tend vers l’infini. De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie. Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
+
 On choisit ici la fonction suivante :
 
-$$ I : \begin{array}{c} \mathbb{R}^+ \rightarrow \mathbb{R} \\
-d \mapsto \frac{c}{d} \ln \left\( \frac{d}{r}\right)  \end{array}
+$$ I : \begin{array}{rcl} \mathbb{R}^+ \rightarrow \mathbb{R} \\
+d \mapsto \frac{c}{d} \ln \ \left\( \frac{d}{r}\right)  \end{array}
 \right.$$
 
 
