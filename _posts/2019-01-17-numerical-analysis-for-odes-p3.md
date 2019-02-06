@@ -28,7 +28,7 @@ La force d’interaction entre les particules est attractive lorsque la distance
 
 On choisit ici la fonction suivante :
 
-$$ I : \begin{array}{rcl} \mathbb{R}^+ \rightarrow \mathbb{R} \\
+$$ I : \begin{array}{l} \mathbb{R}^+ \rightarrow \mathbb{R} \\
 d \mapsto \frac{c}{d} \ln \ \left\( \frac{d}{r}\right)  \end{array}
 \right.$$
 
