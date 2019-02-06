@@ -116,9 +116,10 @@ x^{k+1}_3={2x}^k_3-x^{k-1}_3+{\Delta t}^2w^k_3-\alpha \Delta t(x^k_3-x^{k-1}_3) 
 Implémenter le schéma dans le cas où M = 3.
 
 On commencera par implémenter la fonction I, puis on codera une fonction TroisGlobules qui prend en argument, outre les paramètres définis
-plus haut, les données initiales colonnes x^{ini} et v^{ini}, et qui renvoie comme résultats une matricee la discrétisation en temps TPS et le tableau suivant :
+plus haut, les données initiales colonnes $$x^{ini}$$ et $$v^{ini}$$, et qui renvoie comme résultats une matricee la discrétisation en temps $$TPS$$ et le tableau suivant :
 <!-- \setcounter{MaxMatrixCols}{21} -->
-TRAJ = $$\left(
+
+$$TRAJ = \left(
 \begin{array}{* {21}c}
 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
