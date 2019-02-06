@@ -49,7 +49,7 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 
 $$\begin{array}{l}
 I : \quad \mathbb{R}^{+}&\to\ \quad \mathbb{R}\\
-d &\mapsto \quad (\frac{c}{d}) \ln  (\frac{d}{r})
+\quad d &\mapsto \quad (\frac{c}{d}) \ln  (\frac{d}{r})
 \end{array}
 $$
 
