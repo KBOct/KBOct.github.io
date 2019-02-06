@@ -24,8 +24,11 @@ On a donc :
 
 $$0 = x_0(t) < x_1(t) < ... < x_M(t) < x_{M+1}(t) = 1$$
 
-La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers $$0$$ lorsque cette distance tend vers l’infini. \
-De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie.\\ Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
+La force d’interaction entre les particules est attractive lorsque la distance entre deux particules est assez grande, et décroit vers $$0$$ lorsque cette distance tend vers l’infini.
+
+De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie.
+^
+Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
 
 On choisit ici la fonction suivante :
 
@@ -49,7 +52,7 @@ $$d\mapsto\dfrac{c}{d}\ln\left\(\dfrac{d}{r}\right)$$
 
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
-Les forces exercées sur l’hématie i comportent
+Les forces exercées sur l’hématie $$i$$ comportent
 donc la force exercée par l’hématie $$i + 1$$, qui est $$I(x_{i+1} - x_i)$$, la force exercée par l’hématie $$i − 1$$, qui est $$−I(x_i − x_{i−1})$$, ainsi qu’une force de frottement qui est proportionnelle à la vitesse de l’hématie, et s’oppose au mouvement de la particule : $$−\alpha \dot{x_i}$$, où $$\alpha$$ est appelé coefficient de frottement.
 
 Les équations du mouvement associées à ce système s’écrivent donc :
