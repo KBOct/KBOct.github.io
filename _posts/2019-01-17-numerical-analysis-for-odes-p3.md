@@ -48,7 +48,7 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$ -->
 
 $$I : \mathbb{R}^{+}\to\mathbb{R}$$
-$$d \mapsto (c/d) \ln (d/r)$$
+$$d \mapsto (\frac{c}{d}) \ln (d/r)$$
 
 
 
