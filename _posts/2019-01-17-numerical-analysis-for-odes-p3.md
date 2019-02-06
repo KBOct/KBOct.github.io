@@ -30,22 +30,22 @@ d \mapsto \frac{c}{d} \ln \ \left\( \frac{d}{r}\right)  \end{array}
 \right.$$
 
 
-où $$c$$ est un paramètre qui caractérise l’intensité de la force. Les forces exercées sur l’hématie i comportent
-donc la force exercée par l’hématie i + 1, qui est $$I(x_{i+1 = − xi)$$, la force exercée par l’hématie
-i − 1, qui est −I(xi − xi−1), ainsi qu’une force de frottement qui est proportionnelle à la vitesse de
-l’hématie, et s’oppose au mouvement de la particule : −x˙i, où est appelé coefficient de frottement.
+où $$c$$ est un paramètre qui caractérise l’intensité de la force.
+Les forces exercées sur l’hématie i comportent
+donc la force exercée par l’hématie $$i + 1$$, qui est $$I(x_{i+1} - x_i)$$, la force exercée par l’hématie $$i − 1$$, qui est $$−I(x_i − x_{i−1})$$, ainsi qu’une force de frottement qui est proportionnelle à la vitesse de l’hématie, et s’oppose au mouvement de la particule : $$−\alpha \dot{x_i}$$, où $$\alpha$$ est appelé coefficient de frottement.
+
 Les équations du mouvement associées à ce système s’écrivent donc :
 
-## Cas d’une seule population : l’équation logistique
+$$ \forall \i \ = 1,\dots, M,  \left\{ \begin{array}{c}
+m \ddot{x_i} = I(x_{i+1} - x_i) - I(x_i - x_{i-1}) -\alpha \dot{x_i}\ \\
+x_i \left(0\right)=x^i_ini \\
+x^\prime_i \left(0\right)=v^i_ini \end{array}
+\right.$$
 
-Le modèle logistique consiste à garder un comportement de croissance exponentielle lorsqu’il y a peu
-d’individus, avec limitation lorsque le nombre d’individus s’approche d’une valeur prescrite (il y alors trop d’individus pour la quantité limitée d’espace et/ou de ressources à disposition). Dans la suite, on normalise cette valeur prescrite à 1.
+
+##  Equations du schéma numérique pour M=3
 
 
-Ce modèle s’écrit : $$\left\{ \begin{array}{l}
-x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
-x(0)=x^{ini} \end{array}
-\right.\label{eq:1}$$
 
 ### Résolution analytique de l’équation par la méthode de séparation des variables
 
