@@ -39,7 +39,7 @@ donc la force exercée par l’hématie $$i + 1$$, qui est $$I(x_{i+1} - x_i)$$,
 
 Les équations du mouvement associées à ce système s’écrivent donc :
 
-$$ \forall \i \ = 1,\dots, M,  \left\{ \begin{array}{l}
+$$ \forall \ i \ = 1,\dots, M,  \left\{ \begin{array}{l}
 m \ddot{x_i} = I(x_{i+1} - x_i) - I(x_i - x_{i-1}) -\alpha \dot{x_i}\ \\
 x_i \left(0\right)=x^i_{ini} \\
 x^\prime_i \left(0\right)=v^i_{ini} \end{array}
