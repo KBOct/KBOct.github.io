@@ -29,10 +29,10 @@ De plus, pour prendre en compte la taille des globules, on considère que la for
 
 On choisit ici la fonction suivante :
 
-$$ I : \begin{array}{l}
-hh\mathbb{R}^+ \rightarrow \mathbb{R} \\
-d \mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right) \end{array}
-\right.$$
+$$ \begin{align*}
+I : \mathbb{R}^+ &\rightarrow B\\
+d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
+\end{align*}$$
 
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
