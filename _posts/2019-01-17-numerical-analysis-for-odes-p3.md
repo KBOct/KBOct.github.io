@@ -48,44 +48,27 @@ x^\prime_i \left(0\right)=v^i_{ini} \end{array}
 où $$m$$ est la masse d’un globule rouge (prise égale à $$1$$ dans la suite).
 
 
-
 ## Schéma numérique de base
 
-### Equations du schéma numérique pour M=3
+On souhaite simuler numériquement le modèle précédent. On commence par définir $$T$$ le temps final de la simulation. On discrétise l’intervalle $$[0, T]$$ en $$K$$ intervalles égaux $$[t_k, t_{k+1}]$$ pour $$k$$ allant de $$0$$ à $$K − 1$$ avec $$t_k = kh$$, et $$h = \frac{T}{K}$$.
+On s’intéresse au schéma suivant ($$k$$ désigne un entier positif ou nul)
 
-On souhaite simuler numériquement le modèle précédent. On commence par définir T le temps final
-de la simulation. On discrétise l’intervalle [0, T] en K intervalles égaux [tk, tk+1] pour k allant de 0 à
-K − 1 avec tk = kh, et h = T
-K.
-On s’intéresse au schéma suivant (k désigne un entier positif ou nul)
-
-
-x0
-i = xini
-i ,
-x1
-i = x0
-i + tvini
-i ,
-wk
-i = I(xk
-i+1 − xk
-i ) − I(xk
-i − xk
-i−1),
-xk+1
-i = 2xk
-i − xk−1
-i + t2wk
-i −t(xk
-i − xk−1
-i ).
-On utilisera les paramètres suivants : K = 1500, t = 0.002,  = 10, c = 0.5, r = 0.004.
+$$\left\{ \begin{array}{l}
+x^0_i=\ x^{ini}_i \\
+x^1_i=\ x^0_i+\Delta tv^{ini}_i \\
+w^k_i=I\left(x^k_{i+1}-x^k_i\right)-I\left(x^k_i-x^k_{i-1}\right) \\
+x^{k+1}_i={2x}^k_i-x^{k-1}_i+{\Delta t}^2w^k_i-\alpha \Delta t(x^k_i-x^{k-1}_i) \end{array}
+\right.$$
+
+On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 10, c = 0.5, r = 0.004$$.
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
 {:class="img-responsive"}
 <!-- {: .full} -->
+
+### Equations du schéma numérique pour M=3
+
 
 
 {% highlight matlab linenos %}
