@@ -117,20 +117,14 @@ Implémenter le schéma dans le cas où M = 3.
 
 On commencera par implémenter la fonction I, puis on codera une fonction TroisGlobules qui prend en argument, outre les paramètres définis
 plus haut, les données initiales colonnes x^{ini} et v^{ini}, et qui renvoie comme résultats une matricee la discrétisation en temps TPS et le tableau suivant :
-
-TRAJ = $$\left( \begin{array}{cc} 2\tau & 7\phi-frac5{12} \\
-3\psi & \frac{\pi}8 \end{array} \right)
-\left( \begin{array}{c} x \\ y \end{array} \right)
-\mbox{~and~} \left[ \begin{array}{cc|r}
-3 & 4 & 5 \\ 1 & 3 & 729 \end{array} \right]$$
-
-
-$$\left[
-\begin{array}{* {14}c}
-1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
-1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0
+<!-- \setcounter{MaxMatrixCols}{21} -->
+TRAJ = $$\left(
+\begin{array}{* {21}c}
+1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 & 0 & 1 & 0
 \end{array}
-\right]$$
+\right)$$
 
 {% highlight matlab linenos %}
 
