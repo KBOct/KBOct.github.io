@@ -49,8 +49,8 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 
 $$\begin{array}{l}
 I : \mathbb{R}^{+}&\to\mathbb{R}\\
-d &\mapsto (\frac{c}{d}) \ln (\frac{d}{r})$$
-
+d &\mapsto (\frac{c}{d}) \ln (\frac{d}{r})\end{array}
+\right.$$
 
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
