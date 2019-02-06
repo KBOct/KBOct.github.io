@@ -90,7 +90,26 @@ On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 1
 
 ### Equations du schéma numérique pour M=3
 
+$$\left\{ \begin{array}{c}
+x^0_1=\ x^{ini}_1 \\
+x^1_1=\ x^0_1+\Delta tv^{ini}_1 \\
+w^k_1=I\left(x^k_2-x^k_1\right)-I\left(x^k_1-x^k_0\right) \\
+x^{k+1}_1={2x}^k_1-x^{k-1}_1+{\Delta t}^2w^k_1-\alpha \Delta t(x^k_1-x^{k-1}_1) \end{array}
+\right.$$ 
 
+$$\left\{ \begin{array}{c}
+x^0_2=\ x^{ini}_2 \\
+x^1_2=\ x^0_2+\Delta tv^{ini}_2 \\
+w^k_2=I\left(x^k_3-x^k_2\right)-I\left(x^k_2-x^k_1\right) \\
+x^{k+1}_2={2x}^k_2-x^{k-1}_2+{\Delta t}^2w^k_2-\alpha \Delta t(x^k_2-x^{k-1}_2) \end{array}
+\right.$$
+
+$$\left\{ \begin{array}{c}
+x^0_3=\ x^{ini}_3 \\
+x^1_3=\ x^0_3+\Delta tv^{ini}_3 \\
+w^k_3=I\left(x^k_4-x^k_3\right)-I\left(x^k_3-x^k_2\right) \\
+x^{k+1}_3={2x}^k_3-x^{k-1}_3+{\Delta t}^2w^k_3-\alpha \Delta t(x^k_3-x^{k-1}_3) \end{array}
+\right.$$
 
 {% highlight matlab linenos %}
 
