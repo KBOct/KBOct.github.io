@@ -29,7 +29,8 @@ De plus, pour prendre en compte la taille des globules, on considère que la for
 
 On choisit ici la fonction suivante :
 
-$$ I : \begin{array}{l} \mathbb{R}^+ \rightarrow \mathbb{R} \\
+$$ I : \begin{array}{l}
+\mathbb{R}^+ \rightarrow \mathbb{R} \\
 d \mapsto \frac{c}{d} \ln \ \left\( \frac{d}{r}\right)  \end{array}
 \right.$$
 
