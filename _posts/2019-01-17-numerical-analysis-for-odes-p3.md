@@ -39,8 +39,8 @@ r\mathbb{R}^+ &\rightarrow r\mathbb{R} \\
 d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
 \end{align*}$$
 
-I : $$\begin{align*}
-\mathbb{R}^+ &\rightarrow \mathbb{R} \\
+$$\begin{align*}
+I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
 d &\mapsto j
 \end{align*}$$
 
