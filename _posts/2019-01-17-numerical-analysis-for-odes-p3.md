@@ -34,6 +34,11 @@ A&\rightarrow B\\
 a&\mapsto b
 \end{align*}$$
 
+$$\begin{align*}
+\mathbb{R}^+ &\rightarrow \mathbb{R} \\
+d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
+\end{align*}$$
+
 I : $$\begin{align*}
 \mathbb{R}^+ &\rightarrow \mathbb{R} \\
 d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
