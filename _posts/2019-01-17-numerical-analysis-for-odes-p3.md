@@ -44,7 +44,7 @@ I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
 d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$
 
-$$I : \begin{cases}\mathbb{R}^+ &\to\mathbb{R}\\d\mapsto \frac{c}{d} \ln \left\( \frac{d}{r}\right)\end{cases}$$
+$$I : \begin{cases}\mathbb{R}^+\to\mathbb{R}\\d\mapsto \frac{c}{d}\ln\left\(\frac{d}{r}\right) \end{cases}$$
 
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
