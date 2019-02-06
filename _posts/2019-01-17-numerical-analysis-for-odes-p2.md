@@ -81,7 +81,7 @@ Pour le deuxième jeu de paramètres, on a :
 
 ### Question d
 
-Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{8} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
+Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{4} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
 
 ### Question e
 
