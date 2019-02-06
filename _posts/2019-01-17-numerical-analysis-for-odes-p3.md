@@ -50,6 +50,8 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 $$I : \mathbb{R}^{+}\to\mathbb{R}$$
 $$d \mapsto \frac{c}{d} \ln \left\(\frac{d}{r}\ right)$$
 
+\[d\mapsto \frac{c}{d}{ln {{\left(\frac{d}{r}\right)}}\ }\]
+
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
 Les forces exercées sur l’hématie $$i$$ comportent
