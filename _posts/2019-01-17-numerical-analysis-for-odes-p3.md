@@ -28,7 +28,7 @@ La force d’interaction entre les particules est attractive lorsque la distance
 
 De plus, pour prendre en compte la taille des globules, on considère que la force d’interaction devient répulsive lorsque la distance entre les hématies devient inférieure à une valeur $$r$$, correspondant à la taille caractéristique (typiquement le rayon) de l’hématie.
 ^
-Cette force d’interaction va être modélisée par une fonction I de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
+Cette force d’interaction va être modélisée par une fonction $$I$$ de la distance entre les particules qui va donc tendre vers $$0$$ à l’infini, qui sera positive pour une distance $$d > r$$ et négative pour une distance $$d < r$$.
 
 On choisit ici la fonction suivante :
 
@@ -48,7 +48,8 @@ d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
 \end{align*}$$ -->
 
 $$I : \mathbb{R}^{+}\to\mathbb{R}$$
-$$d \mapsto (\frac{c}{d}) \ln (d/r)$$
+^
+$$d \mapsto (\dfrac{c}{d}) \ln (\dfrac{d}{r})$$
 
 
 
