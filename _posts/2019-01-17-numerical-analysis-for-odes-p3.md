@@ -34,10 +34,10 @@ A&\rightarrow B\\
 a&\mapsto b
 \end{align*}$$
 
-<!-- $$ \begin{align*}
-I : \mathbb{R}^+ &\rightarrow \\
+$$ \begin{align*}
+I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
 d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
-\end{align*}$$ -->
+\end{align*}$$
 
 
 où $$c$$ est un paramètre qui caractérise l’intensité de la force.
