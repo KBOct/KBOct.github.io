@@ -32,21 +32,6 @@ Cette force d’interaction va être modélisée par une fonction $$I$$ de la di
 
 On choisit ici la fonction suivante :
 
-<!-- I : $$\begin{align*}
-A&\rightarrow B\\
-a&\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
-\end{align*}$$
-
-$$\begin{align*}
-r\mathbb{R}^+ &\rightarrow r\mathbb{R} \\
-d &\mapsto \frac{c}{d} ln \left\( \frac{d}{r}\right)
-\end{align*}$$
-
-$$\begin{align*}
-I : \mathbb{R}^+ &\rightarrow \mathbb{R} \\
-d &\to \frac{c}{d} \ln \left\( \frac{d}{r}\right)
-\end{align*}$$ -->
-
 $$I : \quad \begin{array}{cl}
 \mathbb{R}_{+}&\to \quad \mathbb{R}\\
 d  &\mapsto \quad (\frac{c}{d}) \ln  (\frac{d}{r})
@@ -162,7 +147,7 @@ TRAJ(:,2)=xini+(deltat*vini);
 // Initialisation de la matrice w qui contiendra les forces qui s'exercent sur chaque globule
 w=zeros(3,K);
 
-//ATTENTION : le paramètre k considéré ici correspond au numéro de la colonne du tableau TRAJ et varie de 1 à K contrairement au paramètre de l'énoncé qui varie de 0 à K-1. De plus, on doit initialiser la boucle à partir de k=2 pour pouvoir calculer TRAJ(:,k-1) et on doit terminer cette boucle à k=K-1 pour rester cohérent avec la définition du tableau TRAJ. On remarquera donc que la matrice w calculée aura donc ses premières et dernières colonnes vides, ce qui n'est pas sans rapport avec le comportement particulier des globules aux extrémités
+//ATTENTION : le paramètre k considéré ici correspond au numéro de la colonne du tableau TRAJ et varie de 1 à K. De plus, on doit initialiser la boucle à partir de k=2 pour pouvoir calculer TRAJ(:,k-1) et on doit terminer cette boucle à k=K-1 pour rester cohérent avec la définition du tableau TRAJ. On remarquera que la matrice w calculée aura donc ses premières et dernières colonnes vides, ce qui n'est pas sans rapport avec le comportement particulier des globules aux extrémités
 
 for k = 2:K-1
     // Calcul des forces qui s'exercent sur les globules
@@ -184,6 +169,22 @@ vini=zeros(1,3)
 [TPS,TRAJ]=TroisGlobules(K,deltat,alpha,xini,vini);
 {% endhighlight %}
 
+ On trace l'évolution des positions des hématies au cours du temps avec les conditions initiales $$(x^{ini}_1,x^{ini}_2,x^{ini}_3)=(0,27; 0,55;0,73)$$ et $$(v^{ini}_1,v^{ini}_2,v^{ini}_3)=(0; 0;0)$$ :
+
+
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-1.jpg)
 {:class="img-responsive"}
-<!-- {: .full} -->
+
+Chacune des hématies s'agglomère à l'hématie qui est initialement la plus proche et les hématies agglomérées en forment une nouvelle qui aura le même comportement :
+
+- L'hématie $$2$$ s'agglomère à l'hématie $$3$$ parce qu'elles sont plus proches que la 1 et la 2 $$(x^0_3-x^0_2=0,18<x^0_2-x^0_1=0,28)$$ ou la 3 et le globule à l'extrémité en position 1 $$(x^0_3-x^0_2=0,18<1-x^0_3=0,27)$$
+
+- Puis le globule aggloméré en position médiane au temps $k$, $x^k_{2,3}\approx 0,64$ est alors plus proche du globule à l'extrémité en position 1 que du globule 1 $$(1-x^k_{2,3}=0,36<0,37=x^k_{2,3}-x^0_1<x^k_{2,3}-x^k_1$$ : la dernière inégalité étant visible sur la figure au moment où les courbes des hématies 2 et 3 se rejoignent), il vient donc s'agglomérer au globule en position 1
+
+- L'hématie $$1$$ vient s'agglomérer au globule en position 0 par un raisonnement analogue
+
+
+Remarque : si les 3 hématies ainsi que celles aux extrémités sont équidistantes au moment initial, i.e. $$(x^0_1,x^0_2,x^0_3)=(0,25;0,50;0,75)$$, alors elles restent immobiles en tout temps :
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-1alt.jpg)
+{:class="img-responsive"}
