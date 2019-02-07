@@ -184,6 +184,6 @@ vini=zeros(1,3)
 [TPS,TRAJ]=TroisGlobules(K,deltat,alpha,xini,vini);
 {% endhighlight %}
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-1.jpg)
 {:class="img-responsive"}
 <!-- {: .full} -->
