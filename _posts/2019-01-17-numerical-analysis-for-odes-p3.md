@@ -83,11 +83,6 @@ x^{k+1}_i={2x}^k_i-x^{k-1}_i+{\Delta t}^2w^k_i-\alpha \Delta t(x^k_i-x^{k-1}_i) 
 
 On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 10, c = 0.5, r = 0.004$$.
 
-
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
-{:class="img-responsive"}
-<!-- {: .full} -->
-
 ### Equations du schéma numérique pour M=3
 
 Nous allons nous interesser au cas particulier du modèle restreint à 3 hématies $$(M =3)$$. Les équations sont donc les suivantes :
@@ -128,5 +123,67 @@ x^0_3 & x^1_3 & x^2_3 & \dots & x^k_3 & \dots & x^N_3
 \right)$$
 
 {% highlight matlab linenos %}
+// Définition de la fonction I représentant la force d'interaction entre deux globules en fonction de leur distance d
 
+function y=I(d)
+    if d > 0 then
+        y=(0.5/d) * log(d/0.004);
+    else
+        disp("la variable d doit être strictement positive !");
+    end
+endfunction
+
+
+// Définition de la fonction TroisGlobules
+
+function [TPS,TRAJ]=TroisGlobules(K,deltat,alpha,xini,vini)
+// Positions des globules aux extremités x0 et x4 nécessaires pour les calculs concernant le globule 1 et le globule 3
+    x0=0.0;
+    x4=1.0;
+// Temps final T
+    T=K*deltat;
+// Discretisation de [0,T] en K intervalles égaux
+    TPS = linspace(0,T,K);
+// Redimensionnement des vecteurs xini et vini si besoin
+if size(xini,2)==3 then
+    xini=xini';
+end
+if size(vini,2)==3 then
+    vini=vini';
+end
+// Initialisation du tableau TRAJ
+TRAJ = zeros(3,K);
+
+// Calcul des 2 premières colonnes du tableau TRAJ
+TRAJ(:,1)=xini;
+TRAJ(:,2)=xini+(deltat*vini);
+
+
+// Initialisation de la matrice w qui contiendra les forces qui s'exercent sur chaque globule
+w=zeros(3,K);
+
+//ATTENTION : le paramètre k considéré ici correspond au numéro de la colonne du tableau TRAJ et varie de 1 à K contrairement au paramètre de l'énoncé qui varie de 0 à K-1. De plus, on doit initialiser la boucle à partir de k=2 pour pouvoir calculer TRAJ(:,k-1) et on doit terminer cette boucle à k=K-1 pour rester cohérent avec la définition du tableau TRAJ. On remarquera donc que la matrice w calculée aura donc ses premières et dernières colonnes vides, ce qui n'est pas sans rapport avec le comportement particulier des globules aux extrémités
+
+for k = 2:K-1
+    // Calcul des forces qui s'exercent sur les globules
+    w(1,k)=I(TRAJ(2,k)-TRAJ(1,k))-I(TRAJ(1,k)-x0);
+    w(2,k)=I(TRAJ(3,k)-TRAJ(2,k))-I(TRAJ(2,k)-TRAJ(1,k));
+    w(3,k)=I(x4-TRAJ(3,k))-I(TRAJ(3,k)-TRAJ(2,k));
+// Reprise du calcul des colonnes du tableau TRAJ
+    TRAJ(:,k+1)=(2*TRAJ(:,k))-TRAJ(:,k-1)+(deltat^2) * w(:,k)-(alpha*deltat) * (TRAJ(:,k)-TRAJ(:,k-1));
+end
+
+endfunction
+
+K=30000;
+deltat=0.0001;
+alpha=10;
+xini=[0.27,0.55,0.73];
+vini=zeros(1,3)
+//[TPS,TRAJ]=TroisGlobules(30000,0.0001,10,[0.27,0.55,0.73],[0,0,0]);
+[TPS,TRAJ]=TroisGlobules(K,deltat,alpha,xini,vini);
 {% endhighlight %}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/1.jpg)
+{:class="img-responsive"}
+<!-- {: .full} -->
