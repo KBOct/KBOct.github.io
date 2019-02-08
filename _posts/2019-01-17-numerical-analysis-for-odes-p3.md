@@ -189,3 +189,84 @@ Remarque : si les $$3$$ hématies ainsi que celles aux extrémités sont équidi
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-1alt.jpg)
 {:class="img-responsive"}
+
+
+### Implémentation du schéma dans le cas où $$M = 40$$
+
+
+{% highlight matlab linenos %}
+//#####################################################
+//Question d) (code fonctionnel)
+//#####################################################
+
+function [TPS,TRAJ]=MGlobules(K,deltat,M,alpha,xini,vini)
+// Positions des globules aux extremités x0 et x4 nécessaires pour les calculs concernant le globule 1 et le globule 3
+    x0=0.0;
+    xMplus1=1.0;
+// Temps final T
+    T=K*deltat;
+// Discretisation de [0,T] en K intervalles égaux
+    TPS = linspace(0,T,K);
+// Redimensionnement des vecteurs xini et vini si besoin
+if size(xini,2)==M then
+    xini=xini';
+end
+if size(vini,2)==M then
+    vini=vini';
+end
+// Initialisation du tableau TRAJ
+TRAJ = zeros(M,K);
+
+// Calcul des 2 premières colonnes du tableau TRAJ
+TRAJ(:,1)=xini;
+TRAJ(:,2)=xini+(deltat*vini);
+
+
+// Initialisation de la matrice w qui contiendra les forces qui s'exercent sur chaque globule
+w=zeros(M,K);
+
+//ATTENTION : le paramètre k considéré ici correspond au numéro de la colonne du tableau TRAJ et varie de 1 à K contrairement au paramètre de l'énoncé qui varie de 0 à K-1. De plus, on doit initialiser la boucle à partir de k=2 pour pouvoir calculer TRAJ(:,k-1) et on doit terminer cette boucle à k=K-1 pour rester cohérent avec la définition du tableau TRAJ. On remarquera donc que la matrice w calculée aura donc ses premières et dernières colonnes vides, ce qui n'est pas sans rapport avec le comportement particulier des globules aux extrémités
+
+for k = 2:K-1
+    // Calcul des forces qui s'exercent sur les globules
+    w(1,k)=I(TRAJ(2,k)-TRAJ(1,k))-I(TRAJ(1,k)-x0);
+    for j = 2:M-1
+        w(j,k)=I(TRAJ(j+1,k)-TRAJ(j,k))-I(TRAJ(j,k)-TRAJ(j-1,k));
+    end
+    w(M,k)=I(xMplus1-TRAJ(M,k))-I(TRAJ(M,k)-TRAJ(M-1,k));
+// Reprise du calcul des colonnes du tableau TRAJ
+    TRAJ(:,k+1)=(2*TRAJ(:,k))-TRAJ(:,k-1)+(deltat^2)*w(:,k)-(alpha*deltat)*(TRAJ(:,k)-TRAJ(:,k-1))
+end
+
+endfunction
+
+K=30000;
+deltat=0.0001;
+alpha=10;
+M=40;
+
+rand("uniform");
+nombres_aleatoires = rand(1,M) * 2-1;
+xini_aleatoire = zeros(M,1);
+viniM = zeros(M,1);
+for i = 1:M
+    xini_aleatoire(i)=(i+(0.1*nombres_aleatoires(i)))/(M+1);
+end
+
+
+[TPSM,TRAJM]=MGlobules(K,deltat,M,alpha,xini_aleatoire,viniM);
+
+scf(3)
+clf
+
+plot(TPSM,TRAJM,'r-')
+
+ylabel('Position','fontsize',2)
+xlabel('Temps','fontsize',2)
+title("Evolution des positions des hématies au cours du temps",'fontsize',2)
+
+{% end highlight %}
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-2.jpg)
+{:class="img-responsive"}
