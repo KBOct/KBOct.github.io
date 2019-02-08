@@ -235,7 +235,7 @@ for k = 2:K-1
     end
     w(M,k)=I(xMplus1-TRAJ(M,k))-I(TRAJ(M,k)-TRAJ(M-1,k));
 // Reprise du calcul des colonnes du tableau TRAJ
-    TRAJ(:,k+1)=(2*TRAJ(:,k))-TRAJ(:,k-1)+(deltat^2)*w(:,k)-(alpha*deltat)*(TRAJ(:,k)-TRAJ(:,k-1))
+    TRAJ(:,k+1)=(2*TRAJ(:,k))-TRAJ(:,k-1)+(deltat^2)* w(:,k)-(alpha*deltat)* (TRAJ(:,k)-TRAJ(:,k-1))
 end
 
 endfunction
