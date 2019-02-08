@@ -68,7 +68,7 @@ x^{k+1}_i={2x}^k_i-x^{k-1}_i+{\Delta t}^2w^k_i-\alpha \Delta t(x^k_i-x^{k-1}_i) 
 
 On utilisera les paramètres suivants : $$K = 1500, \Delta t = 0.002, \alpha = 10, c = 0.5, r = 0.004$$.
 
-### Equations du schéma numérique pour M=3
+### Equations du schéma numérique pour $$M=3$$
 
 Nous allons nous interesser au cas particulier du modèle restreint à $$3$$ hématies $$(M =3)$$. Les équations sont donc les suivantes :
 
