@@ -265,7 +265,7 @@ ylabel('Position','fontsize',2)
 xlabel('Temps','fontsize',2)
 title("Evolution des positions des hématies au cours du temps",'fontsize',2)
 
-{% end highlight %}
+{% endhighlight %}
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3-2.jpg)
