@@ -10,8 +10,6 @@ mathjax: true
 author_profile: false
 ---
 
-# Binomial pricing for American options in C
-
 {% highlight c linenos %}
 
 #include <math.h>
