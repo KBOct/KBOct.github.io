@@ -12,8 +12,8 @@ author_profile: false
 
 # Binomial pricing for American options in C
 
-````c
-// {% highlight c linenos %}
+{% highlight c linenos %}
+
 #include <math.h>
 #include <stdio.h>
 
@@ -71,5 +71,4 @@ double Prix(Option opt)
 	return (P[0]);
 }
 
-// {% endhighlight %}
-````
+{% endhighlight %}
