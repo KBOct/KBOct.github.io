@@ -10,51 +10,66 @@ mathjax: true
 author_profile: false
 ---
 
-# H1 Heading
+# Binomial pricing for American options in C
 
-## H2 Heading
+````c
+// {% highlight c linenos %}
+#include <math.h>
+#include <stdio.h>
 
-### H3 Heading
+#define Taille 1000
 
-Here's some basic text
+typedef double Etat[Taille + 1];
 
-And here's some *italic*
+typedef struct Option {
+	double TauxAnnuel;
+	double Sigma;
+	double T;
+	double ValeurInitiale;
+	double K;
+} Option;
 
-Here's some **bold** text
+double plus(double x)
+{
+	return (x>0?x:0);
+}
 
-What about a [link](https://github.com/kboct)
+double Prix(Option opt)
+{
+	double r, a, b, proba, p1, p2, tmp, ro, xmax;
+	Etat P, roi;
+	long i, j, N;
 
-Here's a bulleted list:
-* First
-+ Second
-- Third
+	/ * Calcul des parametres de Cox Ross * /
+	N = 500;
+	r = opt.TauxAnnuel * opt.T / N;
+	a = (1 + r) * exp(-opt.Sigma * sqrt(opt.T / N)) - 1;
+	b = (1 + r) * exp(opt.Sigma * sqrt(opt.T / N)) - 1;
+	proba = (b - r) / (b - a);
+	/ *  par souci d’efficacite on calcule
+		le maximum de choses en dehors de la boucle principale * /
+	ro = (1 + a) / (1 + b);
+	roi[0] = 1.0;
+	for (i = 1; i <= N; i++)
+		roi[i] = ro * roi[i - 1];
+	p1 = (1 - proba) / (1 + r);
+	p2 = proba / (1 + r);
+	/ * A un instant j, P[i] approxime P(j,x(1+a)^i (1+b)^(N-j-i)) * /
+	/ * en N : P[i] = (K-x(1+a)^i (1+b)^(N-i))+ * /
+	xmax = opt.ValeurInitiale * pow(1 + b, N);
+	for (i = 0; i <= N; i++)
+		P[i] = plus(opt.K - xmax * roi[i]);
+	for (j = 1; j <= N; j++) {
+		xmax /= 1 + b;
+		for (i = 0; i <= N - j; i++) {
+			P[i] = p1 * P[i] + p2 * P[i + 1];
+			tmp = plus(opt.K - xmax * roi[i]);
+			if (tmp > P[i])
+				P[i] = tmp;
+		}
+	}
+	return (P[0]);
+}
 
-
-Here's a numbered list:
-1. First
-2. Second
-3. Third
-
-
-C code block:
-{% highlight c linenos %}
-include <stdio.h>
-# DEFINE code = 6
-{% endhighlight %}
-
-
-Here's some inline code `x+y`
-
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg" alt="scilab numerical analysis plot" class="full">
-
-
-Here's another image using Kramdown:
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg)
-{: .full}
-
-Here's some math :
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
+// {% endhighlight %}
+````
