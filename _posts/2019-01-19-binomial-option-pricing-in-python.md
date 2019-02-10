@@ -11,7 +11,10 @@ author_profile: false
 ---
 The binomial options pricing model provides a generalizable numerical method for the valuation of options. It was first proposed by John Carrington Cox, Stephen Ross and Mark Edward Rubinstein in their 1979 article "Option pricing: A simplified approach" published in the *Journal of Financial Economics*
 
-The Cox-Ross-Rubinstein model is a discrete-time version of the Black-Scholes model. It considers only one risky asset whose price is $$S_n$$ at time $$n, 0 < n < N,$$ and a riskless asset whose return is $$г$$ over one period of time. Which means that $$S^0_n=(1+r)^n$$. The risky asset is modelled as follows: between two consecutive periods the relative price change is either $$u$$ or $$d$$, with $$-1 < d < u$$ :
+The Cox-Ross-Rubinstein model is a discrete-time version of the Black-Scholes model. It considers only one risky asset whose price is $$S_n$$ at time $$n, 0 < n < N,$$ and a riskless asset whose return is $$r$$ over one period of time.
+Which means that $$S^0_n=(1+r)^n$$.
+
+The risky asset is modelled as follows: between two consecutive periods the relative price change is either $$u$$ or $$d$$, with $$-1 < d < u$$ :
 
 $$S_{n+1}\left\{ \begin{array}{l}
 S_n \quad (1+u) \\
