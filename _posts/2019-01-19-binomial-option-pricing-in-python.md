@@ -190,4 +190,6 @@ gives the following average :
 86.6 µs ± 890 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ````
 
+Which is around 84 times faster !
+
 In all of the testruns I did, the second function always ran around $$80$$ times faster than the first one.
