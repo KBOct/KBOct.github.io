@@ -26,7 +26,7 @@ I will implement 2 versions of the binomial model to price both European Calls a
 {% highlight python linenos %}
 import numpy
 
-def binom_tree_call(N,T,S0, sigma, r, K, array_out=False):
+def binom_tree_call_put(N, T, S0, sigma, r, K, call=True, array_out=False):
     #Init
 
     #If array_out is False, only the call price will be displayed,
@@ -48,7 +48,10 @@ def binom_tree_call(N,T,S0, sigma, r, K, array_out=False):
 
     # Option price at maturity N
     option=numpy.zeros([N+1,N+1])
-    option[:, N]=numpy.maximum(numpy.zeros(N+1), price_tree[:, N]-K)
+    if call:
+        option[:, N]=numpy.maximum(numpy.zeros(N+1), price_tree[:, N]-K)
+    else:
+        option[:, N]=numpy.maximum(numpy.zeros(N+1), K-price_tree[:, N])
 
     # Option price at t = 0 by going backwards
     for i in numpy.arange(N-1,-1,-1):
@@ -64,30 +67,30 @@ def binom_tree_call(N,T,S0, sigma, r, K, array_out=False):
 
 An execution of
 {% highlight python %}
-binom_tree_call(50,1,100,0.1,0.05,100, True)
+binom_tree_call_put(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=True, array_out=True)
 {% endhighlight %}
 returns the following tree :
 ````
-[6.783564165691306,
- array([[100.        , 101.42426087, 102.86880693, ..., 197.15548787,
-         199.96349633, 202.81149816],
-        [  0.        ,  98.59573946, 100.        , ..., 191.65721247,
-         194.38691115, 197.15548787],
-        [  0.        ,   0.        ,  97.2111984 , ..., 186.31227307,
-         188.96584587, 191.65721247],
+[11.546434850755071,
+ array([[100.        , 102.86880693, 105.81991439, ..., 388.70286396,
+         399.85399865, 411.32503788],
+        [  0.        ,  97.2111984 , 100.        , ..., 367.32487093,
+         377.86271228, 388.70286396],
+        [  0.        ,   0.        ,  94.50017095, ..., 347.12263097,
+         357.08090906, 367.32487093],
         ...,
-        [  0.        ,   0.        ,   0.        , ...,  50.72138802,
-          51.4437929 ,  52.17648671],
+        [  0.        ,   0.        ,   0.        , ...,  25.72659203,
+          26.46463828,  27.22385766],
         [  0.        ,   0.        ,   0.        , ...,   0.        ,
-          50.00912758,  50.72138802],
+          25.00912842,  25.72659203],
         [  0.        ,   0.        ,   0.        , ...,   0.        ,
-           0.        ,  49.30686914]]),
- array([[  6.78356417,   7.72801529,   8.74811248, ...,  97.355288  ,
-         100.06344635, 102.81149816],
-        [  0.        ,   5.72515965,   6.58569481, ...,  91.85701261,
-          94.48686117,  97.15548787],
-        [  0.        ,   0.        ,   4.75982223, ...,  86.5120732 ,
-          89.06579589,  91.65721247],
+           0.        ,  24.31167344]]),
+ array([[ 11.54643485,  13.40897969,  15.46463735, ..., 289.94017906,
+         300.9727274 , 312.32503788],
+        [  0.        ,   9.60391567,  11.26670021, ..., 268.56218603,
+         278.98144103, 289.70286396],
+        [  0.        ,   0.        ,   7.86799392, ..., 248.35994607,
+         258.19963781, 268.32487093],
         ...,
         [  0.        ,   0.        ,   0.        , ...,   0.        ,
            0.        ,   0.        ],
@@ -99,12 +102,12 @@ returns the following tree :
 ````
 An execution of
 {% highlight python %}
-binom_tree_call(50,1,100,0.1,0.05,100, False)
+binom_tree_call_put(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=True, array_out=False)
 {% endhighlight %}
 returns:
 
 ````
-6.783564165691306
+11.546434850755071
 ````
 
 # Alternate faster version
@@ -117,7 +120,7 @@ This is a faster version using the numba Just-In-Time compiling library availabl
 import numba
 
 @numba.jit
-def binom_tree_call_faster(N,T,S0, sigma, r, K, array_out=False):
+def binom_tree_call_put_faster(N, T, S0, sigma, r, K, call=True, array_out=False):
     #Init
 
     #If array_out is False, only the call price will be displayed,
@@ -139,7 +142,10 @@ def binom_tree_call_faster(N,T,S0, sigma, r, K, array_out=False):
 
     # Option price at maturity N
     option=numpy.zeros([N+1,N+1])
-    option[:, N]=numpy.maximum(numpy.zeros(N+1), price_tree[:, N]-K)
+    if call:
+        option[:, N]=numpy.maximum(numpy.zeros(N+1), price_tree[:, N]-K)
+    else:
+        option[:, N]=numpy.maximum(numpy.zeros(N+1), K-price_tree[:, N])
 
     # Option price at t = 0 by going backwards
     for i in numpy.arange(N-1,-1,-1):
@@ -155,23 +161,23 @@ def binom_tree_call_faster(N,T,S0, sigma, r, K, array_out=False):
 
 We need to call this new function (and the previous one as well but it's already been done)
 {% highlight python %}
-fast=binom_tree_call_faster(50,1,100,0.1,0.05,100, False)
+fast=binom_tree_call_put_faster(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=False, array_out=False)
 {% endhighlight %}
 
 in order to time both functions as follows :
 
 {% highlight python %}
-%timeit binom_tree_call(50,1,100,0.1,0.05,100, False)
+%timeit binom_tree_call_put(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=False, array_out=False)
 {% endhighlight %}
 ````
-7.36 ms ± 132 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+7.25 ms ± 118 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 ````
 
 {% highlight python %}
-%timeit binom_tree_call_faster(50,1,100,0.1,0.05,100, False)
+%timeit binom_tree_call_put_faster(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=False, array_out=False)
 {% endhighlight %}
 ````
-85.8 µs ± 1.24 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+86.6 µs ± 890 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ````
 
-The second function runs more than $$85$$ times faster than the first one.
+In all of the tests runs I did the second function always ran around $$80$$ times faster than the first one.
