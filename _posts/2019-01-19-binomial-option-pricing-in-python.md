@@ -9,15 +9,12 @@ excerpt: "In this article, I implement 2 versions of the Binomial option pricing
 mathjax: true
 author_profile: false
 ---
+The binomial options pricing model provides a generalizable numerical method for the valuation of options. It was first proposed by John Carrington Cox, Stephen Ross and Mark Edward Rubinstein in their 1979 article "Option pricing: A simplified approach" published in the *Journal of Financial Economics*
 
-# H1 Heading
-
-The binomial options pricing model provides a generalizable numerical method for the valuation of options. It was first proposed by Cox, Ross and Rubinstein in their 1979 article "Option pricing: A simplified approach" published in the Journal of Financial Economics
-
-The Cox-Ross-Rubinstein model is a discrete-time version of the Black-Scholes model. It considers only one risky asset whose price is $$Sn$$ at time $$n, 0 < n < N,$$ and a riskless asset whose return is $$г$$ over one period of time. Which means that $$S^0_n=(1+r)^n$$. The risky asset is modelled as follows: between two consecutive periods the relative price change is either $$u$$ or $$d$, with $$-1 < d < u$$ :
-$$Sn(l+a)\left\{ \begin{array}{l}
-x'\left(t\right)=ax\left(t\right)(1-x\left(t\right)) \\
-x(0)=x^{ini} \end{array}
+The Cox-Ross-Rubinstein model is a discrete-time version of the Black-Scholes model. It considers only one risky asset whose price is $$S_n$$ at time $$n, 0 < n < N,$$ and a riskless asset whose return is $$г$$ over one period of time. Which means that $$S^0_n=(1+r)^n$$. The risky asset is modelled as follows: between two consecutive periods the relative price change is either $$u$$ or $$d$$, with $$-1 < d < u$$ :
+$$S_{n+l}\left\{ \begin{array}{l}
+S_n(1+u) \\
+S_n(1+d) \end{array}
 \right.$$
 
 Where the initial stock price $$S_0$$ is given.
@@ -65,9 +62,12 @@ def binom_tree_call(N,T,S0, sigma, r, K, array_out=False):
         return option[0,0]
 {% endhighlight %}
 
-````
+An execution of
+{% highlight python %}
 binom_tree_call(50,1,100,0.1,0.05,100, True)
-
+{% endhighlight %}
+returns the following tree :
+````
 [6.783564165691306,
  array([[100.        , 101.42426087, 102.86880693, ..., 197.15548787,
          199.96349633, 202.81149816],
@@ -97,16 +97,81 @@ binom_tree_call(50,1,100,0.1,0.05,100, True)
            0.        ,   0.        ]])]
 
 ````
+An execution of
+{% highlight python %}
+binom_tree_call(50,1,100,0.1,0.05,100, False)
+{% endhighlight %}
+returns:
 
-TEXTE
+````
+6.783564165691306
+````
 
 # Alternate faster version
 
 This is a faster version using the numba Just-In-Time compiling library available at
-[link](https://numba.pydata.org/)
+[https://numba.pydata.org/](https://numba.pydata.org/)
 
 
 {% highlight python linenos %}
 import numba
 
+@numba.jit
+def binom_tree_call_faster(N,T,S0, sigma, r, K, array_out=False):
+    #Init
+
+    #If array_out is False, only the call price will be displayed,
+    #If it is True, however, the call price, the stock price tree and the call price tree will be displayed
+
+    # Let's initialize the parameters
+    dt=T/N
+    u= numpy.exp(sigma*numpy.sqrt(dt))
+    d=1/u
+    p=(numpy.exp(r*dt)-d)/(u-d)
+
+    # Price tree
+    price_tree=numpy.zeros([N+1,N+1])
+
+    # Price at each node
+    for i in range(N+1):
+        for j in range(i+1):
+            price_tree[j,i]=S0*(d**j)* (u**(i-j))
+
+    # Option price at maturity N
+    option=numpy.zeros([N+1,N+1])
+    option[:, N]=numpy.maximum(numpy.zeros(N+1), price_tree[:, N]-K)
+
+    # Option price at t = 0 by going backwards
+    for i in numpy.arange(N-1,-1,-1):
+        for j in numpy.arange(0,i+1):
+            option[j,i]=numpy.exp(-r*dt)* (p*option[j ,i+1]+(1-p)* option[j+1,i+1])
+
+    # Return
+    if array_out:
+        return [option[0,0], price_tree, option]
+    else:
+        return option[0,0]
 {% endhighlight %}
+
+We need to call this new function (and the previous one as well but it's already been done)
+{% highlight python %}
+fast=binom_tree_call_faster(50,1,100,0.1,0.05,100, False)
+{% endhighlight %}
+
+in order to time both functions as follows :
+
+{% highlight python %}
+%timeit binom_tree_call(50,1,100,0.1,0.05,100, False)
+{% endhighlight %}
+````
+7.36 ms ± 132 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+````
+
+{% highlight python %}
+%timeit binom_tree_call_faster(50,1,100,0.1,0.05,100, False)
+{% endhighlight %}
+````
+85.8 µs ± 1.24 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+````
+
+The second function runs more than $$85$$ times faster than the first one.
