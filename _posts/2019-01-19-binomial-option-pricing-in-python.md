@@ -12,8 +12,9 @@ author_profile: false
 The binomial options pricing model provides a generalizable numerical method for the valuation of options. It was first proposed by John Carrington Cox, Stephen Ross and Mark Edward Rubinstein in their 1979 article "Option pricing: A simplified approach" published in the *Journal of Financial Economics*
 
 The Cox-Ross-Rubinstein model is a discrete-time version of the Black-Scholes model. It considers only one risky asset whose price is $$S_n$$ at time $$n, 0 < n < N,$$ and a riskless asset whose return is $$г$$ over one period of time. Which means that $$S^0_n=(1+r)^n$$. The risky asset is modelled as follows: between two consecutive periods the relative price change is either $$u$$ or $$d$$, with $$-1 < d < u$$ :
-$$S_{n+l}\left\{ \begin{array}{l}
-S_n(1+u) \\
+
+$$S_{n+1}\left\{ \begin{array}{l}
+S_n \quad (1+u) \\
 S_n(1+d) \end{array}
 \right.$$
 
@@ -104,17 +105,19 @@ An execution of
 {% highlight python %}
 binom_tree_call_put(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=True, array_out=False)
 {% endhighlight %}
-returns:
+simply returns the first value:
 
 ````
 11.546434850755071
 ````
+
 
 # Alternate faster version
 
 This is a faster version using the numba Just-In-Time compiling library available at
 [https://numba.pydata.org/](https://numba.pydata.org/)
 
+We just import the library and add a line to the previous function's definition:
 
 {% highlight python linenos %}
 import numba
@@ -169,6 +172,8 @@ in order to time both functions as follows :
 {% highlight python %}
 %timeit binom_tree_call_put(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=False, array_out=False)
 {% endhighlight %}
+
+gives the following average :
 ````
 7.25 ms ± 118 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 ````
@@ -176,8 +181,10 @@ in order to time both functions as follows :
 {% highlight python %}
 %timeit binom_tree_call_put_faster(N=50, T=1, S0=100, sigma=0.2, r=0.06, K=99, call=False, array_out=False)
 {% endhighlight %}
+
+gives the following average :
 ````
 86.6 µs ± 890 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ````
 
-In all of the tests runs I did the second function always ran around $$80$$ times faster than the first one.
+In all of the testruns I did, the second function always ran around $$80$$ times faster than the first one.
