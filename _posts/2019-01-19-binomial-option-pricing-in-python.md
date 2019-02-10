@@ -120,7 +120,7 @@ simply returns the first value:
 This is a faster version using the numba Just-In-Time compiling library available at
 [https://numba.pydata.org/](https://numba.pydata.org/)
 
-We just import the library and add a line to the previous function's definition:
+We just import the library and add a line on top of the previous function's definition:
 
 {% highlight python linenos %}
 import numba
