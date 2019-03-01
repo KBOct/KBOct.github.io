@@ -17,7 +17,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.14.2"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "fr-FR" #"en-US"
+locale                   : "en-US" #"fr-FR"
 title                    : "QuantReady"
 title_separator          : "-"
 name                     : "Kenny Bazile-Octuvon"
