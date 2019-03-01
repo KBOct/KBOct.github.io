@@ -9,6 +9,7 @@ excerpt: "Third and last part of the series, wherein the actual numerical scheme
 mathjax: true
 author_profile: false
 toc : true
+toc_sticky: true
 ---
 
 # Partie 3 : Modélisation des globules rouges
