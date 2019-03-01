@@ -8,6 +8,9 @@ tags: [quantitative finance, Monte Carlo, simulation, path-dependent, option pri
 excerpt: "Monte Carlo simulation for path-dependent options pricing in C++"
 mathjax: true
 author_profile: false
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
 # H1 Heading
