@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US" #"fr-FR"
-title                    : "Quantitativity"
+title                    : "QuantReady"
 title_separator          : "-"
 name                     : "Kenny Bazile-Octuvon"
 description              : "Quantitative Finance portfolio"
