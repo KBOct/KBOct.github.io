@@ -9,8 +9,8 @@ excerpt: "Monte Carlo simulation for path-dependent options pricing in C++"
 mathjax: true
 author_profile: false
 toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
+toc_label: "Table of Contents"
+toc_sticky: true
 ---
 
 # H1 Heading

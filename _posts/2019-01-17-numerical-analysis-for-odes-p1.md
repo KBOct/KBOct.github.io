@@ -9,6 +9,7 @@ excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab.
 mathjax: true
 author_profile: false
 toc : true
+toc_sticky: true
 ---
 
 # Partie 1 : Dynamique des populations
