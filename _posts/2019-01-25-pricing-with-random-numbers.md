@@ -8,7 +8,7 @@ tags: [quantitative finance, random numbers, simulation, pricing, C++, cpp]
 excerpt: "Pricing with random numbers in C++"
 toc: true
 toc_label: "Unique Title"
-toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 mathjax: true
 
 #author_profile: false

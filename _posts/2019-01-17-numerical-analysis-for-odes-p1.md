@@ -10,6 +10,7 @@ mathjax: true
 author_profile: false
 toc : true
 toc_sticky: true
+toc_icon:
 ---
 
 # Partie 1 : Dynamique des populations
@@ -181,18 +182,18 @@ Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^
 ### Analyse théorique
 
 #### Question a
-rajouter TEX
+<!-- rajouter TEX -->
 
 #### Question b
-rajouter TEX
+<!-- rajouter TEX -->
 
 #### Question c
-rajouter TEX
+<!-- rajouter TEX -->
 
 ### Analyse numérique
 
 #### Question a
-voir CR
+<!-- voir CR -->
 
 {% highlight matlab linenos %}
 
