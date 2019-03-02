@@ -49,6 +49,7 @@ En intégrant les deux membres, on obtient :
 $$\int{\frac{dx}{x(1-x)}}=\int{a\ dt}$$
 
 or par décomposition en éléments simples on obtient :
+
 $$\int{(\frac{1}{x}}+\frac{1}{1-x})\ dx=\int{a\ dt}$$
 
 puis :
