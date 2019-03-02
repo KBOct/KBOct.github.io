@@ -6,8 +6,11 @@ tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, american o
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Binomial pricing for American options in C"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 {% highlight c linenos %}

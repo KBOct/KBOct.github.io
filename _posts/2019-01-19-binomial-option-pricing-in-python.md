@@ -6,8 +6,11 @@ tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, options, o
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "In this article, I implement 2 versions of the Binomial option pricing model in Python"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 The binomial options pricing model provides a generalizable numerical method for the valuation of options. It was first proposed by John Carrington Cox, Stephen Ross and Mark Edward Rubinstein in their 1979 article "Option pricing: A simplified approach" published in the *Journal of Financial Economics*
 

@@ -6,8 +6,11 @@ tags: [quantitative finance, bonds, t-bills, t-notes, treasury, yield, duration,
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Bonds in C++"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # H1 Heading

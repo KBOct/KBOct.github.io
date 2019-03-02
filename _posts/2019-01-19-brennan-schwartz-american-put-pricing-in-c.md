@@ -6,8 +6,11 @@ tags: [quantitative finance, Brennan-Schwartz, American put pricing, C, options,
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Brennan-Schwartz American put pricing in C"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 

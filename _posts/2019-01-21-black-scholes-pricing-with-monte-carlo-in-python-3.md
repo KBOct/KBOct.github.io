@@ -6,8 +6,11 @@ tags: [quantitative finance, Black-Scholes, option pricing, Monte-Carlo, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Black Scholes pricing with Monte Carlo in Python"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # H1 Heading

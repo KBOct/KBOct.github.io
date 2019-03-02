@@ -6,9 +6,11 @@ tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "This is the second part of my 3-part series on using Numerical Analysis of ODEs to model RBC agglomeration"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
-toc : true
 ---
 
 # Partie 2 : Dynamique des populations en compétition

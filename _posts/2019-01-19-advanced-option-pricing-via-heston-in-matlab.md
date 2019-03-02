@@ -6,8 +6,11 @@ tags: [quantitative finance, Heston, option pricing, matlab]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Advanced option pricing via Heston in Matlab"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # Heston model closed-form formula
@@ -87,7 +90,7 @@ int2 = integral(@(w)int2(w,s0, v0, vbar, a, vvol, r, rho, t, k),0,100);int2 = re
 pi2 = int2/pi+0.5; % final pi
 
 % 2rd step: calculate call value
-y = s0*pi1-exp(-r*t) * k * pi2; 
+y = s0*pi1-exp(-r*t) * k * pi2;
 end
 
 %Numerical Example 2: Call valuation in the Heston model.

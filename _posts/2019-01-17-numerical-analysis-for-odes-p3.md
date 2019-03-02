@@ -6,10 +6,11 @@ tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "Third and last part of the series, wherein the actual numerical scheme to model RBC agglomeration is introduced and implemented"
-mathjax: true
-author_profile: false
-toc : true
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
+mathjax: true
 ---
 
 # Partie 3 : Modélisation des globules rouges

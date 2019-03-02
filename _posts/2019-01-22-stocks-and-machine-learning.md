@@ -6,8 +6,11 @@ tags: [machine learning, stock, stock prediction, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Stocks and Machine Learning"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # H1 Heading

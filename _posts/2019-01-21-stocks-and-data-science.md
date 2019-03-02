@@ -6,8 +6,11 @@ tags: [data science, stock, stock prediction, time series, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Stocks and Data Science"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # H1 Heading

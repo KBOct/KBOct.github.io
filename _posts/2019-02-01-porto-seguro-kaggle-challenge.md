@@ -6,10 +6,14 @@ tags: [machine learning, data science, eda, exploratory data analysis, kaggle, p
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Porto Seguro Kaggle challenge"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
 ---
 
-# H1 Heading
+<!-- # H1 Heading
 
 ## H2 Heading
 
@@ -32,7 +36,7 @@ Here's a bulleted list:
 Here's a numbered list:
 1. First
 2. Second
-3. Third
+3. Third -->
 
 Python code block:
 {% highlight python linenos %}
@@ -44,7 +48,7 @@ return z
 {% endhighlight %}
 
 
-Here's some inline code `x+y`
+<!-- Here's some inline code `x+y`
 
 Here's an image:
 <img src="{{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg" alt="scilab numerical analysis plot" class="full">
@@ -58,4 +62,4 @@ Here's some math :
 
 $$z=x+y$$
 
-You can also put it inline $$z=x+y$$
+You can also put it inline $$z=x+y$$ -->

@@ -6,8 +6,11 @@ tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, options, p
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Binomial option pricing in C++"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
-author_profile: false
 ---
 
 # H1 Heading

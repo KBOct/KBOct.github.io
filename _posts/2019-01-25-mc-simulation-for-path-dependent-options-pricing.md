@@ -6,11 +6,11 @@ tags: [quantitative finance, Monte Carlo, simulation, path-dependent, option pri
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Monte Carlo simulation for path-dependent options pricing in C++"
-mathjax: true
-author_profile: false
 toc: true
-toc_label: "Table of Contents"
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
+mathjax: true
 ---
 
 # H1 Heading

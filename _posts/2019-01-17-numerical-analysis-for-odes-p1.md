@@ -6,11 +6,12 @@ tags: [numerical analysis, ode, scilab]
 header:
   image: "/images/1- numerical analysis for ODEs/RBC banner2.jpg"
 excerpt: "Here, I model Red Blood Cell (Haematocyte) agglomeration using scilab. This was my Bachelor's thesis project for which I got a 18/20 (Grade A)"
-mathjax: true
 author_profile: false
-toc : true
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
-toc_icon:
+mathjax: true
 ---
 
 # Partie 1 : Dynamique des populations
