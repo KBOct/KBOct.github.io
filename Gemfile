@@ -24,7 +24,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jemoji"
 #   gem "jekyll-data"
 #   gem "jekyll-include-cache"
-#
+#	gem "jekyll-sitemap"
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
 end
