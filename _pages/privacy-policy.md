@@ -22,4 +22,4 @@ Because we have no use for it.
 
 ### Our Cookie Policy
 
-This website does not use cookies, period.
+[This website does not use cookies](/images/screenshot_siteinfo.JPG), period.
