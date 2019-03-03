@@ -12,6 +12,6 @@ main:
   - title: "Browse"
     url: /categories/
   - title: "Sitemap"
-    url: /sitemap.xsl
+    url: /sitemap/
   - title: "Terms and Privacy Policy"
     url: /terms/
