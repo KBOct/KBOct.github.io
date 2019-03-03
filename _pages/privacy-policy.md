@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 permalink: /privacy-policy/
 author_profile: true
 title: "Privacy Policy"
