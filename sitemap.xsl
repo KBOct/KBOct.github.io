@@ -135,7 +135,7 @@ permalink: /sitemap/
 </xsl:stylesheet>
 
 
-<!-- <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<!-- <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> -->
   {% for post in site.posts %}
     {% if post.id contains "404" %}{% else %}
       <url>
@@ -161,4 +161,4 @@ permalink: /sitemap/
       </url>
     {% endif %}
   {% endfor %}
-</urlset> -->
+</urlset>
