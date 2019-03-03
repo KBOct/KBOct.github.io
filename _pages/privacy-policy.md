@@ -4,7 +4,8 @@ permalink: /privacy-policy/
 author_profile: true
 title: "Privacy Policy"
 header:
-  overlay_image: /images/cyber-security-gdpr-mod-1.jpg
+  # overlay_image: /images/cyber-security-gdpr-mod-1.jpg
+  image: /images/cyber-security-gdpr-mod-1.jpg
   caption: "Image by: [**TheDigitalArtist**](https://pixabay.com/users/TheDigitalArtist-202249/)"
 ---
 ## Privacy Policy
