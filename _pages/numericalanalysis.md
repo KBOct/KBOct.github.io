@@ -4,7 +4,7 @@ permalink: /numerical-analysis/
 title: "Numerical Analysis Posts"
 author_profile: true
 header:
-  image: "/images/Untitled-2.jpg"
+  image: "/images/ANED.jpg"
 ---
 
 {% include group-by-array collection=site.posts field="categories" %}
