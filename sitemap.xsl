@@ -2,7 +2,7 @@
 layout:
 permalink: /sitemap/
 - -->
-
+<?xml-stylesheet type='text/xsl' href='/url/to/xsl-stylesheet.xsl'?>
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0"
                 xmlns:html="http://www.w3.org/TR/REC-html40"
