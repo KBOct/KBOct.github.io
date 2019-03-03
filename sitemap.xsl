@@ -3,7 +3,7 @@ layout:
 permalink: /sitemap/
 - -->
 <?xml-stylesheet type='text/xsl' href='/sitemap.xsl'?>
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
 <xsl:stylesheet version="2.0"
                 xmlns:html="http://www.w3.org/TR/REC-html40"
 				xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
