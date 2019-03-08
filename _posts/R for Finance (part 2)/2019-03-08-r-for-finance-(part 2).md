@@ -1,3 +1,17 @@
+---
+title: "R for Finance"
+date: 2019-03-08
+categories: [quantitative finance, data science, prediction, python]
+tags: [data science, stock, stock prediction, time series, analysis, python]
+#header:
+#  image: "/images/2 - heat equation/heat.jpg"
+excerpt: "This post discusses moving average crossover strategies,backtesting, and benchmarking"
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
+mathjax: true
+---
 
 This post discusses moving average crossover strategies,backtesting, and benchmarking
 
@@ -60,10 +74,10 @@ end <- as.Date("2016-10-01")
 # Let's get Apple stock data; Apple's ticker symbol is AAPL. We use the quantmod function getSymbols, and pass a string as a first argument to identify the desired ticker symbol, pass "yahoo" to src for Yahoo! Finance, and from and to specify date ranges
 
 #Quandl.api_key("5PgwbJYXkcVZgpEs9byv")
-#AAPL <- Quandl(c("MF1", "WIKI/AAPL.4"), 
-#                    type = "xts", 
+#AAPL <- Quandl(c("MF1", "WIKI/AAPL.4"),
+#                    type = "xts",
 #                    collapse = "daily",  
-#                    start_date="2010-01-01", 
+#                    start_date="2010-01-01",
 #                    end_date="2016-10-01")
 
 # Start with daily data. Note that "type = raw" will download a data frame.
@@ -79,7 +93,7 @@ getSymbols("AAPL", src="yahoo", from = start, to = end)
       Use `force = TRUE` to force installation
     Skipping install of 'quantstrat' from a github remote, the SHA1 (be01b350) has not changed since last install.
       Use `force = TRUE` to force installation
-    
+
 
 
 'AAPL'
@@ -240,9 +254,9 @@ table(as.vector(regime_val))
 ```
 
 
-    
-      -1    1 
-     616 1034 
+
+      -1    1
+     616 1034
 
 
 The call above indicates that the market was bullish on Apple stock for 987 days, and bearish for 663 days. (If you were following along on the Python version, you may notice there is no 0. This may be due to different behavior by sigComparison().)
@@ -272,8 +286,8 @@ table(sig)
 
 
     sig
-      -1    0    1 
-      18 1613   18 
+      -1    0    1
+      18 1613   18
 
 
 We would buy Apple stock 18 times and sell Apple stock 18 times. If we only go long on Apple stock, only 19 trades will be engaged in over the 6-year period, while if we pivot from a long to a short position every time a long position is terminated, we would engage in 19 trades total. (Bear in mind that trading more frequently isn’t necessarily good; trades are never free.)
@@ -679,7 +693,7 @@ applyStrategy(strategy_st, portfolios = portfolio_st)
     [1] "2016-07-12 00:00:00 AAPL_adj -1064 @ 96.6464428592831"
     [1] "2016-07-26 00:00:00 AAPL_adj 1023 @ 96.2983306600025"
     [1] "2016-07-27 00:00:00 AAPL_adj 15 @ 103.708186831476"
-    
+
 
 Here we effectvely conclude the study so we can perform some analytics.
 
@@ -752,7 +766,7 @@ print(data.frame(t(tStats[, -c(1,2)])))
     Max.Equity          103650.48
     Min.Equity          -15249.89
     End.Equity            4730.59
-    
+
 
 
 ```R
