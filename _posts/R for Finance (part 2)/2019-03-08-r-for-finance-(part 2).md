@@ -155,19 +155,19 @@ addTA(AAPL_sma_200, on = 1, col = "green")
 ```
 
 
-![png](output_4_0.png)
+![alt](output_4_0.png){:class="img-responsive"}
 
 
 
-![png](output_4_1.png)
+![alt](output_4_1.png){:class="img-responsive"}
 
 
 
-![png](output_4_2.png)
+![alt](output_4_2.png){:class="img-responsive"}
 
 
 
-![png](output_4_3.png)
+![alt](output_4_3.png){:class="img-responsive"}
 
 
 We will refer to the sign of this difference as the **regime**; that is, if the fast moving average is above the slow moving average, this is a bullish regime (the bulls rule), and a bearish regime (the bears rule) holds when the fast moving average is below the slow moving average. I identify regimes with the following code.
@@ -187,7 +187,7 @@ plot(regime_val["2016"], main = "Regime", ylim = c(-2, 2))
 ```
 
 
-![png](output_6_0.png)
+![alt](output_6_0.png){:class="img-responsive"}
 
 
 
@@ -196,7 +196,7 @@ plot(regime_val, main = "Regime", ylim = c(-2, 2))
 ```
 
 
-![png](output_7_0.png)
+![alt](output_7_0.png){:class="img-responsive"}
 
 
 
@@ -209,19 +209,19 @@ zoomChart("2016")
 ```
 
 
-![png](output_8_0.png)
+![alt](output_8_0.png){:class="img-responsive"}
 
 
 
-![png](output_8_1.png)
+![alt](output_8_1.png){:class="img-responsive"}
 
 
 
-![png](output_8_2.png)
+![alt](output_8_2.png){:class="img-responsive"}
 
 
 
-![png](output_8_3.png)
+![alt](output_8_3.png){:class="img-responsive"}
 
 
 
@@ -233,19 +233,19 @@ addSMA(n = c(20, 50), on = 1, col = c("red", "blue"))
 ```
 
 
-![png](output_9_0.png)
+![alt](output_9_0.png){:class="img-responsive"}
 
 
 
-![png](output_9_1.png)
+![alt](output_9_1.png){:class="img-responsive"}
 
 
 
-![png](output_9_2.png)
+![alt](output_9_2.png){:class="img-responsive"}
 
 
 
-![png](output_9_3.png)
+![alt](output_9_3.png){:class="img-responsive"}
 
 
 
@@ -276,7 +276,7 @@ plot(sig, main = "Signal", ylim = c(-2, 2))
 ```
 
 
-![png](output_12_0.png)
+![alt](output_12_0.png){:class="img-responsive"}
 
 
 
@@ -393,23 +393,23 @@ zoomChart("2014-05/2014-07")
 ```
 
 
-![png](output_19_0.png)
+![alt](output_19_0.png){:class="img-responsive"}
 
 
 
-![png](output_19_1.png)
+![alt](output_19_1.png){:class="img-responsive"}
 
 
 
-![png](output_19_2.png)
+![alt](output_19_2.png){:class="img-responsive"}
 
 
 
-![png](output_19_3.png)
+![alt](output_19_3.png){:class="img-responsive"}
 
 
 
-![png](output_19_4.png)
+![alt](output_19_4.png){:class="img-responsive"}
 
 
 As you can see, adjusting for dividends and stock splits makes a big difference. We will use this data from now on.
@@ -775,7 +775,7 @@ plot(final_acct$summary$End.Eq["2010/2016"], main = "Portfolio Equity")
 ```
 
 
-![png](output_45_0.png)
+![alt](output_45_0.png){:class="img-responsive"}
 
 
 
