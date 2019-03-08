@@ -155,19 +155,19 @@ addTA(AAPL_sma_200, on = 1, col = "green")
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_4_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_4_0.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_4_1.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_4_1.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_4_2.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_4_2.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_4_3.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_4_3.png){:class="img-responsive"}
 
 
 We will refer to the sign of this difference as the **regime**; that is, if the fast moving average is above the slow moving average, this is a bullish regime (the bulls rule), and a bearish regime (the bears rule) holds when the fast moving average is below the slow moving average. I identify regimes with the following code.
@@ -187,7 +187,7 @@ plot(regime_val["2016"], main = "Regime", ylim = c(-2, 2))
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_6_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_6_0.png){:class="img-responsive"}
 
 
 
@@ -196,7 +196,7 @@ plot(regime_val, main = "Regime", ylim = c(-2, 2))
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_7_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_7_0.png){:class="img-responsive"}
 
 
 
@@ -209,19 +209,19 @@ zoomChart("2016")
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_8_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_8_0.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_8_1.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_8_1.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_8_2.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_8_2.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_8_3.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_8_3.png){:class="img-responsive"}
 
 
 
@@ -233,19 +233,19 @@ addSMA(n = c(20, 50), on = 1, col = c("red", "blue"))
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_9_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_9_0.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_9_1.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_9_1.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_9_2.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_9_2.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_9_3.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_9_3.png){:class="img-responsive"}
 
 
 
@@ -276,7 +276,7 @@ plot(sig, main = "Signal", ylim = c(-2, 2))
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_12_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_12_0.png){:class="img-responsive"}
 
 
 
@@ -393,23 +393,23 @@ zoomChart("2014-05/2014-07")
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_19_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_19_0.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_19_1.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_19_1.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_19_2.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_19_2.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_19_3.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_19_3.png){:class="img-responsive"}
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_19_4.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_19_4.png){:class="img-responsive"}
 
 
 As you can see, adjusting for dividends and stock splits makes a big difference. We will use this data from now on.
@@ -775,7 +775,7 @@ plot(final_acct$summary$End.Eq["2010/2016"], main = "Portfolio Equity")
 ```
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/_posts/R for Finance (part 2)/output_45_0.png){:class="img-responsive"}
+![alt]({{ site.url }}{{ site.baseurl }}/images/output_45_0.png){:class="img-responsive"}
 
 
 
