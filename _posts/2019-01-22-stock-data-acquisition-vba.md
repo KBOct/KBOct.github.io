@@ -16,7 +16,7 @@ In this post I will try to sum up the different ways in which one can acquire st
 
 Because of the changes that have been occuring following Yahoo's API shutdown I will focus on the source of the data.
 
-#Yahoo!
+# Yahoo!
 
 ## Data acquisition in VBA
 
@@ -65,7 +65,6 @@ Sub qTest_3()
 
             'Split string here
             For Each element In metrics
-
 
                 firstTerm = Chr(34) & element & Chr(34) & ":{" & Chr(34) & "raw" & Chr(34) & ":"
                 secondTerm = "," & Chr(34) & "fmt" & Chr(34)
