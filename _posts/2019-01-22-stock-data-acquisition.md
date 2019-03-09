@@ -202,7 +202,8 @@ plot(AAPL[, "AAPL.Close"], main = "AAPL")
 ```
 
 
-![png](output_4_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/sda-yahoo-r.png)
+{:class="img-responsive"}
 
 
 ## Data acquisition in C++
