@@ -66,7 +66,6 @@ Sub qTest_3()
             'Split string here
             For Each element In metrics
 
-
                 firstTerm = Chr(34) & element & Chr(34) & ":{" & Chr(34) & "raw" & Chr(34) & ":"
                 secondTerm = "," & Chr(34) & "fmt" & Chr(34)
 
