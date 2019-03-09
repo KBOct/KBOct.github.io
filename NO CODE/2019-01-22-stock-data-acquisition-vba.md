@@ -16,7 +16,7 @@ In this post I will try to sum up the different ways in which one can acquire st
 
 Because of the changes that have been occuring following Yahoo's API shutdown I will focus on the source of the data.
 
-#Yahoo!
+# Yahoo!
 
 ## Data acquisition in VBA
 
