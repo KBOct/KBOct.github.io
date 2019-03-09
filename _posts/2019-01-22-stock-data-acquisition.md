@@ -206,8 +206,6 @@ plot(AAPL[, "AAPL.Close"], main = "AAPL")
 {:class="img-responsive"}
 
 
-## Data acquisition in C++
-
 # Google
 
 ## Morningstar
