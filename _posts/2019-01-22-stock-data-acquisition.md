@@ -1,18 +1,18 @@
 ---
-title: "Stock Data Acquisition using Excel VBA"
+title: "Stock Data Acquisition"
 date: 2019-01-22
 categories: [quantitative finance, data science, prediction, vba]
 tags: [stock, data, live stock data, updated stock data, analysis, acquisition, excel, spreadsheet, vba]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Stock Data Acquisition using Excel VBA"
+excerpt: "Here, we'll explore different ways to acquire stock data in Excel VBA, Python 3 and R"
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
-In this post I will try to sum up the different ways in which one can acquire stock data to use in different frameworks and programming languages, essentially for resource allocation, portfolio optimization and rebalancing or to elaborate quantitative trading strategies.
+In this post I will present different ways in which one can acquire stock data to use in different frameworks and programming languages, essentially for resource allocation, portfolio optimization and rebalancing or to elaborate quantitative trading strategies.
 
 Because of the changes that have been occuring following Yahoo's API shutdown I will focus on the source of the data.
 
@@ -419,8 +419,7 @@ AAPL <- Quandl(c("MF1", "WIKI/AAPL.4"),
                     start_date="2010-01-01",
                     end_date="2019-01-22")
 
-## Data acquisition in C++
-
+**Remark** : Quandl could be used to acquire data from Yahoo and Google sources but it's not recommended since Yahoo's shutdown and Morningstar library's recent issues
 <!-- # H1 Heading
 
 ## H2 Heading
