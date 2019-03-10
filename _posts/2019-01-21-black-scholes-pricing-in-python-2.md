@@ -1,11 +1,11 @@
 ---
-title: "Black Scholes pricing in Python 2"
+title: "Black Scholes pricing in Python"
 date: 2019-01-21
 categories: [quantitative finance, pricing, python 2]
 tags: [quantitative finance, Black-Scholes, pricing, python 2]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Black Scholes pricing in Python 2"
+excerpt: "Black Scholes pricing in Python"
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
@@ -15,22 +15,18 @@ mathjax: true
 
 Python code block:
 {% highlight python linenos %}
-from math import sqrt, exp, log, erf
 
-from decimal import *
-getcontext().prec = 5
+S_t = float(input("Stock price (in €): "))
+sigma = float(input("Volatility (in %): "))
+K = float(input("Strike price (in €): "))
+ttm = float(input("Time to maturity (in days): "))
 
-S_t = float(input("Please type the stock price: "))
-sigma = float(input("Please type the volatility: "))
-K = float(input("Please type the strike price: "))
-ttm = float(input("Please type the time to maturity in days: "))
+r = float(input("Interest rate (in %): "))
+q = float(input("Dividend rate (in %): "))
 
-r = float(input("Please type the interest rate: "))
-q = float(input("Please type the dividend rate: "))
-
-sigma_sqrtttm = sqrt(Decimal(ttm)/365) * sigma
-divdiscount = exp((-q*ttm)/365)
-irdiscount = exp((-r*ttm)/365)
+sigma_sqrtttm = sqrt(Decimal(ttm)/365) * (sigma/100.0)
+divdiscount = exp((-(q/100.0) * ttm)/365)
+irdiscount = exp((-(r/100.0) * ttm)/365)
 
 d1 = (log(S_t*divdiscount/K)+(r+.5*(sigma**2)) * ttm/365)/sigma_sqrtttm
 d2 = d1 - sigma_sqrtttm
@@ -44,6 +40,18 @@ CallPrice = round(S_t*divdiscount*Nd1-K*irdiscount*Nd2, 2)
 PutPrice = round(K*irdiscount*Nd2b-S_t*divdiscount*Nd1b, 2)
 
 print(" ")
-print("The Black-Scholes Call Price is " + str(CallPrice))
-print("The Black-Scholes Put Price is " + str(PutPrice))
+print("The Black-Scholes Call Price is " + str(CallPrice) + " €")
+print("The Black-Scholes Put Price is " + str(PutPrice) + " €")
 {% endhighlight %}
+
+```
+
+    Stock price (in €): 42.30
+    Volatility (in %): 1
+    Strike price (in €): 40.8
+    Time to maturity (in days): 126
+    Interest rate (in %): 0.41
+    Dividend rate (in %): 7
+
+    The Black-Scholes Call Price is 0.55 €
+    The Black-Scholes Put Price is 0.0 €
