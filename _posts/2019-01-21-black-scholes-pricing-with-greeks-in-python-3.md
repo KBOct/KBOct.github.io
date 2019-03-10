@@ -103,11 +103,11 @@ We get the following animation :
 
 Then we go ahead and compute the greeks according to the following formulas:
 
-<math>\delta= \frac{\partial P}{\partial S}</math>
+$$\delta= \frac{\partial P}{\partial S}$$
 
-<math>\delta_{Call}= N(d_{1})</math>
+$$\delta_{Call}= N(d_{1})$$
 
-<math>\delta_{Put} = \delta_{Call}-1= N(d_{1})-1</math>
+$$\delta_{Put} = \delta_{Call}-1= N(d_{1})-1$$
 
 
 {% highlight python linenos %}
