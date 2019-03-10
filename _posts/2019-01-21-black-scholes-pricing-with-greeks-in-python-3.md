@@ -147,8 +147,7 @@ print(Black_Scholes_Greeks_Call(100, 100, 0.005, 0.06, 0.4, 0))
 ```
 (0.5285710345530259, 0.10486079971293322, -2.1437085315040076, 25.166591931103973, 20.49713093369678)
 ```
-With both the underlying price equal to the strike price, the call option is at the money and we get a Delta close to $\frac{1}{2}$ (slightly higher because the option is at $0.4 \times 1 \text{ year} = \text{4 months and 24 days}$ to expiry) which is what we should expect
-
+With both the underlying price equal to the strike price, the call option is at the money and we get a Delta close to $$\frac{1}{2}$$ (slightly higher because the option is at $$0.4 \times 1 \text{ year} = \text{4 months and 24 days}$$ to expiry) which is what we should expect
 
 
 With a put option we get :
