@@ -98,6 +98,8 @@ plt.show()
 
 We get the following animation :
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/CallBS.gif)
+{:class="img-responsive"}
 
 Then we go ahead and compute the greeks according to the following formulas:
 
