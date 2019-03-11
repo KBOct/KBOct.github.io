@@ -8,7 +8,7 @@ header:
   image: /images/cyber-security-gdpr-mod-1.jpg
   caption: "Image by: [**TheDigitalArtist**](https://pixabay.com/users/TheDigitalArtist-202249/)"
 ---
-This privacy policy ("policy") will help you understand how Github and Kenny Bazile-Octuvon ("us", "we", "our") use and protect the data you provide to us when you visit and use [www.quantready.com](www.quantready.com) ("website").
+This privacy policy ("policy") will help you understand how Github and Kenny Bazile-Octuvon ("us", "we", "our") use and protect the data you provide to us when you visit and use [www.quantready.com](https://www.quantready.com) ("website").
 
 We reserve the right to change this policy at any given time. If you want to make sure that you are up to date with the latest changes, we advise you to frequently visit this website page.
 
