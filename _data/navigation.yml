@@ -11,7 +11,7 @@ main:
     url: /numerical-analysis/
   - title: "Browse"
     url: /categories/
-  - title: "Sitemap"
-    url: /sitemap/
+  # - title: "Sitemap"
+  #   url: /sitemap/
   - title: "Privacy Policy"
     url: /privacy-policy/
