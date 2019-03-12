@@ -84,7 +84,7 @@ Then we go ahead and compute the greeks according to the following formulas:
 
 $$\delta= \frac{\partial P}{\partial S}$$
 
-$$\delta_{Call}= N(d_{1})$$
+$$\delta_{Call}= N(d_{1})$$, with $$N$$ being the Gaussian cumulative distribution fonction
 
 $$\delta_{Put} = \delta_{Call}-1= N(d_{1})-1$$
 
@@ -103,9 +103,9 @@ Rho :
 
 $$\rho = \frac{\partial P}{\partial r}$$
 
-* $$\rho_{call} =KTe^{-rT}N(d_{2})$$
+$$\rho_{call} =KTe^{-rT}N(d_{2})$$
 
-* $$\rho_{put} =-KTe^{-rT}N(-d_{2})$$
+$$\rho_{put} =-KTe^{-rT}N(-d_{2})$$
 
 Vega :
 
@@ -159,9 +159,9 @@ With a put option we get :
 # S - Stock price
 # K - Strike price
 # T - Time to maturity
-# r - Riskfree interest rate
-# d - Dividend yield
-# v - Volatility
+# r - Risk-free interest rate
+# q - Dividend yield
+# sigma - Volatility
 Return:
 Delta: partial wrt S
 Gamma: second partial wrt S
