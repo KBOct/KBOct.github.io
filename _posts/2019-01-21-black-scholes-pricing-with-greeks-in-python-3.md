@@ -17,7 +17,7 @@ mathjax: true
 {% highlight python linenos %}
 """
 # The Black Scholes Formula for a European Put
-# CallPutFlag - This is set to 'c' for call option, anything else for put
+# CallorPut - This is set to 'c' for call option, anything else for put
 # S - Stock price
 # K - Strike price
 # T - Time to maturity
@@ -31,10 +31,10 @@ import numpy as np
 from scipy.stats import norm
 from math import *
 
-def BlackScholes(CallPutFlag,S,K,T,r,d,v):
+def BlackScholes(CallorPut,S,K,T,r,d,v):
     d1 = (log(float(S)/K)+((r-d)+v*v/2.) * T)/(v*sqrt(T))
     d2 = d1-v*sqrt(T)
-    if CallPutFlag=='c':
+    if CallorPut=='c':
         return S*exp(-d*T) * norm.cdf(d1)-K*exp(-r*T) * norm.cdf(d2)
     else:
         return K*exp(-r*T) * norm.cdf(-d2)-S*exp(-d * T) * norm.cdf(-d1)
@@ -156,19 +156,6 @@ With a put option we get :
 {% highlight python linenos %}
 #The Put Greeks
 """Calculating the partial derivatives for a Black Scholes Option (Put)
-# S - Stock price
-# K - Strike price
-# T - Time to maturity
-# r - Risk-free interest rate
-# q - Dividend yield
-# sigma - Volatility
-Return:
-Delta: partial wrt S
-Gamma: second partial wrt S
-Theta: partial wrt T
-Vega: partial wrt v
-Rho: partial wrt r
-"""
 
 from scipy.stats import norm
 from math import *
@@ -187,7 +174,10 @@ def Black_Scholes_Greeks_Put(S, K, r, v, T, d):
 
     return Delta, Gamma, Theta, Vega, Rho
 
-
 print(Black_Scholes_Greeks_Put(100, 100, 0.005, 0.06, 0.4, 0))
 
 {% endhighlight %}
+
+```
+(-0.47142896544697405, 0.10486079971293322, -1.644707532170341, 25.166591931103973, -19.42294901299654)
+```
