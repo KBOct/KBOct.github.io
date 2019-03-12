@@ -1,44 +1,19 @@
 ---
-title: "Black Scholes pricing with Greeks in Python 2"
+title: "Black Scholes pricing with Greeks in Python"
 date: 2019-01-21
-categories: [quantitative finance, pricing, python 2]
-tags: [quantitative finance, Black-Scholes, option pricing, greeks, python 2]
+categories: [quantitative finance, pricing, python]
+tags: [quantitative finance, Black-Scholes, option pricing, greeks, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Black Scholes pricing with Greeks in Python 2"
+excerpt: "Black Scholes pricing with Greeks in Python"
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
+# Initial implementation
 
-<!-- # H1 Heading
-
-## H2 Heading
-
-### H3 Heading
-
-Here's some basic text
-
-And here's some *italic*
-
-Here's some **bold** text
-
-What about a [link](https://github.com/kboct)
-
-Here's a bulleted list:
-* First
-+ Second
-- Third
-
-
-Here's a numbered list:
-1. First
-2. Second
-3. Third -->
-
-Python code block:
 {% highlight python linenos %}
 """
 # The Black Scholes Formula for a European Put
@@ -96,10 +71,14 @@ ani = animation.FuncAnimation(fig, update, data_gen, interval=100)
 plt.show()
 {% endhighlight %}
 
-We get the following animation :
+# Approximation
+
+We get the following approximation as  :
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/CallBS.gif)
 {:class="img-responsive"}
+
+# Greeks
 
 Then we go ahead and compute the greeks according to the following formulas:
 
@@ -108,6 +87,29 @@ $$\delta= \frac{\partial P}{\partial S}$$
 $$\delta_{Call}= N(d_{1})$$
 
 $$\delta_{Put} = \delta_{Call}-1= N(d_{1})-1$$
+
+$$\gamma_{Call} = \gamma_{Put} = \frac{\partial ^2 P}{\partial S ^2}=\frac{N'(d_{1})}{S\sigma\sqrt{T}}$$
+
+
+For a European call on a stock that doesn't pay any dividends, the Theta is:
+
+$$\theta_{call} = -\frac{SN'(d_{1})\sigma}{2\sqrt{T}}-rKe^{-rT}N(d_{2})$$
+
+For a European put on a stock that doesn't pay any dividends, the Theta is :
+
+$$\theta_{put} = -\frac{SN'(d_{1})\sigma}{2\sqrt{T}}+rKe^{-rT}N(-d_{2})$$
+
+Rho :
+
+$$\rho = \frac{\partial P}{\partial r}$$
+
+* $$\rho_{call} =KTe^{-rT}N(d_{2})$$
+
+* $$\rho_{put} =-KTe^{-rT}N(-d_{2})$$
+
+Vega :
+
+$$\mathcal{V}_{call} = \mathcal{V}_{put} = \frac{\partial P}{\partial \sigma}=S\sqrt{T}N'(d_{1})$$
 
 
 {% highlight python linenos %}
