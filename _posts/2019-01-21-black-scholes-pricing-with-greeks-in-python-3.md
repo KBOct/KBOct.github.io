@@ -12,11 +12,13 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
-# Initial implementation
+# Black-Scholes Formula
+
+We first implement the Black-Scholes Formula that we'll use to get the call and put values by simply passing the proper arguments to the following function:
 
 {% highlight python linenos %}
 """
-# The Black Scholes Formula for a European Put
+# The Black Scholes Formula for a European Option
 # CallorPut - This is set to 'c' for call option, anything else for put
 # S - Stock price
 # K - Strike price
@@ -38,7 +40,12 @@ def BlackScholes(CallorPut,S,K,T,r,d,v):
         return S*exp(-d*T) * norm.cdf(d1)-K*exp(-r*T) * norm.cdf(d2)
     else:
         return K*exp(-r*T) * norm.cdf(-d2)-S*exp(-d * T) * norm.cdf(-d1)
+{% endhighlight %}
 
+
+We then define the functions necessary to show the approximation evolve as
+
+{% highlight python linenos %}
 plt.clf()
 fig,ax = plt.subplots()
 
@@ -80,6 +87,8 @@ We get the following approximation as  :
 
 # Greeks
 
+## formulas
+
 Then we go ahead and compute the greeks according to the following formulas:
 
 $$\delta= \frac{\partial P}{\partial S}$$
@@ -111,6 +120,7 @@ Vega :
 
 $$\mathcal{V}_{call} = \mathcal{V}_{put} = \frac{\partial P}{\partial \sigma}=S\sqrt{T}N'(d_{1})$$
 
+## Call greeks
 
 {% highlight python linenos %}
 #The Call Greeks
@@ -151,6 +161,7 @@ print(Black_Scholes_Greeks_Call(100, 100, 0.005, 0.06, 0.4, 0))
 ```
 With the underlying price equal to the strike price, the call option is at the money and we get a Delta close to $$\frac{1}{2}$$ but slightly higher because the option is at $$0.4 \times 1 \text{ year} = \text{4 months and 24 days}$$ to expiry, which is what we should expect
 
+## Put greeks
 
 With a put option we get :
 {% highlight python linenos %}
