@@ -97,18 +97,7 @@ plt.show()
 
 {% endhighlight %}
 
-<!-- Here's some inline code `x+y`
-
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg" alt="scilab numerical analysis plot" class="full">
-
-
-Here's another image using Kramdown:
-![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/image1.jpg)
-{: .full}
-
-Here's some math :
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$ -->
+<div>
+    <a href="https://plot.ly/~KBOct/0/?share_key=h5OAKH95n68M6WdhHj59BI" target="_blank" title="line-mode" style="display: block; text-align: center;"><img src="https://plot.ly/~KBOct/0.png?share_key=h5OAKH95n68M6WdhHj59BI" alt="line-mode" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="KBOct:0" sharekey-plotly="h5OAKH95n68M6WdhHj59BI" src="https://plot.ly/embed.js" async></script>
+</div>
