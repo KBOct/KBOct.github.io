@@ -87,7 +87,7 @@ for x in range(num_simulations):
 
 
 fig = plt.figure()
-fig.suptitle('Monte Carlo Simulation: MSFT')
+fig.subtitle('Monte Carlo Simulation: MSFT')
 plt.plot(simulation_df)
 plt.axhline(y = last_price, color = 'r', linestyle = '-')
 plt.xlabel('Day')
