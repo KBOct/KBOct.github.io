@@ -41,10 +41,60 @@ Here's a numbered list:
 Python code block:
 {% highlight python linenos %}
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+import pandas as pd
+import quandl
+import datetime
+#style.use('ggplot')
 
-def test_function(x,y):
-  z=np.sum(x,y)
-return z
+
+start_date = datetime.date(2017,1,3)
+end_date = datetime.date.today()
+
+quandl.ApiConfig.api_key = "5PgwbJYXkcVZgpEs9byv"
+
+
+df = quandl.get('WIKI/AAP.4', start_date=start_date, end_date=end_date, collapse="daily")
+df = df.reset_index()
+prices = df['Close']
+
+returns = prices.pct_change()
+pricelist=prices.tolist()
+last_price = pricelist[-1]
+
+
+num_simulations = 1000
+num_days = 252
+
+simulation_df=pd.DataFrame()
+
+for x in range(num_simulations):
+    count = 0
+    daily_vol = returns.std()
+    price_series = []
+    price = last_price * (1 + np.random.normal(0, daily_vol))
+    price_series.append(price)
+
+    for y in range(num_days):
+        if count == 251:
+            break
+        price = price_series[count] * (1 + np.random.normal(0, daily_vol))
+        price_series.append(price)
+        count += 1
+
+    simulation_df[x] = price_series
+
+
+fig = plt.figure()
+fig.suptitle('Monte Carlo Simulation: MSFT')
+plt.plot(simulation_df)
+plt.axhline(y = last_price, color = 'r', linestyle = '-')
+plt.xlabel('Day')
+plt.ylabel('Price')
+plt.show()
+
+
 {% endhighlight %}
 
 <!-- Here's some inline code `x+y`
