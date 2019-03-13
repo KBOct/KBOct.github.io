@@ -97,7 +97,4 @@ plt.show()
 
 {% endhighlight %}
 
-<div>
-    <a href="https://plot.ly/~KBOct/0/?share_key=h5OAKH95n68M6WdhHj59BI" target="_blank" title="line-mode" style="display: block; text-align: center;"><img src="https://plot.ly/~KBOct/0.png?share_key=h5OAKH95n68M6WdhHj59BI" alt="line-mode" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="KBOct:0" sharekey-plotly="h5OAKH95n68M6WdhHj59BI" src="https://plot.ly/embed.js" async></script>
-</div>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~KBOct/0.embed"></iframe>
