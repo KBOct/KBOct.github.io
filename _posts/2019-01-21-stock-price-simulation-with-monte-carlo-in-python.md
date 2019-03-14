@@ -13,54 +13,29 @@ toc_sticky: true
 mathjax: true
 ---
 
-<!-- # H1 Heading
 
-## H2 Heading
-
-### H3 Heading
-
-Here's some basic text
-
-And here's some *italic*
-
-Here's some **bold** text
-
-What about a [link](https://github.com/kboct)
-
-Here's a bulleted list:
-* First
-+ Second
-- Third
-
-
-Here's a numbered list:
-1. First
-2. Second
-3. Third -->
-
-Python code block:
 {% highlight python linenos %}
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
+from matplotlib.lines import Line2D
 import pandas as pd
 import quandl
 import datetime
-#style.use('ggplot')
 
 
 start_date = datetime.date(2017,1,3)
 end_date = datetime.date.today()
 
-quandl.ApiConfig.api_key = "yourRegisteredQuandlAPIkey"
+quandl.ApiConfig.api_key = "5PgwbJYXkcVZgpEs9byv"
 
 
-df = quandl.get('WIKI/AAP.4', start_date=start_date, end_date=end_date, collapse="daily")
+df = quandl.get('WIKI/MSFT.4', start_date=start_date, end_date=end_date, collapse="daily")
 df = df.reset_index()
 prices = df['Close']
 
 returns = prices.pct_change()
-pricelist=prices.tolist()
+pricelist = prices.tolist()
 last_price = pricelist[-1]
 
 
@@ -86,13 +61,19 @@ for x in range(num_simulations):
     simulation_df[x] = price_series
 
 
+# average for the Monte Carlo Method
+#average = np.sum(np.amax(option_data, axis = 1))/float(self.iterations)
+#return np.exp(-1.0*self.rf*self.T) * average
+
 fig = plt.figure()
-fig.subtitle('Monte Carlo Simulation: MSFT')
+fig.suptitle('Monte Carlo stock closing price simulation: MSFT')
 plt.plot(simulation_df)
-plt.axhline(y = last_price, color = 'r', linestyle = '-')
+plt.axhline(y = last_price, color = 'r', linestyle = '-.')
 plt.xlabel('Day')
 plt.ylabel('Price')
 plt.show()
+
+
 
 
 {% endhighlight %}
