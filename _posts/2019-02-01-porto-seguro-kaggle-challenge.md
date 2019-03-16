@@ -9,21 +9,21 @@ excerpt: "Porto Seguro Kaggle challenge"
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+toc_sticky: false
 mathjax: true
 ---
 
 
 
 
-Python code block:
+<!-- Python code block:
 {% highlight python linenos %}
 import numpy as np
 
 def test_function(x,y):
   z=np.sum(x,y)
 return z
-{% endhighlight %}
+{% endhighlight %} -->
 
 
 
