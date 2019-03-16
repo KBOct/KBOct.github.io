@@ -14,8 +14,6 @@ mathjax: true
 ---
 In this post I will present different ways in which one can acquire stock data to use in different frameworks and programming languages, essentially for resource allocation, portfolio optimization and rebalancing or to elaborate quantitative trading strategies.
 
-Because of the changes that have been occuring following Yahoo's API shutdown I will focus on the source of the data.
-
 # Yahoo!
 
 ## Data acquisition in VBA

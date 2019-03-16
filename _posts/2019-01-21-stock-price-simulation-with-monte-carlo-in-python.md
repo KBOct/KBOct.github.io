@@ -14,6 +14,7 @@ mathjax: true
 ---
 
 
+
 {% highlight python linenos %}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -33,6 +34,11 @@ quandl.ApiConfig.api_key = "5PgwbJYXkcVZgpEs9byv"
 df = quandl.get('WIKI/MSFT.4', start_date=start_date, end_date=end_date, collapse="daily")
 df = df.reset_index()
 prices = df['Close']
+
+{% endhighlight %}
+TEXTE
+
+{% highlight python linenos %}
 
 returns = prices.pct_change()
 pricelist = prices.tolist()
@@ -65,6 +71,11 @@ for x in range(num_simulations):
 #average = np.sum(np.amax(option_data, axis = 1))/float(self.iterations)
 #return np.exp(-1.0*self.rf*self.T) * average
 
+{% endhighlight %}
+Then we plot 
+
+{% highlight python linenos %}
+
 fig = plt.figure()
 fig.suptitle('Monte Carlo stock closing price simulation: MSFT')
 plt.plot(simulation_df)
@@ -72,9 +83,6 @@ plt.axhline(y = last_price, color = 'r', linestyle = '-.')
 plt.xlabel('Day')
 plt.ylabel('Price')
 plt.show()
-
-
-
 
 {% endhighlight %}
 
