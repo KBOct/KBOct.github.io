@@ -1584,7 +1584,7 @@ msno.matrix(donnees[val_manquantes],width_ratios=(10,1),figsize=(20,10),color=(0
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7fefc85b65c0>
+    <matplotlib.axes._ subplots.AxesSubplot at 0x7fefc85b65c0>
 
 
 
