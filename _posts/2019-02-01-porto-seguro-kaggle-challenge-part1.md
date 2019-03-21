@@ -1696,7 +1696,7 @@ def correlation_features(titre, colonnes, dataframe):
     sns.heatmap(dataframe[colonnes].corr(), cmap=colormap, annot=True)
 ```
 
-#### Corrélation des features binaires
+**Corrélation des features binaires**
 
 
 ```python
@@ -1709,7 +1709,7 @@ correlation_features('binaires', bin_featnames, donnees)
 
 Observation
 
-#### Corrélation des features continues
+**Corrélation des features continues**
 
 
 ```python
@@ -1722,7 +1722,7 @@ correlation_features('continues', cont_featnames,donnees)
 
 Observation
 
-#### Corrélation des features ordinales
+**Corrélation des features ordinales**
 
 
 ```python
