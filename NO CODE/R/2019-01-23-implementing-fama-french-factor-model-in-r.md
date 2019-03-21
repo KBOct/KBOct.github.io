@@ -12,6 +12,7 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
+PP 48-56 Implementing Fama-French Factor model in R
 
 R code block:
 {% highlight r linenos %}

@@ -12,6 +12,7 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
+PP 243-249 Cryptocurrency price prediction using NN in R
 
 R code block:
 {% highlight r linenos %}
