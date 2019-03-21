@@ -13,7 +13,7 @@ toc_sticky: true
 mathjax: true
 ---
 
-# III. Construction des modèles
+# Construction des modèles
 
 ## 1) Choix du classifieur
 
