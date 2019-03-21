@@ -1735,9 +1735,9 @@ correlation_features('ordinales', ord_featnames, donnees)
 
 Observation
 
-### Distribution des features
+### b) Distribution des features
 
-#### Catégorielles
+**Catégorielles**
 
 
 ```python
@@ -1752,7 +1752,7 @@ fig.delaxes(axes[4][2])
 ![png](output_51_0.png)
 
 
-#### Binaires
+**Binaires**
 
 
 ```python
@@ -1768,7 +1768,7 @@ for i in range(1,4):
 ![png](output_53_0.png)
 
 
-#### Continues
+**Continues**
 
 
 ```python
@@ -1822,34 +1822,7 @@ for i, colname in enumerate(cont_featnames):
 ![png](output_55_9.png)
 
 
-from scipy.stats import norm
-
-compt=0
-for i, colname in enumerate(ord_featnames):
-    if 'calc' in colname:
-        plt.figure(compt)
-        x = donnees[colname]
-        ax = sns.distplot(x, kde=False, fit=norm);
-        plt.title('Distribution de ' + colname)
-
-        (mu, sigma) = norm.fit(x)
-        #print("mu={0}, sigma={1}".format(mu, sigma))
-
-        plt.legend(["normal dist. fit ($\mu=${0:.2g}, $\sigma=${1:.2f})".format(mu, sigma)])
-        plt.ylabel('Frequency')
-
-        #x_dummy = np.linspace(norm.ppf(0.01), norm.ppf(0.99), 100)
-        x_dummy = np.linspace(0, np.max(x), 100)
-        ax.plot(x_dummy, norm.pdf(x_dummy, mu, sigma))
-        plt.legend(["normal dist. fit ($\mu=${0:.2g}, $\sigma=${1:.2f})".format(mu, sigma),
-                   "cross-check"], loc="upper right")
-    compt+=1
-
-
-
-
-
-#### Ordinales
+**Ordinales**
 
 
 ```python
