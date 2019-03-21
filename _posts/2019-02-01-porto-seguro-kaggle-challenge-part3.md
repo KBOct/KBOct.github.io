@@ -286,7 +286,7 @@ def gini_normalizedc(a, p):
 gini_sklearn = make_scorer(gini_normalizedc, True, True)
 ```
 
-### Séparation du jeu de données
+**Séparation du jeu de données**
 
 On va entraîner nos modèles par K-fold cross-validation. Etant donné que le jeu de données est très déséquilibré, on veut avoir le même nombre de "True" dans chacun des folds pour être sur que les modèles ne prédisent pas la classe "False" trop souvent.
 
@@ -296,7 +296,7 @@ folds = 4
 skf = StratifiedKFold(n_splits=folds, shuffle = True, random_state = 1001)
 ```
 
-### Grille d'hyperparamètres pour GradientBoostingClassifier
+**Grille d'hyperparamètres pour GradientBoostingClassifier**
 
 
 ```python
