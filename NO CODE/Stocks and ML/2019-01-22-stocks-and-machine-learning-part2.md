@@ -1,11 +1,11 @@
 ---
-title: "Stocks and Data Science"
-date: 2019-01-21
+title: "Stocks and Machine Learning"
+date: 2019-01-22
 categories: [quantitative finance, data science, prediction, python]
-tags: [data science, stock, stock prediction, time series, analysis, python]
+tags: [machine learning, stock, stock prediction, analysis, python]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
-excerpt: "Stocks and Data Science"
+excerpt: "Stocks and Machine Learning"
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
