@@ -1316,8 +1316,6 @@ for x in ord_featnames:
 
 <a id='vm'></a>
 ### d) Valeurs manquantes
-[Retourner au sommaire](#toc)<br>
-
 
 ```python
 Nombre_de_donnees_manquantes=df.isna().sum()
@@ -1683,7 +1681,6 @@ Il n'y a que 3.6% de déclaration de sinistres. On voir donc que le jeu de donn�
 Pour effectuer de bonnes prédictions malgré ce déséquilibre on peut sous-échantillonner les données de la classe dominante, sur-échantillonner les données de la classe minoritaire ou bien encore stratifier les données lors de la cross-validation.
 
 ## 2) Visualisation des données
-[Retourner au sommaire](#toc)<br>
 
 ### a) 	Corrélation des features selon leur type
 

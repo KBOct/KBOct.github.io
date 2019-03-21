@@ -13,8 +13,7 @@ toc_sticky: true
 mathjax: true
 ---
 
-# II. Pré-traitement des données
-[Retourner au sommaire](#toc)<br>
+# Pré-traitement des données
 
 ## 1) Suppression de features
 
@@ -268,9 +267,6 @@ donnees.isna().sum().sum()
 ```
 
 ## 2) Encodage des données catégorielles
-[Retourner au sommaire](#toc)<br>
-
-
 
 
 ```python

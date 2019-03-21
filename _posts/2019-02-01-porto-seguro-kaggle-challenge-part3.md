@@ -14,7 +14,6 @@ mathjax: true
 ---
 
 # III. Construction des modèles
-[Retourner au sommaire](#toc)<br>
 
 ## 1) Choix du classifieur
 
@@ -335,14 +334,4 @@ random_search.fit(X_train, y_train)
 ```python
 print('Meilleurs hyperparamètres :')
 print(random_search.best_params_)
-```
-
-
-```python
-
-```
-
-
-```python
-
 ```
