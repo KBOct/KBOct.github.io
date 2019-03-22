@@ -81,7 +81,12 @@ Factor Models
 Now, we have a data frame R object that contains about 6,500 stocks that are traded
 on different exchanges such as AMEX, NASDAQ, or NYSE. In order to see the
 variables that the dataset contains, we can use the str command:
+
+```r
 str(stocks)
+```
+
+```
 'data.frame': 6551 obs. of 8 variables:
 $ Symbol : chr "AA-P" "AAMC" "AAU" "ACU" ...
 $ Name : chr "Alcoa Inc." "Altisource Asset Management Corp"...
@@ -91,39 +96,45 @@ $ IPOyear : int NA NA NA 1988 NA NA NA NA NA NA ...
 $ Sector : chr "Capital Goods" "Finance" "Basic Industries"...
 $ Industry : chr "Metal Fabrications" "Real Estate"...
 $ Exchange : chr "AMEX" "AMEX" "AMEX" "AMEX" ...
+
 We can drop the variables that we don't really need and include the information
 about market capitalization and the book value of the company coming from
 a different database as new variables since we will need them to estimate the
 Fama-French model:
+
+```r
 stocks[1:5, c(1, 3:4, ncol(stocks))]
+```
+
+```
 Symbol LastSale MarketCap BookValuePerShare
 1 AA-P 87.30 0 0.03
 2 AAMC 985.00 2207480545 -11.41
 3 AAU 1.29 83209284 0.68
 4 ACU 16.50 53003808 10.95
 5 ACY 16.40 25309415 30.13
+```
+
 We will also need the time series of the risk-free return, which will be quantified in
 this calculation by the one-month USD LIBOR rate:
+
 library(Quandl)
-Warning message:
-package 'Quandl' was built under R version 3.1.0
+
 LIBOR <- Quandl('FED/RILSPDEPM01_N_B',
 start_date = '2010-06-01', end_date = '2014-06-01')
-Warning message:
 
-In Quandl("FED/RILSPDEPM01_N_B", start_date = "2010-06-01", end_date
-= "2014-06-01") : It would appear you aren't using an authentication
-token. Please visit http://www.quandl.com/help/r or your usage may be
-limited.
-We can ignore the warning messages as data is still assigned to the LIBOR variable.
+
 The Quandl package, the tseries package, and other packages that collect data are
 discussed in Chapter 4, Big Data – Advanced Analytics, in more detail.
 This can also be used to get the prices of stocks, and the S&P 500 index can be used
 as the market portfolio.
+
 We have a table with stock prices (a time series of approximately 5,000 stock prices
 between June 1, 2010 to June 1, 2014). The first and last few columns look like this:
+
 d <- read.table("data.csv", header = TRUE, sep = ";")
 d[1:7, c(1:5, (ncol(d) - 6):ncol(d))]
+
 Date SP500 AAU ACU ACY ZMH ZNH ZOES ZQK ZTS
 ZX
 1 2010.06.01 1070.71 0.96 11.30 20.64 54.17 21.55 NA 4.45 NA NA
@@ -133,6 +144,8 @@ ZX
 5 2010.06.07 1050.47 0.97 11.45 19.03 52.66 20.24 NA 4.18 NA NA
 6 2010.06.08 1062.00 0.98 11.35 18.25 52.99 20.96 NA 3.96 NA NA
 7 2010.06.09 1055.69 0.98 11.90 18.35 53.22 20.45 NA 4.02 NA NA
+
+
 If we have the data saved on our hard drive, we can simply read it with the
 read.table function. In Chapter 4, Big Data – Advanced Analytics, we will discuss
 how to collect data directly from the Internet.
@@ -140,14 +153,17 @@ Now, we have all the data we need: the market portfolio (S&P 500), the price of
 stocks, and the risk-free rates (one-month LIBOR).
 We have chosen to delete the variables with missing values and 0 or negative prices,
 in order to clean the database. The easiest way to do this is the following:
+
 d <- d[, colSums(is.na(d)) == 0]
 d <- d[, c(T, colMins(d[, 2:ncol(d)]) > 0)]
+
 To use the colMins function, we apply the matrixStats package. Now, we can start
 working with the data.
-Factor Models
 
-Estimation of APT with principal component
-analysis
+**Factor Models**
+
+Estimation of APT with principal component analysis
+
 In practice, it is not easy to carry out a factor analysis, because identifying the macro
 variables that have an effect on the securities' return is difficult (Medvegyev – Száz,
 2010, pp. 42). In many cases, the latent factors that drive the returns are searched by
