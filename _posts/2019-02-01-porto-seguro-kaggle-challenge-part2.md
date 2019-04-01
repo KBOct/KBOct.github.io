@@ -353,5 +353,5 @@ plt.ylabel("2ème axe - Justifie %.1f %% de la variance" % (acp.explained_varian
 plt.show()
 ```
 
-
-![png](output_93_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_93_0.png)
+{:class="img-responsive"}

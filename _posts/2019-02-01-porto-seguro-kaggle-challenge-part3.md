@@ -154,7 +154,8 @@ plt.show()
 ```
 
 
-![png](output_101_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_101_0.png)
+{:class="img-responsive"}
 
 
 ### c)	Courbes ROC
@@ -229,7 +230,8 @@ plt.legend(loc="lower right", fontsize=10)
 
 
 
-![png](output_104_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_104_1.png)
+{:class="img-responsive"}
 
 
 ### d)	Courbes Precision-Recall
@@ -256,7 +258,8 @@ plt.legend(loc="upper right", fontsize=11)
 
 
 
-![png](output_106_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_106_1.png)
+{:class="img-responsive"}
 
 
  ## 2) Tuning des hyperparamètres
