@@ -13,7 +13,7 @@ toc_sticky: true
 mathjax: true
 ---
 
-Python code block:
+
 {% highlight python linenos %}
 
 S_t = float(input("Stock price (in €): "))
