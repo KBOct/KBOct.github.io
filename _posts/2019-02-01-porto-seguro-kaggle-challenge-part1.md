@@ -1663,14 +1663,12 @@ ax=sns.countplot(x=target, data=donnees)
 
 plt.tight_layout()
 ```
-![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/2-1.jpg)
-{:class="img-responsive"}
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_35_0.png)
 {:class="img-responsive"}
 
 
-Il n'y a que 3.6% de déclaration de sinistres. On voir donc que le jeu de données est très déséquilibré. C'est surement la raison de cette compétition Kaggle. En effet, si la valeur 1 est aussi sous-représentée, il devient difficle de la prédire. Le but est alors soit de mieux prédire les futures déclarations de sinistres soit de détecter de la fraude.
+Il n'y a que 3,6 % de déclaration de sinistres. On voir donc que le jeu de données est très déséquilibré. C'est surement la raison de cette compétition Kaggle. En effet, si la valeur 1 est aussi sous-représentée, il devient difficle de la prédire. Le but est alors soit de mieux prédire les futures déclarations de sinistres soit de détecter de la fraude.
 
 Pour effectuer de bonnes prédictions malgré ce déséquilibre on peut sous-échantillonner les données de la classe dominante, sur-échantillonner les données de la classe minoritaire ou bien encore stratifier les données lors de la cross-validation.
 
