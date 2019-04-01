@@ -13,15 +13,6 @@ toc_sticky: true
 mathjax: true
 ---
 
-<!-- Python code block:
-{% highlight python linenos %}
-import numpy as np
-
-def test_function(x,y):
-  z=np.sum(x,y)
-return z
-{% endhighlight %} -->
-
 Les consignes originales du défi Kaggle :
 
 **1. Data Description**
@@ -646,65 +637,65 @@ df.describe()
   <tbody>
     <tr>
       <th>count</th>
-      <td>5.952120e+05</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
-      <td>595212.000000</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
+      <td>595212</td>
     </tr>
     <tr>
       <th>mean</th>
@@ -1524,7 +1515,8 @@ msno.matrix(donnees[val_manquantes],width_ratios=(10,1),figsize=(20,10),color=(0
 
 
 
-![png](output_27_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_27_1.png)
+{:class="img-responsive"}
 
 
 Calculons les pourcentages de données manquantes :
@@ -1671,9 +1663,11 @@ ax=sns.countplot(x=target, data=donnees)
 
 plt.tight_layout()
 ```
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/2-1.jpg)
+{:class="img-responsive"}
 
-
-![png](output_35_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_35_0.png)
+{:class="img-responsive"}
 
 
 Il n'y a que 3.6% de déclaration de sinistres. On voir donc que le jeu de données est très déséquilibré. C'est surement la raison de cette compétition Kaggle. En effet, si la valeur 1 est aussi sous-représentée, il devient difficle de la prédire. Le but est alors soit de mieux prédire les futures déclarations de sinistres soit de détecter de la fraude.
@@ -1701,7 +1695,8 @@ correlation_features('binaires', bin_featnames, donnees)
 ```
 
 
-![png](output_41_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_41_0.png)
+{:class="img-responsive"}
 
 
 Observation
@@ -1714,7 +1709,8 @@ correlation_features('continues', cont_featnames,donnees)
 ```
 
 
-![png](output_44_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_44_0.png)
+{:class="img-responsive"}
 
 
 Observation
@@ -1727,7 +1723,8 @@ correlation_features('ordinales', ord_featnames, donnees)
 ```
 
 
-![png](output_47_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_47_0.png)
+{:class="img-responsive"}
 
 
 Observation
@@ -1746,7 +1743,8 @@ fig.delaxes(axes[4][2])
 ```
 
 
-![png](output_51_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_51_0.png)
+{:class="img-responsive"}
 
 
 **Binaires**
@@ -1762,7 +1760,8 @@ for i in range(1,4):
 ```
 
 
-![png](output_53_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_53_0.png)
+{:class="img-responsive"}
 
 
 **Continues**
@@ -1780,43 +1779,53 @@ for i, colname in enumerate(cont_featnames):
 ```
 
 
-![png](output_55_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_0.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_1.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_2.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_2.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_3.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_3.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_4.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_4.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_5.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_5.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_6.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_6.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_7.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_7.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_8.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_8.png)
+{:class="img-responsive"}
 
 
 
-![png](output_55_9.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_55_9.png)
+{:class="img-responsive"}
 
 
 **Ordinales**
@@ -1831,4 +1840,5 @@ plt.tight_layout()
 ```
 
 
-![png](output_59_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/kaggle/output_59_0.png)
+{:class="img-responsive"}
