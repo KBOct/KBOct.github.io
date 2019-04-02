@@ -21,75 +21,73 @@ In this post I will present different ways in which one can acquire stock data t
 Here we will get the PE Ratio, Forward PE, Beta, Market Cap and 52 Week High. A way to acquire such data in VBA would be to use this Subroutine :
 
 {% highlight vb linenos %}
-Sub qTest_3()
+Sub Acquire_Stock()
 
-    Call clear_data
+Call clear_data
 
-    Dim myrng As Range
-    Dim lastrow As Long
-    Dim row_count As Long
-    Dim ws As Worksheet
-    Set ws = Sheets("Main")
+Dim myRange As Range
+Dim lastr As Long
+Dim rows As Long
+Dim ws As Worksheet
+Set ws = Sheets("Main")
 
-    col_count = 2
-    row_count = 2
+columns = 2
+rows = 2
 
-    'Find last row
-    With ws
-     lastrow = .Range("A" & .Rows.Count).End(xlUp).Row
-    End With
+'Find last row
+With ws
+ lastr = .Range("A" & .Rows.Count).End(xlUp).Row
+End With
 
-    'set ticker range
-    Set myrng = ws.Range(Cells(2, 1), Cells(lastrow, 1))
+'set ticker range
+Set myRange = ws.Range(Cells(2, 1), Cells(lastr, 1))
 
-    'loop through tickers
-    For Each ticker In myrng
+'loop through tickers
+For Each ticker In myRange
 
-        'Send web request
-        Dim URL2 As String: URL2 = "https://finance.yahoo.com/quote/" & ticker & "/key-statistics?p=" & ticker
-        Dim Http2 As New WinHttpRequest
+	Dim URL2 As String: URL2 = "https://finance.yahoo.com/quote/" & ticker & "/key-statistics?p=" & ticker
+	Dim Http2 As New WinHttpRequest
 
-        Http2.Open "GET", URL2, False
-        Http2.Send
+	Http2.Open "GET", URL2, False
+	Http2.Send
 
-        Dim s As String
-        'Get source code of site
-        s = Http2.ResponseText
+	Dim s As String
 
-            Dim metrics As Variant
-            '**** Metric fields here
-            metrics = Array("trailingPE", "forwardPE", "beta", "marketCap", "fiftyTwoWeekHigh")
+	s = Http2.ResponseText
 
-
-            'Split string here
-            For Each element In metrics
-
-                firstTerm = Chr(34) & element & Chr(34) & ":{" & Chr(34) & "raw" & Chr(34) & ":"
-                secondTerm = "," & Chr(34) & "fmt" & Chr(34)
-
-                nextPosition = 1
-
-                On Error GoTo err_hdl
-
-                Do Until nextPosition = 0
-                    startPos = InStr(nextPosition, s, firstTerm, vbTextCompare)
-                    stopPos = InStr(startPos, s, secondTerm, vbTextCompare)
-                    split_string = Mid$(s, startPos + Len(firstTerm), stopPos - startPos - Len(secondTerm))
-                    nextPosition = InStr(stopPos, s, firstTerm, vbTextCompare)
-
-                    Exit Do
-                Loop
-
-                On Error GoTo 0
+		Dim metrics As Variant
+		'**** Metric fields here
+		metrics = Array("trailingPE", "forwardPE", "beta", "marketCap", "fiftyTwoWeekHigh")
 
 
-                Dim arr() As String
-                arr = Split(split_string, ",")
-                metric = arr(0)
+		For Each element In metrics
 
-                'Output to sheet
-                ws.Range(Cells(row_count, col_count), Cells(row_count, col_count)).Value = metric
-                col_count = col_count + 1
+			firstTerm = Chr(34) & element & Chr(34) & ":{" & Chr(34) & "raw" & Chr(34) & ":"
+			secondTerm = "," & Chr(34) & "fmt" & Chr(34)
+
+			nextPosition = 1
+
+			On Error GoTo err_hdl
+
+			Do Until nextPosition = 0
+				startPos = InStr(nextPosition, s, firstTerm, vbTextCompare)
+				stopPos = InStr(startPos, s, secondTerm, vbTextCompare)
+				split_string = Mid$(s, startPos + Len(firstTerm), stopPos - startPos - Len(secondTerm))
+				nextPosition = InStr(stopPos, s, firstTerm, vbTextCompare)
+
+				Exit Do
+			Loop
+
+			On Error GoTo 0
+
+
+			Dim arr() As String
+			arr = Split(split_string, ",")
+			metric = arr(0)
+
+			'Output to sheet
+			ws.Range(Cells(rows, columns), Cells(rows, columns)).Value = metric
+			columns = columns + 1
 
 getData:
 

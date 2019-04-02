@@ -57,8 +57,6 @@ double bond_pricing(const vector<double>& CF_periods,
 Bonds yield to maturity:
 
 {% highlight c++ linenos %}
-#include <cmath>
-#include <vector>
 #include "bond_pricing.h"
 using namespace std;
 
@@ -87,10 +85,6 @@ double bonds_yield_to_maturity( const vector<double>& CF_periods,
 Bonds regular duration:
 
 {% highlight c++ linenos %}
-#include <cmath>
-#include <vector>
-using namespace std;
-
 double bond_reg_duration(const vector<double>& CF_periods,
 		      const vector<double>& CF,
 		      const double& r) {

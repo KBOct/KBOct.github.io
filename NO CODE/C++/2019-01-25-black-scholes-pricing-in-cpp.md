@@ -13,10 +13,12 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
-BS Call:
+Black-Scholes Call:
 {% highlight c++ linenos %}
-#include <cmath>              // mathematical C library
-#include "normdist.h"         // the calculation of the cumularive normal distribution
+#include <cmath>
+#include "normdist.h"
+
+using namespace std;
 
 double euro_call_BS_pricing(const double& S,   // UL price
 				       const double& K,       // strike
@@ -34,11 +36,6 @@ double euro_call_BS_pricing(const double& S,   // UL price
 
 Black-Scholes Put pricing:
 {% highlight c++ linenos %}
-#include <cmath>
-#include "normdist.h"
-
-using namespace std;
-
 double euro_put_BS_pricing( const double& S,      // UL price
 				       const double& K,      // strike
 				       const double& r,      // IR
@@ -56,9 +53,6 @@ double euro_put_BS_pricing( const double& S,      // UL price
 Black-Scholes pricing on dividend paying Call option:
 
 {% highlight c++ linenos %}
-#include <cmath>
-#include <vector>
-
 double euro_call_BS_dividend_pricing( const double& S,               
 					     const double& K,
 					     const double& r,

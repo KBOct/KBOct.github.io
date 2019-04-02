@@ -17,8 +17,8 @@ mathjax: true
 The one period model can be implemented like this:
 
 {% highlight c++ linenos %}
-#include <cmath>             // standard mathematical library
-#include <algorithm>             // defining the max() operator
+#include <cmath>
+#include <algorithm>
 using namespace std;
 
 double euro_call_pricing( const double& S,     // spot price
@@ -26,24 +26,29 @@ double euro_call_pricing( const double& S,     // spot price
 					    const double& r,     // interest rate (per period)
 					    const double& u,     // up movement
 					    const double& d){   // down movement
-   double p_u = (exp(r)-d)/(u-d);
-   double p_down = 1.0-p_u;
-   double c_u = max(0.0,(u*S-X));
-   double c_d = max(0.0,(d*S-X));
-   double call_price = exp(-r)* (p_u*c_u+p_down*c_d);
+   double p_up = (exp(r)-d)/(u-d);
+   double p_down = 1.0-p_up;
+   double c_up = max(0.0,(u*S-X));
+   double c_down = max(0.0,(d*S-X));
+   double call_price = exp(-r)* (p_up*c_up+p_down*c_down);
    return call_price;
 {% endhighlight %}
 
 This one period setting is unrealistic, which is why I'll be coding the multiperiod binomial option pricing model. If we build a binary tree as such:
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/mutlibinomialtree.png)
+{:class="img-responsive"}
 
-Then the option's price is calculated iteratively by going from the 'top' of the tree back to its root:
+Then the option's price is calculated iteratively by going from the 'top' of the tree back to its root. For instance, in a simple 2-period model:
 
-1.
+1. Calculate the derivative's payoff:
+$$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
+$$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
+$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
 
-2.
+2. f
 
-3. Value of the option: $$C_0 = e^-r(q C_h + (1 - q) C_b)$$
+3. Value of the option: $$C_0 = e^{-r}(q C_up + (1 - q) C_down)$$
 
 Which looks like this in C++:
 
@@ -66,8 +71,8 @@ double euro_call_pricing(const double& S,     // spot price
    double u = exp(sigma*sqrt(t/steps));    // move up
    double u2 = u*u;
    double d = 1.0/u;
-   double p_u = (R-d)/(u-d);
-   double p_down = 1.0-p_u;
+   double p_up = (R-d)/(u-d);
+   double p_down = 1.0-p_up;
 
    vector<double> prices(steps+1);       // UL price
    prices[0] = S*pow(d, steps);
@@ -80,7 +85,7 @@ double euro_call_pricing(const double& S,     // spot price
 
    for (int step=steps-1; step>=0; --step) {
       for (int i=0; i<=step; ++i) {
-	 call_values[i] = (p_u*call_values[i+1]+p_down*call_values[i])* inv_R;
+	 call_values[i] = (p_up*call_values[i+1]+p_down*call_values[i])* inv_R;
       };
    };
 

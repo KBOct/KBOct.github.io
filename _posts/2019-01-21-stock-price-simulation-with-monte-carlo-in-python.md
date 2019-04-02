@@ -28,7 +28,7 @@ import datetime
 start_date = datetime.date(2017,1,3)
 end_date = datetime.date.today()
 
-quandl.ApiConfig.api_key = "5PgwbJYXkcVZgpEs9byv"
+quandl.ApiConfig.api_key = ""yourRegisteredQuandlAccountAPIkey""
 
 
 df = quandl.get('WIKI/MSFT.4', start_date=start_date, end_date=end_date, collapse="daily")

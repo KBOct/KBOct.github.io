@@ -18,15 +18,16 @@ mathjax: true
 instead of just generating the terminal value of the underlying security from the lognormal assumption. -->
 
 We'll use lognormal random variables of the type:
-$$ S_T = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \left( T-t\right)+\sigma \sqrt{T-t}X}$$
-where $$T-t$$ is time to maturity. With &&\Delta t$$ the step of the time discretization between $$0$$ and $$T-t$$
+$$ S_T = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \left( T-t\right)+\sigma \sqrt{T-t}G}$$
+where $$T-t$$ is timetomaturity. With &&\Delta t$$ the step of the timediscretization between $$0$$ and $$T-t$$
 
 The general term of the price sequence is:
-$$ S_t+\Delta t = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \Delta t +\sigma\sqrt{\Delta t}X}$$
+$$ S_t+\Delta t = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \Delta t +\sigma\sqrt{\Delta t}G}$$
 
 {% highlight c++ linenos %}
 #include <cmath>
 #include <vector>
+
 using namespace std;
 #include "normdist.h"
 
@@ -34,14 +35,14 @@ vector<double>
 simul_lognorm_RV_sequence(const double& S,  // current value of underlying
 					  const double& r,  // interests
 					  const double& sigma,  // volatility
-					  const double& time,  // time to maturity
-					  const int& no_steps){  // discretization size
-    vector<double> prices(no_steps);
-    double delta_t = time/no_steps;
+					  const double& T_t,  // T_t to maturity
+					  const int& N){  // discretization size
+    vector<double> prices(N);
+    double delta_t = T_t/N;
     double R = (r-0.5*pow(sigma,2)) * delta_t;
     double SD = sigma * sqrt(delta_t);
     double S_t = S;                       // initialize at current price
-    for (int i=0;  i<no_steps; ++i) {   
+    for (int i=0;  i<N; ++i) {   
 	S_t = S_t * exp(R + SD * random_normal());
 	prices[i]=S_t;
     };
@@ -50,47 +51,41 @@ simul_lognorm_RV_sequence(const double& S,  // current value of underlying
 
 {% endhighlight %}
 
-{% highlight c++ linenos %}
-#include <cmath>
-#include <numeric>
-#include <vector>
-using namespace std;
+Here are the geometric and arithmetic average functions:
 
-double payoff_arithmetric_average_call(const vector<double>& prices, const double& X) {
-    double sum=accumulate(prices.begin(), prices.end(),0.0);
+{% highlight c++ linenos %}
+double call_PO_arithm_avg(const vector<double>& prices, const double& G) {
+    double sum = accumulate(prices.begin(), prices.end(),0.0);
     double avg = sum/prices.size();
-    return max(0.0,avg-X);
+    return max(0.0,avg-G);
 };
 
-double payoff_geometric_average_call(const vector<double>& prices, const double& X) {
+double call_PO_geom_avg(const vector<double>& prices, const double& G) {
     double logsum=log(prices[0]);
     for (unsigned i=1;i<prices.size();++i){ logsum+=log(prices[i]); };
     double avg = exp(logsum/prices.size());
-    return max(0.0,avg-X);
+    return max(0.0,avg-G);
 };
 {% endhighlight %}
 
-{% highlight c++ linenos %}
-#include <cmath>
-using namespace std;
-#include "fin_recipes.h"
+And we use these functions to compute a generic european option price with the help of our simulated lognormal random variable:
 
+{% highlight c++ linenos %}
 double
-derivative_price_simulate_european_option_generic(const double& S, // price of underlying
-						  const double& X, // used by user provided payoff function
-						  const double& r, // risk free interest rate
-						  const double& sigma, // volatility
-						  const double& time, // time to maturity
+euro_generic_simu_pricing(const double& S, // UL price
+						  const double& G, // payoff function
+						  const double& r, // risk-free IR
+						  const double& sigma, // vol
+						  const double& T_t, // TTM
 						  double payoff(const vector<double>& prices,
-								const double& X),
-						  // user provided function
-						  const int& no_steps, // number of steps in generated price sequence
-						  const int& no_sims) { // number of simulations to run
-    double sum_payoffs=0;
-    for (int n=0; n<no_sims; n++) {
-	vector<double>prices = simul_lognorm_RV_sequence(S,r,sigma,time,no_steps);
-	sum_payoffs += payoff(prices,X);
+								const double& G),
+						  const int& N,
+						  const int& Nsimu) {
+    double Sum_PO=0;
+    for (int n=0; n<Nsimu; n++) {
+	vector<double>prices = simul_lognorm_RV_sequence(S,r,sigma,T_t,N);
+	Sum_PO += payoff(prices,G);
     };
-    return exp(-r*time) * (sum_payoffs/no_sims);
+    return exp(-r*T_t) * (Sum_PO/Nsimu);
 };
 {% endhighlight %}
