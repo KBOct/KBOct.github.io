@@ -36,7 +36,7 @@ df = df.reset_index()
 prices = df['Close']
 
 {% endhighlight %}
-TEXTE
+
 
 {% highlight python linenos %}
 
@@ -67,9 +67,9 @@ for x in range(num_simulations):
     simulation_df[x] = price_series
 
 
-# average for the Monte Carlo Method
+<!-- # average for the Monte Carlo Method
 #average = np.sum(np.amax(option_data, axis = 1))/float(self.iterations)
-#return np.exp(-1.0*self.rf*self.T) * average
+#return np.exp(-1.0*self.rf*self.T) * average -->
 
 {% endhighlight %}
 Then we plot

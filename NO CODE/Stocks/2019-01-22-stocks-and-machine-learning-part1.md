@@ -1,5 +1,5 @@
 ---
-title: "Stocks and Machine Learning"
+title: "Stocks and Machine Learning - Part 1"
 date: 2019-01-22
 categories: [quantitative finance, data science, prediction, python]
 tags: [machine learning, stock, stock prediction, analysis, python]
@@ -13,7 +13,7 @@ toc_sticky: true
 mathjax: true
 ---
 
-Python code block:
+
 {% highlight python linenos %}
 import numpy as np
 

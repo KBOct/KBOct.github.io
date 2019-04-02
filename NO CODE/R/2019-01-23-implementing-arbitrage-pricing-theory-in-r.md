@@ -125,9 +125,7 @@ LIBOR <- Quandl('FED/RILSPDEPM01_N_B',
 start_date = '2010-06-01', end_date = '2014-06-01')
 ```
 
-The Quandl package, the tseries package, and other packages that collect data are
-discussed in Chapter 4, Big Data – Advanced Analytics, in more detail.
-This can also be used to get the prices of stocks, and the S&P 500 index can be used
+The Quandl package, the tseries package, and other packages can also be used to get the prices of stocks, and the S&P 500 index can be used
 as the market portfolio.
 
 We have a table with stock prices (a time series of approximately 5,000 stock prices
@@ -150,12 +148,7 @@ ZX
 ```
 
 If we have the data saved on our hard drive, we can simply read it with the
-read.table function. In Chapter 4, Big Data – Advanced Analytics, we will discuss
-how to collect data directly from the Internet.
-Now, we have all the data we need: the market portfolio (S&P 500), the price of
-stocks, and the risk-free rates (one-month LIBOR).
-We have chosen to delete the variables with missing values and 0 or negative prices,
-in order to clean the database. The easiest way to do this is the following:
+read.table function.
 
 ```r
 d <- d[, colSums(is.na(d)) == 0]
@@ -169,9 +162,8 @@ working with the data.
 Estimation of APT with principal component analysis
 
 In practice, it is not easy to carry out a factor analysis, because identifying the macro
-variables that have an effect on the securities' return is difficult (Medvegyev – Száz,
-2010, pp. 42). In many cases, the latent factors that drive the returns are searched by
-principal component analysis.
+variables that have an effect on the securities' return is difficult . In many cases, the latent factors that drive the returns are searched by principal component analysis.
+
 From the originally downloaded 6,500 stocks, we can use the data of 4,015 stocks;
 the rest were excluded because of missing values or 0 prices. Now, we omit the first
 two columns because we do not need the dates in this section, and the S&P 500 is
@@ -196,15 +188,18 @@ r <- r[, runif(nrow(r)) < 0.1]
 
 runif(nrow(r)) < 0.1 is a 4,013 dimension 0-1 vector, which chooses
 approximately 10 percent of the columns (in our case, 393) from the table. We can
-also use the following sample function for this, on which you can find further details
-at http://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html:
+also use the following sample function for this:
 pca <- princomp(r)
+
 As a result, we receive a princomp class object, which has eight attributes, of which
 the most important ones are the loading matrix and the sdev attributes, which
 contain the standard deviations of the components. The first principal component is
 the vector on which the data set has the maximum variance.
 Let's check the standard deviations of the principal component:
+
+```r
 plot(pca$sdev)
+```
 
 The result is as follows:
 We can see that the first five components are separated; consequently, five factors
@@ -212,7 +207,11 @@ should be chosen, but other factors also have significant standard deviations, s
 market cannot be explained by a few factors.
 We can confirm this result by calling the factanal function, which estimates the
 factor model with five factors:
+
+```r
 factanal(r, 5)
+```
+
 We notice that it takes much more time to perform this computation. Factor analysis
 is related to PCA, but is a little more complicated from a mathematical aspect. As a
 result, we get an object of class factanal, which has many attributes, but now, we
@@ -233,10 +232,3 @@ Factor Models
 This output shows that the factor model with five factors fits, but the explained
 variance is only approximately 30 percent, which means that the model should be
 extended with other factors as well.
-
-
-{% highlight r linenos %}
-library(tidyverse)
-df <- read_csv("some_file.csv")
-head(df)
-{% endhighlight %}
