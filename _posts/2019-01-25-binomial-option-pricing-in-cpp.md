@@ -41,16 +41,16 @@ This one period setting is unrealistic, which is why I'll be coding the multiper
 
 Then the option's price is calculated iteratively by going from the "top" of the tree back to its root. For instance, in a simple 2-period model:
 
-1. Calculate the derivative's payoff:
+1) Calculate the derivative's payoff:
 
-* $$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
-* $$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
-* $$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
+-	$$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
+-	$$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
+-	$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
 
-2. f
+2) f
 
-3. Value of the option:
-$$C_0 = e^{-r}(q\ \ C_{up} + (1 - q)\ \ C_{down})$$
+3) Value of the option:
+$$C_0 = e^{-r}(q\ \C_{up} + (1 - q)\ \C_{down})$$
 
 Which looks like this in C++:
 
