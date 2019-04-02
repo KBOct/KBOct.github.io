@@ -43,14 +43,16 @@ Then the option's price is calculated iteratively by going from the "top" of the
 
 1) Calculate the derivative's payoff:
 
--	$$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
+-	$$C_{up/up}=\left(C_{up/up}-K\right)_ + $$ for our first-case scenario
 -	$$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
--	$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
+-	$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$ for our last-case scenario
 
-2) f
+2) Calculate the 2 prices at period 1:
+C_{up} = e^{-r}(q C_{up/up} + (1 - q) C_{up/down})
+C_{down} = e^{-r}(q C_{up/down} + (1 - q) C_{down/down})
 
 3) Value of the option:
-$$C_0 = e^{-r}(q\ \C_{up} + (1 - q)\ \C_{down})$$
+$$C_0 = e^{-r}(q\ C_{up} + (1 - q)\ C_{down})$$
 
 Which looks like this in C++:
 
