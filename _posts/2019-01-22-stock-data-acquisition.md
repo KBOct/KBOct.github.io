@@ -386,7 +386,6 @@ getSymbols() created a global environment object called AAPL that is of the xts 
 ### Quandl API
 
 ```R
-
 if (!require("Quandl")) {
     install.packages("Quandl")
 }
