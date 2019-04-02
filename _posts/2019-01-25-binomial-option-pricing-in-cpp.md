@@ -48,10 +48,13 @@ Then the option's price is calculated iteratively by going from the "top" of the
 -	$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$ for our last-case scenario
 
 2) Calculate the 2 prices at period 1:
-C_{up} = e^{-r}(q C_{up/up} + (1 - q) C_{up/down})
-C_{down} = e^{-r}(q C_{up/down} + (1 - q) C_{down/down})
+
+$$C_{up} = e^{-r}(q C_{up/up} + (1 - q) C_{up/down})$$
+
+$$C_{down} = e^{-r}(q C_{up/down} + (1 - q) C_{down/down})$$
 
 3) Value of the option:
+
 $$C_0 = e^{-r}(q\ C_{up} + (1 - q)\ C_{down})$$
 
 Which looks like this in C++:
