@@ -39,16 +39,18 @@ This one period setting is unrealistic, which is why I'll be coding the multiper
 ![alt]({{ site.url }}{{ site.baseurl }}/images/mutlibinomialtree.png)
 {:class="img-responsive"}
 
-Then the option's price is calculated iteratively by going from the 'top' of the tree back to its root. For instance, in a simple 2-period model:
+Then the option's price is calculated iteratively by going from the "top" of the tree back to its root. For instance, in a simple 2-period model:
 
 1. Calculate the derivative's payoff:
-$$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
-$$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
-$$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
+
+* $$C_{up/up}=\left(C_{up/up}-K\right)_ + $$
+* $$C_{down/up}=C_{up/down}=\left(C_{up/up}-K\right)_ +$$  for a recombining tree (meaning the downward move and the upward move are of equal intensity)
+* $$C_{down/down}=\left(C_{up/up}-K\right)_ +$$
 
 2. f
 
-3. Value of the option: $$C_0 = e^{-r}(q C_up + (1 - q) C_down)$$
+3. Value of the option:
+$$C_0 = e^{-r}(q\ \ C_{up} + (1 - q)\ \ C_{down})$$
 
 Which looks like this in C++:
 
@@ -59,12 +61,12 @@ Which looks like this in C++:
 
 using namespace std;
 
-double euro_call_pricing(const double& S,     // spot price
-					    const double& X,     // exercise price
-					    const double& r,     // IR
-					    const double& sigma, // vol
-					    const double& t,     // time to maturity
-					    const int& steps){  // number of steps in binomial tree
+double euro_call_pricing(const double& S, // spot
+					const double& X,     // exercise price
+					const double& r,     // IR
+					const double& sigma, // vol
+					const double& t,     // TTM
+					const int& steps){  // number of steps in tree
 
 	 double R = exp(r*(t/steps));            // stepwise IR
    double inv_R = 1.0/R;
