@@ -14,7 +14,7 @@ mathjax: true
 ---
 PP 93-114 Pricing FX derivatives in R
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

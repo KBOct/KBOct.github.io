@@ -72,7 +72,7 @@ for x in range(num_simulations):
 #return np.exp(-1.0*self.rf*self.T) * average
 
 {% endhighlight %}
-Then we plot 
+Then we plot
 
 {% highlight python linenos %}
 

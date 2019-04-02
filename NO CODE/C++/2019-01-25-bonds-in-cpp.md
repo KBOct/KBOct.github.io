@@ -84,7 +84,7 @@ double bonds_yield_to_maturity( const vector<double>& CF_periods,
 
 {% endhighlight %}
 
-Bonds duration:
+Bonds regular duration:
 
 {% highlight c++ linenos %}
 #include <cmath>

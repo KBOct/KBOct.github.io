@@ -18,59 +18,60 @@ BS Call:
 #include <cmath>              // mathematical C library
 #include "normdist.h"         // the calculation of the cumularive normal distribution
 
-double option_price_call_black_scholes(const double& S,       // spot (underlying) price
-				       const double& K,       // strike (exercise) price,
-				       const double& r,       // interest rate
-				       const double& sigma,   // volatility
-				       const double& time) {  // time to maturity
-    double time_sqrt = sqrt(time);
-    double d1 = (log(S/K)+r*time)/(sigma*time_sqrt)+0.5*sigma*time_sqrt;
-    double d2 = d1-(sigma*time_sqrt);
-    double c  = S*N(d1) - K*exp(-r*time) * N(d2);
+double euro_call_BS_pricing(const double& S,   // UL price
+				       const double& K,       // strike
+				       const double& r,       // IR
+				       const double& sigma,   // vol
+				       const double& T) {  // time to maturity
+    double T_sqrt = sqrt(T);
+    double d1 = (log(S/K)+r*T)/(sigma*T_sqrt)+0.5*sigma*T_sqrt;
+    double d2 = d1-(sigma*T_sqrt);
+    double c  = S*N(d1) - K*exp(-r*T) * N(d2);
     return c;
 };
 
 {% endhighlight %}
 
-BS Put:
+Black-Scholes Put pricing:
 {% highlight c++ linenos %}
-#include <cmath>              // mathematical library
-#include "normdist.h"          // this defines the normal distribution
+#include <cmath>
+#include "normdist.h"
+
 using namespace std;
 
-double option_price_put_black_scholes( const double& S,      // spot price
-				       const double& K,      // Strike (exercise) price,
-				       const double& r,      // interest rate
-				       const double& sigma,  // volatility
-				       const double& time) {  
-    double time_sqrt = sqrt(time);
-    double d1 = (log(S/K)+r*time)/(sigma*time_sqrt) + 0.5*sigma*time_sqrt;
-    double d2 = d1-(sigma*time_sqrt);
-    double p =  K * exp(-r*time) * N(-d2) - S * N(-d1);
+double euro_put_BS_pricing( const double& S,      // UL price
+				       const double& K,      // strike
+				       const double& r,      // IR
+				       const double& sigma,  // vol
+				       const double& T) {  
+    double T_sqrt = sqrt(T);
+    double d1 = (log(S/K)+r*T)/(sigma*T_sqrt) + 0.5*sigma*T_sqrt;
+    double d2 = d1-(sigma*T_sqrt);
+    double p =  K * exp(-r*T) * N(-d2) - S * N(-d1);
     return p;
 };
 
 {% endhighlight %}
 
-BS on dividend paying Call option:
-{% highlight c++ linenos %}
-#include <cmath>              // mathematical library
-#include <vector>
-#include "fin_recipes.h"          // define the black scholes price
+Black-Scholes pricing on dividend paying Call option:
 
-double option_price_european_call_dividends( const double& S,               
+{% highlight c++ linenos %}
+#include <cmath>
+#include <vector>
+
+double euro_call_BS_dividend_pricing( const double& S,               
 					     const double& K,
 					     const double& r,
 					     const double& sigma,           
-					     const double& time_to_maturity,
-					     const vector<double>& dividend_times,
+					     const double& T,
+					     const vector<double>& dividend_periods,
 					     const vector<double>& dividend_amounts ) {  
     double adjusted_S = S;
-    for (int i=0;i<dividend_times.size();i++) {
-	if (dividend_times[i]<=time_to_maturity){
-	    adjusted_S -= dividend_amounts[i] * exp(-r*dividend_times[i]);
+    for (int i=0;i<dividend_periods.size();i++) {
+	if (dividend_periods[i]<=T){
+	    adjusted_S -= dividend_amounts[i] * exp(-r*dividend_periods[i]);
 	};
     };
-    return option_price_call_black_scholes(adjusted_S,K,r,sigma,time_to_maturity);
+    return euro_call_BS_pricing(adjusted_S,K,r,sigma,T);
 };
 {% endhighlight %}

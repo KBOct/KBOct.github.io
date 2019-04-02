@@ -14,7 +14,7 @@ mathjax: true
 ---
 PP 243-249 Cryptocurrency price prediction using NN in R
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

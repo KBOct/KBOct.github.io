@@ -14,7 +14,7 @@ mathjax: true
 ---
 PP 59-74 Forecasting intra day trading volume in R
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

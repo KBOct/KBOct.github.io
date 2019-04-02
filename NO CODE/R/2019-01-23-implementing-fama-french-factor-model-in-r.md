@@ -14,7 +14,7 @@ mathjax: true
 ---
 PP 48-56 Implementing Fama-French Factor model in R
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

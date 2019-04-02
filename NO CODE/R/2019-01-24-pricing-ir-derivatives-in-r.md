@@ -14,7 +14,7 @@ mathjax: true
 ---
 PP 115-135 Pricing IR derivatives in R
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

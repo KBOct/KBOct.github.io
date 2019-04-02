@@ -234,7 +234,7 @@ This output shows that the factor model with five factors fits, but the explaine
 variance is only approximately 30 percent, which means that the model should be
 extended with other factors as well.
 
-R code block:
+
 {% highlight r linenos %}
 library(tidyverse)
 df <- read_csv("some_file.csv")

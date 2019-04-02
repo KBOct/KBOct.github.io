@@ -32,7 +32,7 @@ double simulate_lognormal_random_variable(const double& S,  // current value of 
 {% endhighlight %}
 
 
-C++ code block:
+
 {% highlight c++ linenos %}
 #include <cmath>  
 #include <algorithm>     // define the max() function
@@ -59,7 +59,7 @@ double option_price_put_european_simulated(const double& S,
 {% endhighlight %}
 
 
-C++ code block:
+
 {% highlight c++ linenos %}
 #include <cmath>  
 #include <algorithm>     // define the max() function
