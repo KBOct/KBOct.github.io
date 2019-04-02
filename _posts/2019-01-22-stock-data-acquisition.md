@@ -134,83 +134,7 @@ End Sub
 
 ## Data acquisition in Python
 
-
-
-## Data acquisition in R
-
-
-```R
-# Get quantmod
-if (!require("quantmod")) {
-    install.packages("quantmod")
-    library(quantmod)
-}
-
-start <- as.Date("2016-01-01")
-end <- as.Date("2019-01-22")
-
-# Here, we use quantmod function getSymbols and pass the desired ticker symbol AAPLa as
-# string in first argument, then 'yahoo' and dates
-
-getSymbols("AAPL", src = "yahoo", from = start, to = end)
-```
-
-'AAPL'
-
-
-```R
-# What class is AAPL?
-class(AAPL)
-```
-
-<ol class=list-inline>
-	<li>'xts'</li>
-	<li>'zoo'</li>
-</ol>
-
-
-
-```R
-# Let's see the first few rows
-head(AAPL)
-```
-
-
-               AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted
-    2016-01-04    102.61    105.37   102.00     105.35    67649400      99.49911
-    2016-01-05    105.75    105.85   102.41     102.71    55791000      97.00573
-    2016-01-06    100.56    102.37    99.87     100.70    68457400      95.10736
-    2016-01-07     98.68    100.13    96.43      96.45    81094400      91.09340
-    2016-01-08     98.55     99.11    96.76      96.96    70798000      91.57507
-    2016-01-11     98.97     99.06    97.34      98.53    49739400      93.05787
-
-
-getSymbols() created a global environment object called AAPL that is of the xts class which is an improved versions of the ts object for storing time series data. They allow multiple time series with the same time index to be stored in the same object.
-
-
-### Visualizing Stock Data
-
-Let's visualize the series with regular R plotting
-
-
-```R
-plot(AAPL[, "AAPL.Close"], main = "AAPL")
-```
-
-
-![alt]({{ site.url }}{{ site.baseurl }}/images/sda-yahoo-r.png)
-{:class="img-responsive"}
-
-
-# Google
-
-## Morningstar
-
-## Getting live stock data without code
-
-# Quandl
-
-## Data acquisition in Python
+#### Quandl API
 
 In this Python script we are going to retrieve Open, High, Low, Clos, Volume and the corresponding adjusted values as well as Ex-Dividend and Split Ratio
 
@@ -392,15 +316,74 @@ Yahoo's API shutdown made market data sourcing a lot harder for quant traders an
 
 ### Visualizing Stock Data
 
+Let's visualize the series with matplotlib:
+
+```
     Populating the interactive namespace from numpy and matplotlib
 
 
     <matplotlib.axes._ subplots.AxesSubplot at 0x1115fda0>
+```
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/sda-yahoo-python.png)
 {:class="img-responsive"}
 
+
+
+
 ## Data acquisition in R
+
+### quantmod package
+
+```R
+# Get quantmod
+if (!require("quantmod")) {
+    install.packages("quantmod")
+    library(quantmod)
+}
+
+start <- as.Date("2016-01-01")
+end <- as.Date("2019-01-22")
+
+# Here, we use quantmod function getSymbols and pass the desired ticker symbol AAPLa as
+# string in first argument, then 'yahoo' and dates
+
+getSymbols("AAPL", src = "yahoo", from = start, to = end)
+```
+
+'AAPL'
+
+
+```R
+# What class is AAPL?
+class(AAPL)
+```
+
+<ol class=list-inline>
+	<li>'xts'</li>
+	<li>'zoo'</li>
+</ol>
+
+
+
+```R
+# Let's see the first few rows
+head(AAPL)
+```
+
+
+               AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted
+    2016-01-04    102.61    105.37   102.00     105.35    67649400      99.49911
+    2016-01-05    105.75    105.85   102.41     102.71    55791000      97.00573
+    2016-01-06    100.56    102.37    99.87     100.70    68457400      95.10736
+    2016-01-07     98.68    100.13    96.43      96.45    81094400      91.09340
+    2016-01-08     98.55     99.11    96.76      96.96    70798000      91.57507
+    2016-01-11     98.97     99.06    97.34      98.53    49739400      93.05787
+
+
+getSymbols() created a global environment object called AAPL that is of the xts class which is an improved versions of the ts object for storing time series data. They allow multiple time series with the same time index to be stored in the same object.
+
+### Quandl API
 
 ```R
 
@@ -419,3 +402,24 @@ AAPL <- Quandl(c("MF1", "WIKI/AAPL.4"),
 ```
 
 **Remark** : Quandl could be used to acquire data from Yahoo and Google sources but it's not recommended since Yahoo's shutdown and Morningstar library's recent issues
+
+
+### Visualizing Stock Data
+
+Let's visualize the series with regular R plotting
+
+
+```R
+plot(AAPL[, "AAPL.Close"], main = "AAPL")
+```
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/sda-yahoo-r.png)
+{:class="img-responsive"}
+
+
+# Google
+
+## Morningstar
+
+## Getting live stock data without code
