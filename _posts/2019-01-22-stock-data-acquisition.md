@@ -134,7 +134,7 @@ End Sub
 
 ## Data acquisition in Python
 
-#### Quandl API
+### Quandl API
 
 In this Python script we are going to retrieve Open, High, Low, Clos, Volume and the corresponding adjusted values as well as Ex-Dividend and Split Ratio
 
