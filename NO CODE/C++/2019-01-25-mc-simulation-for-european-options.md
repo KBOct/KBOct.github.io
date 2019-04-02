@@ -13,7 +13,7 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 toc_sticky: true
 mathjax: true
 ---
-
+We simulate a lognormal random variable:
 
 
 {% highlight c++ linenos %}
