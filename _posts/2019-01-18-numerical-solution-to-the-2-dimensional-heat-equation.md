@@ -18,20 +18,245 @@ mathjax: true
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
+
+
+```python
+from numpy import *
+from matplotlib.pyplot import *
+from random import *
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+from matplotlib import cm
+
+import sys
+reload(sys)  
+sys.setdefaultencoding('Cp1252')
+
+##################################################################################
+#############################  CHALEUR STATIONNAIRE  #############################
+##################################################################################
+
+def f(x,y):
+    return 10
+
+def Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f):
+
+    n=len(x)
+    Nt=len(triangle)
+    F=zeros(n)
+    Rigidite=zeros([n,n])
+
+    for i in range(Nt):
+
+        t0=int(triangle[i,0])
+        t1=int(triangle[i,1])
+        t2=int(triangle[i,2])
+
+        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
+        deta1 = y[t1] - y[t2]
+        detb1 = x[t2] - x[t1]
+        deta2 = y[t2] - y[t0]
+        detb2 = x[t0] - x[t2]
+        deta3 = y[t0] - y[t1]
+        detb3 = x[t1] - x[t0]
+
+        Aire = (1./2)*abs(detd)
+
+        Rigidite[triangle[i,0],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,0]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta1 + detb1*detb1)
+        Rigidite[triangle[i,1],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta2 + detb2*detb2)
+        Rigidite[triangle[i,2],triangle[i,2]]   =   Rigidite[triangle[i,2],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta3*deta3 + detb3*detb3)
+        Rigidite[triangle[i,0],triangle[i,1]]   =   Rigidite[triangle[i,0],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta2 + detb1*detb2)
+        Rigidite[triangle[i,0],triangle[i,2]]   =   Rigidite[triangle[i,0],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta3 + detb1*detb3)
+        Rigidite[triangle[i,1],triangle[i,2]]   =   Rigidite[triangle[i,1],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta3 + detb2*detb3)
+
+        Rigidite[triangle[i,1],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,1]]
+        Rigidite[triangle[i,2],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,2]]
+        Rigidite[triangle[i,2],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,2]]
+
+
+    for k in range(n):
+
+        for i in range(Nt):
+            somme = 0
+            for j in range(3):
+
+                if(triangle[i,j]==k):
+                        t0=triangle[i,0]
+                        t1=triangle[i,1]
+                        t2=triangle[i,2]
+                        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
+                        Aire = (1./2)*abs(detd)
+                        somme = f(x[triangle[i,j]], y[triangle[i,j]]) * Aire/3
+
+            F[k]=F[k]+somme
+
+    for i in sb:
+        Rigidite[i,:]=0
+        Rigidite[i,i]=1
+        F[i]=0
+
+    return [Rigidite,F]
+```
+
+
+```python
+def Chaleur_Stationnaire(x,y,triangle,sb,f):
+
+    [Rigidite,F] = Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f)
+    U=linalg.solve(Rigidite,F)
+
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    ax.plot_trisurf(x,y,triangle,U,cmap=cm.jet,linewidth=0.1)
+    plt.show()
+
+    return U
+```
+
+
+```python
+##################################################################################
+############################# CHALEUR INSTATIONNAIRE  ############################
+##################################################################################
+
+
+
+## \\\\\\\\\\\\\\\\\\\\\\\\\\\ VECTEUR INITIAL \\\\\\\\\\\\\\\\\\\\\\\\\\\
+def vecteur_initial_U0(x,y):
+    if(sqrt(x*x+y*y) <= 0.5):
+        return 10
+    else:
+        return 0
+
+def vecteur_initial_U0(x,y):
+    return 0
+## \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+
+## \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ FONCTION f \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+def f_temps(x,y,t):
+    return 0
+
+#def f_temps(x,y,t):
+#    return 1
+
+#def f_temps(x,y,t):
+#    return 10
+
+#def f_temps(x,y,t):
+#    if (t <= 1):
+#        return 1
+#    else:
+#        return 0
+## \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+```
+
+
+```python
+## //////////////////////////////////////////////////////////////////////////////////
+## ####################################### QUESTION 1 ###############################
+## //////////////////////////////////////////////////////////////////////////////////
+
+
+def maillage_rectangle(Lx,Ly,Nx,Ny):
+
+    dX=(Lx/Nx)
+    dY=(Ly/Ny)
+
+    n=(Nx+1)*(Ny+1)
+    Nt=2*Nx*Ny
+
+    x = zeros([n])
+    y = zeros([n])
+    triangle=zeros([Nt,3])
+    sb=zeros((Nx+Ny)*2)
+
+
+    a=0
+    for i in range(Nx+1):
+        for j in range(Ny+1):
+            s=i+(Nx+1)*j
+            x[s]=i*dX
+            y[s]=j*dY
+            if(i==0 or i==Nx or j==0 or j==Ny):
+                sb[a]=s
+                a=a+1
+
+    for i in range(Nx):
+        for j in range(Ny):
+            s=i+(Nx+1)*j
+            t1=2*(Nx*j + i)
+            t2=t1+1
+
+            triangle[t1,0]=s
+            triangle[t1,1]=s+Nx+1
+            triangle[t1,2]=s+Nx+2
+            triangle[t2,0]=s
+            triangle[t2,1]=s+1
+            triangle[t2,2]=s+Nx+2
+
+
+
+    return[x,y,triangle,sb]
+```
+
 # QUESTION 2
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (2).jpg)
 {:class="img-responsive"}
+
+
+```python
+#######################################################################################    MAIN    ########################################################################################################
+
+
+
+####################################### QUESTION 2 ###############################################
+##
+## TRACE DU MAILLAGE RECTANGLE
+
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,6,4)
+plt.gca().set_aspect('equal')
+plt.triplot(x,y,triangle)
+plt.show()
+```
+
+
+![png](output_6_0.png)
+
 
 # QUESTION 3
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (3).jpg)
 {:class="img-responsive"}
 
+
+
+```python
+####################################### QUESTION 3 ###############################################
+
+## TRACE DU MAILLAGE PIECE
+
+[x,y,triangle,sb]=importe_maillage("piece.dat")
+plt.gca().set_aspect('equal')
+plt.triplot(x,y,triangle)
+plt.show()
+```
+
+
+![png](output_7_0.png)
+
+
 # QUESTION 4
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (4).jpg)
 {:class="img-responsive"}
+
+## **REPONSE ECRITE**
 
 # INTRO PARTIE 2
 
