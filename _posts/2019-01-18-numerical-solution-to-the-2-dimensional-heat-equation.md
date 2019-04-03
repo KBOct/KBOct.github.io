@@ -414,7 +414,9 @@ def vecteur_initial_U0(x,y):
     else:
         return 0
 
-
 def f_temps(x,y,t):
         return 0
+
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 ```
