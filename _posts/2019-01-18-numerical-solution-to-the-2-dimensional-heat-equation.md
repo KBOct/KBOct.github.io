@@ -20,62 +20,62 @@ mathjax: true
 
 
 ```python
-from numpy import *
-from matplotlib.pyplot import *
-from random import *
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import axes3d
-from matplotlib import cm
+        from numpy import *
+        from matplotlib.pyplot import *
+        from random import *
+        import matplotlib.pyplot as plt
+        from mpl_toolkits.mplot3d import axes3d
+        from matplotlib import cm
 
-import sys
-reload(sys)  
-sys.setdefaultencoding('Cp1252')
+        import sys
+        reload(sys)  
+        sys.setdefaultencoding('Cp1252')
 
-## //////////////////////////////////////////////////////////////////////////////////
-## ####################################### QUESTION 1 ###############################
-## //////////////////////////////////////////////////////////////////////////////////
-
-
-def maillage_rectangle(Lx,Ly,Nx,Ny):
-
-    dX=(Lx/Nx)
-    dY=(Ly/Ny)
-
-    n=(Nx+1)*(Ny+1)
-    Nt=2*Nx*Ny
-
-    x = zeros([n])
-    y = zeros([n])
-    triangle=zeros([Nt,3])
-    sb=zeros((Nx+Ny)*2)
+        ## //////////////////////////////////////////////////////////////////////////////////
+        ## ####################################### QUESTION 1 ###############################
+        ## //////////////////////////////////////////////////////////////////////////////////
 
 
-    a=0
-    for i in range(Nx+1):
-        for j in range(Ny+1):
-            s=i+(Nx+1)*j
-            x[s]=i*dX
-            y[s]=j*dY
-            if(i==0 or i==Nx or j==0 or j==Ny):
-                sb[a]=s
-                a=a+1
+        def maillage_rectangle(Lx,Ly,Nx,Ny):
 
-    for i in range(Nx):
-        for j in range(Ny):
-            s=i+(Nx+1)*j
-            t1=2*(Nx*j + i)
-            t2=t1+1
+            dX=(Lx/Nx)
+            dY=(Ly/Ny)
 
-            triangle[t1,0]=s
-            triangle[t1,1]=s+Nx+1
-            triangle[t1,2]=s+Nx+2
-            triangle[t2,0]=s
-            triangle[t2,1]=s+1
-            triangle[t2,2]=s+Nx+2
+            n=(Nx+1)*(Ny+1)
+            Nt=2*Nx*Ny
+
+            x = zeros([n])
+            y = zeros([n])
+            triangle=zeros([Nt,3])
+            sb=zeros((Nx+Ny)*2)
 
 
+            a=0
+            for i in range(Nx+1):
+                for j in range(Ny+1):
+                    s=i+(Nx+1)*j
+                    x[s]=i*dX
+                    y[s]=j*dY
+                    if(i==0 or i==Nx or j==0 or j==Ny):
+                        sb[a]=s
+                        a=a+1
 
-    return[x,y,triangle,sb]
+            for i in range(Nx):
+                for j in range(Ny):
+                    s=i+(Nx+1)*j
+                    t1=2*(Nx*j + i)
+                    t2=t1+1
+
+                    triangle[t1,0]=s
+                    triangle[t1,1]=s+Nx+1
+                    triangle[t1,2]=s+Nx+2
+                    triangle[t2,0]=s
+                    triangle[t2,1]=s+1
+                    triangle[t2,2]=s+Nx+2
+
+
+
+            return[x,y,triangle,sb]
 ```
 
 # QUESTION 2
