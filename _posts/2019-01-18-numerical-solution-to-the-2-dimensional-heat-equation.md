@@ -36,81 +36,6 @@ sys.setdefaultencoding('Cp1252')
 #############################  CHALEUR STATIONNAIRE  #############################
 ##################################################################################
 
-def f(x,y):
-    return 10
-
-def Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f):
-
-    n=len(x)
-    Nt=len(triangle)
-    F=zeros(n)
-    Rigidite=zeros([n,n])
-
-    for i in range(Nt):
-
-        t0=int(triangle[i,0])
-        t1=int(triangle[i,1])
-        t2=int(triangle[i,2])
-
-        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
-        deta1 = y[t1] - y[t2]
-        detb1 = x[t2] - x[t1]
-        deta2 = y[t2] - y[t0]
-        detb2 = x[t0] - x[t2]
-        deta3 = y[t0] - y[t1]
-        detb3 = x[t1] - x[t0]
-
-        Aire = (1./2)*abs(detd)
-
-        Rigidite[triangle[i,0],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,0]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta1 + detb1*detb1)
-        Rigidite[triangle[i,1],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta2 + detb2*detb2)
-        Rigidite[triangle[i,2],triangle[i,2]]   =   Rigidite[triangle[i,2],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta3*deta3 + detb3*detb3)
-        Rigidite[triangle[i,0],triangle[i,1]]   =   Rigidite[triangle[i,0],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta2 + detb1*detb2)
-        Rigidite[triangle[i,0],triangle[i,2]]   =   Rigidite[triangle[i,0],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta3 + detb1*detb3)
-        Rigidite[triangle[i,1],triangle[i,2]]   =   Rigidite[triangle[i,1],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta3 + detb2*detb3)
-
-        Rigidite[triangle[i,1],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,1]]
-        Rigidite[triangle[i,2],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,2]]
-        Rigidite[triangle[i,2],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,2]]
-
-
-    for k in range(n):
-
-        for i in range(Nt):
-            somme = 0
-            for j in range(3):
-
-                if(triangle[i,j]==k):
-                        t0=triangle[i,0]
-                        t1=triangle[i,1]
-                        t2=triangle[i,2]
-                        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
-                        Aire = (1./2)*abs(detd)
-                        somme = f(x[triangle[i,j]], y[triangle[i,j]]) * Aire/3
-
-            F[k]=F[k]+somme
-
-    for i in sb:
-        Rigidite[i,:]=0
-        Rigidite[i,i]=1
-        F[i]=0
-
-    return [Rigidite,F]
-```
-
-
-```python
-def Chaleur_Stationnaire(x,y,triangle,sb,f):
-
-    [Rigidite,F] = Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f)
-    U=linalg.solve(Rigidite,F)
-
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    ax.plot_trisurf(x,y,triangle,U,cmap=cm.jet,linewidth=0.1)
-    plt.show()
-
-    return U
 ```
 
 
@@ -263,40 +188,139 @@ plt.show()
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (5).jpg)
 {:class="img-responsive"}
 
+## **REPONSE ECRITE**
+
 # QUESTION 5
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
 {:class="img-responsive"}
+
+## **REPONSE ECRITE**
 
 # QUESTION 6
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (7).jpg)
 {:class="img-responsive"}
 
+## **REPONSE ECRITE**
+
 # QUESTION 7
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (8).jpg)
 {:class="img-responsive"}
+
+## **REPONSE ECRITE**
 
 # QUESTION 8
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (9).jpg)
 {:class="img-responsive"}
 
+## **REPONSE ECRITE**
+
 # QUESTION 9
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (10).jpg)
 {:class="img-responsive"}
+
+```python
+def f(x,y):
+    return 10
+
+def Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f):
+
+    n=len(x)
+    Nt=len(triangle)
+    F=zeros(n)
+    Rigidite=zeros([n,n])
+
+    for i in range(Nt):
+
+        t0=int(triangle[i,0])
+        t1=int(triangle[i,1])
+        t2=int(triangle[i,2])
+
+        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
+        deta1 = y[t1] - y[t2]
+        detb1 = x[t2] - x[t1]
+        deta2 = y[t2] - y[t0]
+        detb2 = x[t0] - x[t2]
+        deta3 = y[t0] - y[t1]
+        detb3 = x[t1] - x[t0]
+
+        Aire = (1./2)*abs(detd)
+
+        Rigidite[triangle[i,0],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,0]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta1 + detb1*detb1)
+        Rigidite[triangle[i,1],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta2 + detb2*detb2)
+        Rigidite[triangle[i,2],triangle[i,2]]   =   Rigidite[triangle[i,2],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta3*deta3 + detb3*detb3)
+        Rigidite[triangle[i,0],triangle[i,1]]   =   Rigidite[triangle[i,0],triangle[i,1]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta2 + detb1*detb2)
+        Rigidite[triangle[i,0],triangle[i,2]]   =   Rigidite[triangle[i,0],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta1*deta3 + detb1*detb3)
+        Rigidite[triangle[i,1],triangle[i,2]]   =   Rigidite[triangle[i,1],triangle[i,2]]+(1/detd)*(1/detd)*(Aire) * (deta2*deta3 + detb2*detb3)
+
+        Rigidite[triangle[i,1],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,1]]
+        Rigidite[triangle[i,2],triangle[i,0]]   =   Rigidite[triangle[i,0],triangle[i,2]]
+        Rigidite[triangle[i,2],triangle[i,1]]   =   Rigidite[triangle[i,1],triangle[i,2]]
+
+
+    for k in range(n):
+
+        for i in range(Nt):
+            somme = 0
+            for j in range(3):
+
+                if(triangle[i,j]==k):
+                        t0=triangle[i,0]
+                        t1=triangle[i,1]
+                        t2=triangle[i,2]
+                        detd = (x[t1]-x[t0])*(y[t2]-y[t0]) - (x[t2]-x[t0])*(y[t1]-y[t0])
+                        Aire = (1./2)*abs(detd)
+                        somme = f(x[triangle[i,j]], y[triangle[i,j]]) * Aire/3
+
+            F[k]=F[k]+somme
+
+    for i in sb:
+        Rigidite[i,:]=0
+        Rigidite[i,i]=1
+        F[i]=0
+
+    return [Rigidite,F]
+```
+
+
 
 # QUESTION 10
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (11).jpg)
 {:class="img-responsive"}
 
+
+```python
+def Chaleur_Stationnaire(x,y,triangle,sb,f):
+
+    [Rigidite,F] = Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f)
+    U=linalg.solve(Rigidite,F)
+
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    ax.plot_trisurf(x,y,triangle,U,cmap=cm.jet,linewidth=0.1)
+    plt.show()
+
+    return U
+```
+
 # QUESTION 11
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (12).jpg)
 {:class="img-responsive"}
+
+```python
+####################################### QUESTION 11 ##############################################
+
+## CHALEUR STATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
+##
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Stationnaire(x,y,triangle,sb,f)
+```
 
 # QUESTION 12
 
