@@ -6,27 +6,26 @@ tags: [quantitative finance, binomial tree, CRR, Cox Ross Rubinstein, american o
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Binomial pricing for American options in C"
-toc: true
-toc_label: "Contents"
-toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+#toc: true
+#toc_label: "Contents"
+#toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+#toc_sticky: true
 mathjax: true
 ---
 
 {% highlight c linenos %}
-
 #include <math.h>
 #include <stdio.h>
 
-#define Taille 1000
+#define Size 1000
 
-typedef double Etat[Taille + 1];
+typedef double State[Size + 1];
 
 typedef struct Option {
-	double TauxAnnuel;
+	double AnnualRate;
 	double Sigma;
 	double T;
-	double ValeurInitiale;
+	double StartingValue;
 	double K;
 } Option;
 
@@ -35,29 +34,29 @@ double plus(double x)
 	return (x>0?x:0);
 }
 
-double Prix(Option opt)
+double Price(Option opt)
 {
 	double r, a, b, proba, p1, p2, tmp, ro, xmax;
-	Etat P, roi;
+	State P, roi;
 	long i, j, N;
 
-	/ * Calcul des parametres de Cox Ross * /
+	/* Cox Ross parameters calculation * /
 	N = 500;
-	r = opt.TauxAnnuel * opt.T / N;
+	r = opt.AnnualRate * opt.T / N;
 	a = (1 + r) * exp(-opt.Sigma * sqrt(opt.T / N)) - 1;
 	b = (1 + r) * exp(opt.Sigma * sqrt(opt.T / N)) - 1;
 	proba = (b - r) / (b - a);
-	/ *  par souci d’efficacite on calcule
-		le maximum de choses en dehors de la boucle principale * /
+	/ * To lower computational time, we compute as many things
+		outside the loop as possible * /
 	ro = (1 + a) / (1 + b);
 	roi[0] = 1.0;
 	for (i = 1; i <= N; i++)
 		roi[i] = ro * roi[i - 1];
 	p1 = (1 - proba) / (1 + r);
 	p2 = proba / (1 + r);
-	/ * A un instant j, P[i] approxime P(j,x(1+a)^i (1+b)^(N-j-i)) * /
-	/ * en N : P[i] = (K-x(1+a)^i (1+b)^(N-i))+ * /
-	xmax = opt.ValeurInitiale * pow(1 + b, N);
+	/ * At a time j, P[i] is an approximation for P(j,x(1+a)^i (1+b)^(N-j-i)) * /
+	/ * At time N : P[i] = (K-x(1+a)^i (1+b)^(N-i))+ * /
+	xmax = opt.StartingValue * pow(1 + b, N);
 	for (i = 0; i <= N; i++)
 		P[i] = plus(opt.K - xmax * roi[i]);
 	for (j = 1; j <= N; j++) {
@@ -71,5 +70,4 @@ double Prix(Option opt)
 	}
 	return (P[0]);
 }
-
 {% endhighlight %}

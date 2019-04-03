@@ -7,10 +7,10 @@ tags: [C++]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Black Scholes pricing in C++"
-toc: true
-toc_label: "Contents"
-toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+#toc: true
+#toc_label: "Contents"
+#toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+#toc_sticky: true
 mathjax: true
 ---
 Black-Scholes Call:

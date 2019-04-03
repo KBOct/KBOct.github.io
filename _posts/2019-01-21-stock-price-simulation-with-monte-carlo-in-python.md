@@ -6,10 +6,10 @@ tags: [quantitative finance, stock price, stock prediction, simulation, Monte-Ca
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Stock price simulation with Monte Carlo in Python"
-toc: true
-toc_label: "Contents"
-toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+#toc: true
+#toc_label: "Contents"
+#toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+#toc_sticky: true
 mathjax: true
 ---
 

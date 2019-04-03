@@ -7,10 +7,10 @@ tags: [C++]
 #header:
 #  image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Bonds in C++"
-toc: true
-toc_label: "Contents"
-toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+#toc: true
+#toc_label: "Contents"
+#toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+#toc_sticky: true
 mathjax: true
 ---
 <!-- The price of a bond is the present value of its future cash ows. If we consider a coupon bond like a US goverment bond (T-Bond), the cash flows look like
