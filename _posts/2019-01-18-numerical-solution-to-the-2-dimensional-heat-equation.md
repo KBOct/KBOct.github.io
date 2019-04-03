@@ -314,12 +314,12 @@ def Chaleur_Stationnaire(x,y,triangle,sb,f):
 {:class="img-responsive"}
 
 ```python
-        ####################################### QUESTION 11 ##############################################
+            ####################################### QUESTION 11 ##############################################
 
-        ## CHALEUR STATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
-        ##
-        [x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
-        U = Chaleur_Stationnaire(x,y,triangle,sb,f)
+            ## CHALEUR STATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
+            ##
+            [x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+            U = Chaleur_Stationnaire(x,y,triangle,sb,f)
 ```
 
 # QUESTION 12
