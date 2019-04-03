@@ -18,11 +18,14 @@ mathjax: true
 instead of just generating the terminal value of the underlying security from the lognormal assumption. -->
 
 We'll use lognormal random variables of the type:
+
 $$ S_T = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \left( T-t\right)+\sigma \sqrt{T-t}G}$$
-where $$T-t$$ is timetomaturity. With &&\Delta t$$ the step of the timediscretization between $$0$$ and $$T-t$$
+where $$T-t$$ is time to maturity.
+With $$\Delta t$$ the step of the time discretization between $$0$$ and $$T-t$$
 
 The general term of the price sequence is:
-$$ S_t+\Delta t = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \Delta t +\sigma\sqrt{\Delta t}G}$$
+
+$$S_{t+\Delta t} = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \Delta t +\sigma\sqrt{\Delta t}\ G}$$
 
 {% highlight c++ linenos %}
 #include <cmath>
