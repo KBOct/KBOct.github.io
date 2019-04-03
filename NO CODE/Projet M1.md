@@ -392,14 +392,7 @@ def Chaleur_Instationnaire(x,y,triangle,sb,N,T,f_temps,vecteur_initial_U0):
 
 
 
-```python
-####################################### QUESTION 11 ##############################################
 
-## CHALEUR STATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
-##
-[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
-U = Chaleur_Stationnaire(x,y,triangle,sb,f)
-```
 
 
 ```python
