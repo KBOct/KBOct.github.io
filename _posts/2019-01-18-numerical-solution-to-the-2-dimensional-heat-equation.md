@@ -271,6 +271,10 @@ def Chaleur_Stationnaire(x,y,triangle,sb,f):
             U = Chaleur_Stationnaire(x,y,triangle,sb,f)
 ```
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 11.png)
+{:class="img-responsive"}
+
+
 # QUESTION 12
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (13).jpg)
@@ -284,6 +288,9 @@ def Chaleur_Stationnaire(x,y,triangle,sb,f):
 [x,y,triangle,sb]=importe_maillage("piece.dat")
 U = Chaleur_Stationnaire(x,y,triangle,sb,f)
 ```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 12.png)
+{:class="img-responsive"}
 
 
 # INTRO PARTIE 3
@@ -318,7 +325,7 @@ def Chaleur_Instationnaire(x,y,triangle,sb,N,T,f_temps,vecteur_initial_U0):
         L = vecteur_L(x,y,triangle,sb,U,t,deltat)
         U = linalg.solve(Q,L)
 
-############### DECOMENTER POUR VOIR LES VALEURS DE U L ET Q AU COURS DU PROGRAMME ###############
+############### DECOMMENTER POUR VOIR LES VALEURS DE U L ET Q AU COURS DU PROGRAMME ###############
 
         print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  ETAPE %d \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\:" % i)
         print("Vecteur U à l'étape %d :" % i)
@@ -367,6 +374,10 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 
 ## Commentaire : On remarque que la fonction chaleur instationnaire converge vers la fonction stationnaire a partir d'un certain rang.
 ```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 0.1).png)
+{:class="img-responsive"}
+
 
 # QUESTION 15
 
