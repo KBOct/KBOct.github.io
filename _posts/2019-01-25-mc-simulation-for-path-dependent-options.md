@@ -21,6 +21,7 @@ We'll use lognormal random variables of the type:
 
 $$ S_T = S_t e^{\left( r-\frac{1}{2} \sigma^2 \right) \left( T-t\right)+\sigma \sqrt{T-t}G}$$
 where $$T-t$$ is time to maturity.
+
 With $$\Delta t$$ the step of the time discretization between $$0$$ and $$T-t$$
 
 The general term of the price sequence is:
