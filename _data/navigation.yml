@@ -7,8 +7,8 @@ main:
     url: /quant-finance/
   - title: "Data Science"
     url: /data-science/
-  - title: "Numerical Analysis"
-    url: /numerical-analysis/
+#  - title: "Numerical Analysis"
+#    url: /numerical-analysis/
   - title: "Browse"
     url: /categories/
   # - title: "Sitemap"
