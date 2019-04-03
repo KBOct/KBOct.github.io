@@ -99,8 +99,8 @@ plt.triplot(x,y,triangle)
 plt.show()
 ```
 
-
-![png](output_6_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
+{:class="img-responsive"}
 
 
 # QUESTION 3
@@ -121,8 +121,8 @@ plt.triplot(x,y,triangle)
 plt.show()
 ```
 
-
-![png](output_7_0.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 3.png)
+{:class="img-responsive"}
 
 
 # QUESTION 4
