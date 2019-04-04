@@ -136,8 +136,6 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (5).jpg)
 {:class="img-responsive"}
 
-## **REPONSE ECRITE**
-
 <a id='q5'></a>
 # QUESTION 5
 [Next question](#q6){: .btn .btn--success}
@@ -146,8 +144,6 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
 {:class="img-responsive"}
-
-## **REPONSE ECRITE**
 
 <a id='q6'></a>
 # QUESTION 6
@@ -158,7 +154,26 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (7).jpg)
 {:class="img-responsive"}
 
-## **REPONSE ECRITE**
+$$\forall x, y \in \mathbb{R}^2$$,
+$$p(x,y)=\alpha x + \beta y + \gamma$$
+or $$(\hat{x_0},\hat{y_0}), (\hat{x_1},\hat{y_1})$$ et $$(\hat{x_2},\hat{y_2})$$ sont les sommets d'un triangle : ils sont donc linéairement indépendants.
+
+Le système $$(S)$$ admet ainsi une unique solution, il est donc de Cramér.
+
+La matrice du système est :
+
+$$M$$
+
+Par les formules de Cramér on a :
+
+$$\alpha$$
+
+et $$\beta$$
+
+
+Puis :
+
+$$\nabla p$$
 
 <a id='q7'></a>
 # QUESTION 7
