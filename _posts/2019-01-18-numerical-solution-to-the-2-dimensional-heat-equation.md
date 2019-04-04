@@ -12,6 +12,7 @@ toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 #toc_sticky: true
 mathjax: true
+classes: wide
 ---
 # 1) INTRO PARTIE 1
 [Back to top](#){: .btn .btn--primary }
