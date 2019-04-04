@@ -1,7 +1,7 @@
 ---
 title: "Numerical solution to the 2-dimensional heat equation (French)"
 date: 2019-01-19
-#layout: splash
+layout: splash
 categories: [numerical analysis, python 2]
 tags: [numerical analysis, pde, finite elements, python]
 header:
