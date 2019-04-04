@@ -10,7 +10,6 @@ excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equat
 mathjax: true
 ---
 <a id='q1'></a>
-# INTRO PARTIE 1
 [Prochaine question](#q2){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
@@ -75,7 +74,6 @@ mathjax: true
                 return[x,y,triangle,sb]
 ```
 <a id='q2'></a>
-# QUESTION 2
 [Question précédente](#q1){: .btn .btn--info}
 [Prochaine question](#q3){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -97,7 +95,6 @@ mathjax: true
 {:class="img-responsive"}
 
 <a id='q3'></a>
-# QUESTION 3
 [Question précédente](#q2){: .btn .btn--info}
 [Prochaine question](#q4){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -120,7 +117,6 @@ mathjax: true
 {:class="img-responsive"}
 
 <a id='q4'></a>
-# QUESTION 4
 [Question précédente](#q3){: .btn .btn--info}
 [Revenir en haut](#link){: .btn .btn--warning }
 
