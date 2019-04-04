@@ -11,7 +11,7 @@ mathjax: true
 ---
 <a id='q1'></a>
 # INTRO PARTIE 1
-[Question précédente](#q2){: .btn .btn--info}
+[Prochaine question](#q2){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
