@@ -102,7 +102,7 @@ plt.show()
 ```
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
-{:class="img-responsive"}
+{: .align-center}
 
 
 # QUESTION 3
