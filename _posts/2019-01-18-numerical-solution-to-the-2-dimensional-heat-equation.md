@@ -15,7 +15,7 @@ mathjax: true
 ---
 # INTRO PARTIE 1
 [Back to top](#/images){: .btn .btn--primary }
-
+[Success Button Text](#link){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
