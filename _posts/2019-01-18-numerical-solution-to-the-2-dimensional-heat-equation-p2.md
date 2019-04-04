@@ -15,14 +15,12 @@ mathjax: true
 {:class="img-responsive"}
 
 <a id='q5'></a>
-# QUESTION 5
 [Prochaine question](#q6){: .btn .btn--success}
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
 {:class="img-responsive"}
 
 <a id='q6'></a>
-# QUESTION 6
 [Question précédente](#q5){: .btn .btn--info}
 [Prochaine question](#q7){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -94,7 +92,6 @@ $$\Rightarrow \nabla p = \left(
 {: .text-center}
 
 <a id='q7'></a>
-# QUESTION 7
 [Question précédente](#q6){: .btn .btn--info}
 [Prochaine question](#q8){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -116,16 +113,15 @@ D'où :
 
 $$\vert K \vert = \frac{1}{2} \vert det(M) \vert$$
 
-$$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
+$$\Rightarrow \vert K \vert = \frac{1}{2} \left| det\left(
 \begin{array}{* {9}c}
 \hat{x_0} & \hat{y_0} & 1 \\
 \hat{x_1} & \hat{y_1} & 1 \\
 \hat{x_2} & \hat{y_2} & 1
 \end{array}
-\right) \vert$$
+\right) \right|$$
 
 <a id='q8'></a>
-# QUESTION 8
 [Question précédente](#q7){: .btn .btn--info}
 [Prochaine question](#q9){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -136,7 +132,6 @@ $$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
 
 
 <a id='q9'></a>
-# QUESTION 9
 [Question précédente](#q8){: .btn .btn--info}
 [Prochaine question](#q10){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -208,7 +203,6 @@ $$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
 ```
 
 <a id='q10'></a>
-# QUESTION 10
 [Question précédente](#q9){: .btn .btn--info}
 [Prochaine question](#q11){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -231,7 +225,6 @@ $$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
                   return U
 ```
 <a id='q11'></a>
-# QUESTION 11
 [Question précédente](#q10){: .btn .btn--info}
 [Prochaine question](#q12){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -250,7 +243,6 @@ $$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
 {:class="img-responsive"}
 
 <a id='q12'></a>
-# QUESTION 12
 [Question précédente](#q11){: .btn .btn--info}
 [Revenir en haut](#link){: .btn .btn--warning }
 
