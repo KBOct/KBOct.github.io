@@ -1,5 +1,5 @@
 ---
-title: "Numerical solution to the 2-dimensional heat equation (French)"
+title: "Numerical solution to the 2-dimensional heat equation (French) - Part 3"
 date: 2019-01-19
 layout: splash
 categories: [numerical analysis, python 2]
