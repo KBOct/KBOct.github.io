@@ -182,7 +182,7 @@ Chacune des hématies s'agglomère à l'hématie qui est initialement la plus pr
 - L'hématie $$2$$ s'agglomère à l'hématie $$3$$ parce
 qu'elles sont plus proches que la $$1$$ et la $$2$$ $$(x^0_3-x^0_2=0,18<x^0_2-x^0_1=0,28)$$ ou la $$3$$ et le globule à l'extrémité en position $$1$$ $$(x^0_3-x^0_2=0,18<1-x^0_3=0,27)$$
 
-- Puis le globule aggloméré en position médiane au temps $$k, x^k_{2,3}\approx 0,64$$ est alors plus proche du globule à l'extrémité en position $$1$$ que du globule $$1 (1-x^k_{2,3}=0,36<0,37=x^k_{2,3}-x^0_1<x^k_{2,3}-x^k_1$$ : la dernière inégalité étant visible sur la figure au moment où les courbes des hématies $$2$$ et $$3$$ se rejoignent), il vient donc s'agglomérer au globule en position $$1$$
+- Puis le globule aggloméré en position médiane au temps $$k, x^k_{2,3}\approx 0,64$$ est alors plus proche du globule à l'extrémité en position $$1$$ que du globule numéro $$1\ (1-x^k_{2,3}=0,36<0,37=x^k_{2,3}-x^0_1<x^k_{2,3}-x^k_1$$ : la dernière inégalité étant visible sur la figure au moment où les courbes des hématies $$2$$ et $$3$$ se rejoignent), il vient donc s'agglomérer au globule en position $$1$$
 
 - L'hématie $$1$$ vient s'agglomérer au globule en position $$0$$ par un raisonnement analogue
 
