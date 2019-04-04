@@ -378,6 +378,19 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 0.1).png)
 {:class="img-responsive"}
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 0.5).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 1.0).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 1.5).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 14 (T valant 2.0).png)
+{:class="img-responsive"}
+
+
 
 # QUESTION 15
 
