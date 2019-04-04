@@ -1,7 +1,7 @@
 ---
 title: "Numerical solution to the 2-dimensional heat equation (French)"
 date: 2019-01-19
-layout: splash
+#layout: splash
 categories: [numerical analysis, python 2]
 tags: [numerical analysis, pde, finite elements, python]
 header:
@@ -13,7 +13,7 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
 #toc_sticky: true
 mathjax: true
 ---
-# INTRO PARTIE 1
+# 1) INTRO PARTIE 1
 [Back to top](#){: .btn .btn--primary }
 [Next question](#){: .btn .btn--success}
 [Previous question](#link){: .btn .btn--info}
@@ -101,8 +101,8 @@ plt.triplot(x,y,triangle)
 plt.show()
 ```
 
-![image-center]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
-{: .align-center}
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
+{:class="img-responsive"}
 
 
 # QUESTION 3
