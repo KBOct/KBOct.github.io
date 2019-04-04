@@ -7,18 +7,18 @@ tags: [numerical analysis, pde, finite elements, python]
 header:
   image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
-#toc: true
-#toc_label: "Contents"
-#toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-#toc_sticky: true
+toc: true
+toc_label: "Contents"
+toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
+toc_sticky: true
 mathjax: true
 ---
 # INTRO PARTIE 1
+[Back to top](#https://www.quantready.com/numerical-solution-to-the-2-dimensional-heat-equation/#){: .btn .btn--primary }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
-[Back to top](#https://www.quantready.com/numerical-solution-to-the-2-dimensional-heat-equation/#){: .btn .btn--primary }
 
 ```python
             from numpy import *
