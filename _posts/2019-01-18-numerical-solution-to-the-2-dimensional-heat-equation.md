@@ -9,7 +9,7 @@ header:
 excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
 mathjax: true
 ---
-<a id='q2'></a>
+<a id='q1'></a>
 # INTRO PARTIE 1
 [Next question](#q2){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
@@ -76,9 +76,9 @@ mathjax: true
 ```
 <a id='q2'></a>
 # QUESTION 2
-[Next question](#){: .btn .btn--success}
+[Next question](#q3){: .btn .btn--success}
 [Previous question](#q1){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--primary }
+[Back to top](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (2).jpg)
 {:class="img-responsive"}
@@ -102,8 +102,11 @@ plt.show()
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
 {:class="img-responsive"}
 
-
+<a id='q3'></a>
 # QUESTION 3
+[Next question](#q4){: .btn .btn--success}
+[Previous question](#q2){: .btn .btn--info}
+[Back to top](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (3).jpg)
 {:class="img-responsive"}
@@ -124,13 +127,17 @@ plt.show()
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 3.png)
 {:class="img-responsive"}
 
-
+<a id='q4'></a>
 # QUESTION 4
+[Next question](#q5){: .btn .btn--success}
+[Previous question](#q3){: .btn .btn--info}
+[Back to top](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (4).jpg)
 {:class="img-responsive"}
 
 ## **REPONSE ECRITE**
+
 
 # INTRO PARTIE 2
 
@@ -139,13 +146,18 @@ plt.show()
 
 ## **REPONSE ECRITE**
 
+<a id='q5'></a>
 # QUESTION 5
+[Next question](#q6){: .btn .btn--success}
+[Previous question](#q4){: .btn .btn--info}
+[Back to top](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
 {:class="img-responsive"}
 
 ## **REPONSE ECRITE**
 
+<a id='q6'></a>
 # QUESTION 6
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (7).jpg)
@@ -153,6 +165,7 @@ plt.show()
 
 ## **REPONSE ECRITE**
 
+<a id='q7'></a>
 # QUESTION 7
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (8).jpg)
@@ -160,6 +173,7 @@ plt.show()
 
 ## **REPONSE ECRITE**
 
+<a id='q8'></a>
 # QUESTION 8
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (9).jpg)
@@ -167,6 +181,7 @@ plt.show()
 
 ## **REPONSE ECRITE**
 
+<a id='q9'></a>
 # QUESTION 9
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (10).jpg)
@@ -235,8 +250,7 @@ def Matrices_Chaleur_Stationnaire(x,y,triangle,sb,f):
     return [Rigidite,F]
 ```
 
-
-
+<a id='q10'></a>
 # QUESTION 10
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (11).jpg)
@@ -256,7 +270,7 @@ def Chaleur_Stationnaire(x,y,triangle,sb,f):
 
     return U
 ```
-
+<a id='q11'></a>
 # QUESTION 11
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (12).jpg)
@@ -274,7 +288,7 @@ def Chaleur_Stationnaire(x,y,triangle,sb,f):
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 11.png)
 {:class="img-responsive"}
 
-
+<a id='q12'></a>
 # QUESTION 12
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (13).jpg)
@@ -298,6 +312,7 @@ U = Chaleur_Stationnaire(x,y,triangle,sb,f)
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (14).jpg)
 {:class="img-responsive"}
 
+<a id='q13'></a>
 # QUESTION 13
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (15).jpg)
@@ -351,7 +366,7 @@ def Chaleur_Instationnaire(x,y,triangle,sb,N,T,f_temps,vecteur_initial_U0):
     return U
 ```
 
-
+<a id='q14'></a>
 # QUESTION 14
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (16).jpg)
@@ -407,7 +422,7 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 {:class="img-responsive"}
 
 
-
+<a id='q15'></a>
 # QUESTION 15
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (17).jpg)
@@ -455,7 +470,7 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,1.5,f_temps,vecteur_initial_U0)
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 1.5).png)
 {:class="img-responsive"}
 
-
+<a id='q16'></a>
 # QUESTION 16
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (18).jpg)
