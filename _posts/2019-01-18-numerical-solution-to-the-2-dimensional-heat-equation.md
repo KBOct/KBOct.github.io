@@ -441,21 +441,19 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 {:class="img-responsive"}
 
 ```python
-#################################### QUESTION 15 ############################################
+              ## CHALEUR INSTATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
+              ##
 
-## CHALEUR INSTATIONNAIRE AVEC MAILLAGE RECTANGULAIRE
-##
+              def f_temps(x,y,t):
+                  if (t <= 1):
+                      return 1
+                  else:
+                      return 0
 
-def f_temps(x,y,t):
-    if (t <= 1):
-        return 1
-    else:
-        return 0
+              [x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+              U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.1,f_temps,vecteur_initial_U0)
 
-[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
-U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.1,f_temps,vecteur_initial_U0)
-
-## Commentaire : On remarque que la fonction chaleur instationnaire converge vers la fonction stationnaire a partir d'un certain rang.
+              ## Commentaire : On remarque que la fonction chaleur instationnaire converge vers la fonction stationnaire a partir d'un certain rang.
 ```
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 0.1).png)
