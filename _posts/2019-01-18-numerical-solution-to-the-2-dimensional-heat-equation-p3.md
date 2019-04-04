@@ -9,13 +9,10 @@ header:
 excerpt: "Third and last part of the Numerical solution to the 2-dimensional heat equation series"
 mathjax: true
 ---
-# INTRO PARTIE 3
-
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (14).jpg)
 {:class="img-responsive"}
 
 <a id='q13'></a>
-# QUESTION 13
 [Prochaine question](#q14){: .btn .btn--success}
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (15).jpg)
@@ -66,7 +63,6 @@ mathjax: true
 ```
 
 <a id='q14'></a>
-# QUESTION 14
 [Question précédente](#q13){: .btn .btn--info}
 [Prochaine question](#q15){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -123,7 +119,6 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 
 
 <a id='q15'></a>
-# QUESTION 15
 [Question précédente](#q14){: .btn .btn--info}
 [Prochaine question](#q16){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
@@ -172,7 +167,6 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,1.5,f_temps,vecteur_initial_U0)
 {:class="img-responsive"}
 
 <a id='q16'></a>
-# QUESTION 16
 [Question précédente](#q15){: .btn .btn--info}
 [Revenir en haut](#link){: .btn .btn--warning }
 
