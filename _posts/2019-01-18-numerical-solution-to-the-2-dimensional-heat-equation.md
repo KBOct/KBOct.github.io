@@ -10,7 +10,7 @@ excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equat
 toc: true
 toc_label: "Contents"
 toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-toc_sticky: true
+#toc_sticky: true
 mathjax: true
 ---
 # INTRO PARTIE 1
