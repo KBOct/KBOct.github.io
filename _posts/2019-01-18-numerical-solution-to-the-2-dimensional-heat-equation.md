@@ -7,17 +7,10 @@ tags: [numerical analysis, pde, finite elements, python]
 header:
   image: "/images/2 - heat equation/heat.jpg"
 excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
-toc: true
-toc_label: "Contents"
-toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix
-#toc_sticky: true
 mathjax: true
-classes: wide
 ---
 # 1) INTRO PARTIE 1
-[Back to top](#){: .btn .btn--primary }
-[Next question](#){: .btn .btn--success}
-[Previous question](#link){: .btn .btn--info}
+[Next question](#toc){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
@@ -80,8 +73,11 @@ classes: wide
 
                 return[x,y,triangle,sb]
 ```
-
+<a id='toc'></a>
 # QUESTION 2
+[Back to top](#link){: .btn .btn--info }
+[Next question](#){: .btn .btn--success}
+[Previous question](#link){: .btn .btn--info}
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (2).jpg)
 {:class="img-responsive"}
