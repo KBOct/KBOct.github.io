@@ -122,5 +122,4 @@ mathjax: true
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (4).jpg)
 {:class="img-responsive"}
-
           Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant les coordonnées des sommets des triangles du maillage (à $$3$$ colonnes et $$N_t$$ lignes)
