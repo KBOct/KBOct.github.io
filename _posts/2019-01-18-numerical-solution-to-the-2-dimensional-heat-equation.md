@@ -14,7 +14,7 @@ toc_sticky: true
 mathjax: true
 ---
 # INTRO PARTIE 1
-[Back to top](#https://www.quantready.com/numerical-solution-to-the-2-dimensional-heat-equation/#){: .btn .btn--primary }
+[Back to top](#/images){: .btn .btn--primary }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
