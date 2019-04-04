@@ -101,7 +101,7 @@ plt.triplot(x,y,triangle)
 plt.show()
 ```
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
+![image-center]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 2.png)
 {:class="img-responsive"}
 
 
