@@ -61,6 +61,7 @@ p(\hat{x_2},\hat{y_2}) & \hat{y_2} & 1
 \right) \right|$$
 
 et
+
 $$\beta = \frac{1}{det(A)} \left|\left(
 \begin{array}{* {9}c}
 \hat{x_0} & p(\hat{x_0},\hat{y_0}) & 1 \\
