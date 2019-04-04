@@ -234,6 +234,20 @@ $$\overrightarrow{AB}+\overrightarrow{AC}=\overrightarrow{BD}$$
 
 alors $$Aire(ABCD)=2\ Aire(ABC)=2\ \vert K \vert$$
 
+or $$Aire(ABCD)=\vert det(M) \vert$$ (où $$M$$ est la matrice de la question 6)
+
+D'où :
+
+$$\vert K \vert = \frac{1}{2} \vert det(M) \vert$$
+
+$$\Rightarrow \vert K \vert = \frac{1}{2} \vert det\left(
+\begin{array}{* {9}c}
+\hat{x_0} & \hat{y_0} & 1 \\
+\hat{x_1} & \hat{y_1} & 1 \\
+\hat{x_2} & \hat{y_2} & 1
+\end{array}
+\right) \vert$$
+
 <a id='q8'></a>
 # QUESTION 8
 [Question précédente](#q7){: .btn .btn--info}
@@ -243,7 +257,7 @@ alors $$Aire(ABCD)=2\ Aire(ABC)=2\ \vert K \vert$$
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (9).jpg)
 {:class="img-responsive"}
 
-## **REPONSE ECRITE**
+
 
 <a id='q9'></a>
 # QUESTION 9
