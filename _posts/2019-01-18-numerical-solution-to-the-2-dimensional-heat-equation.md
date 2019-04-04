@@ -158,25 +158,61 @@ $$\forall x, y \in \mathbb{R}^2$$,
 
 $$p(x,y)=\alpha x + \beta y + \gamma$$
 
+$$ \Rightarrow \left\{ \begin{array}{l}
+p(\hat{x_0},\hat{y_0})=\alpha \hat{x_0} + \beta \hat{y_0} + \gamma \\
+p(\hat{x_1},\hat{y_1})=\alpha \hat{x_1} + \beta \hat{y_1} + \gamma \\
+p(\hat{x_2},\hat{y_2})=\alpha \hat{x_2} + \beta \hat{y_2} + \gamma \end{array}
+\right.$$
+
 or $$(\hat{x_0},\hat{y_0}), (\hat{x_1},\hat{y_1})$$ et $$(\hat{x_2},\hat{y_2})$$ sont les sommets d'un triangle : ils sont donc linéairement indépendants.
 
 Le système $$(S)$$ admet ainsi une unique solution, il est donc de Cramér.
 
 La matrice du système est :
 
-$$M$$
+$$M = \left(
+\begin{array}{* {9}c}
+\hat{x_0} & \hat{y_0} & 1 \\
+\hat{x_1} & \hat{y_1} & 1 \\
+\hat{x_2} & \hat{y_2} & 1
+\end{array}
+\right)$$
 
 Par les formules de Cramér on a :
 
-$$\alpha$$
+$$\alpha = \frac{1}{det(M)} \vert \left(
+\begin{array}{* {9}c}
+p(\hat{x_0},\hat{y_0}) & \hat{y_0} & 1 \\
+p(\hat{x_1},\hat{y_1}) & \hat{y_1} & 1 \\
+p(\hat{x_2},\hat{y_2}) & \hat{y_2} & 1
+\end{array}
+\right) \vert$$
 
 et
-$$\beta$$
+$$\beta = \frac{1}{det(A)} \vert \left(
+\begin{array}{* {9}c}
+\hat{x_0} & p(\hat{x_0},\hat{y_0}) & 1 \\
+\hat{x_1} & p(\hat{x_1},\hat{y_1}) & 1 \\
+\hat{x_2} & p(\hat{x_2},\hat{y_2}) & 1
+\end{array}
+\right) \vert$$
 
 
 Puis :
 
-$$\nabla p$$
+$$\nabla p = \left(
+\begin{array}{* {2}c}
+\frac{\partial}{\partial x} (\alpha x + \beta y + \gamma) \\
+\frac{\partial}{\partial y} (\alpha x + \beta y + \gamma)
+\end{array}
+\right)$$
+
+$$\Rightarrow \nabla p = \left(
+\begin{array}{* {2}c}
+\alpha \\
+\beta
+\end{array}
+\right)$$
 
 
 {: .text-center}
