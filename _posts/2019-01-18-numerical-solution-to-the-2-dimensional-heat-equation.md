@@ -11,7 +11,7 @@ mathjax: true
 ---
 <a id='q1'></a>
 # INTRO PARTIE 1
-[Next question](#q2){: .btn .btn--success}
+[Prochaine question](#q2){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
@@ -76,9 +76,9 @@ mathjax: true
 ```
 <a id='q2'></a>
 # QUESTION 2
-[Next question](#q3){: .btn .btn--success}
-[Previous question](#q1){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q3){: .btn .btn--success}
+[Question précédente](#q1){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (2).jpg)
 {:class="img-responsive"}
@@ -98,9 +98,9 @@ mathjax: true
 
 <a id='q3'></a>
 # QUESTION 3
-[Next question](#q4){: .btn .btn--success}
-[Previous question](#q2){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q4){: .btn .btn--success}
+[Question précédente](#q2){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (3).jpg)
 {:class="img-responsive"}
@@ -121,9 +121,9 @@ mathjax: true
 
 <a id='q4'></a>
 # QUESTION 4
-[Next question](#q5){: .btn .btn--success}
-[Previous question](#q3){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q5){: .btn .btn--success}
+[Question précédente](#q3){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (4).jpg)
 {:class="img-responsive"}
@@ -138,18 +138,18 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 
 <a id='q5'></a>
 # QUESTION 5
-[Next question](#q6){: .btn .btn--success}
-[Previous question](#q4){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q6){: .btn .btn--success}
+[Question précédente](#q4){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
 {:class="img-responsive"}
 
 <a id='q6'></a>
 # QUESTION 6
-[Next question](#q7){: .btn .btn--success}
-[Previous question](#q5){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q7){: .btn .btn--success}
+[Question précédente](#q5){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (7).jpg)
 {:class="img-responsive"}
@@ -177,9 +177,9 @@ $$\nabla p$$
 
 <a id='q7'></a>
 # QUESTION 7
-[Next question](#q8){: .btn .btn--success}
-[Previous question](#q6){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q8){: .btn .btn--success}
+[Question précédente](#q6){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (8).jpg)
 {:class="img-responsive"}
@@ -188,9 +188,9 @@ $$\nabla p$$
 
 <a id='q8'></a>
 # QUESTION 8
-[Next question](#q9){: .btn .btn--success}
-[Previous question](#q7){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q9){: .btn .btn--success}
+[Question précédente](#q7){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (9).jpg)
 {:class="img-responsive"}
@@ -199,9 +199,9 @@ $$\nabla p$$
 
 <a id='q9'></a>
 # QUESTION 9
-[Next question](#q10){: .btn .btn--success}
-[Previous question](#q8){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q10){: .btn .btn--success}
+[Question précédente](#q8){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (10).jpg)
 {:class="img-responsive"}
@@ -271,9 +271,9 @@ $$\nabla p$$
 
 <a id='q10'></a>
 # QUESTION 10
-[Next question](#q11){: .btn .btn--success}
-[Previous question](#q9){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q11){: .btn .btn--success}
+[Question précédente](#q9){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (11).jpg)
 {:class="img-responsive"}
@@ -294,9 +294,9 @@ $$\nabla p$$
 ```
 <a id='q11'></a>
 # QUESTION 11
-[Next question](#q12){: .btn .btn--success}
-[Previous question](#q10){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q12){: .btn .btn--success}
+[Question précédente](#q10){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (12).jpg)
 {:class="img-responsive"}
@@ -313,9 +313,9 @@ $$\nabla p$$
 
 <a id='q12'></a>
 # QUESTION 12
-[Next question](#q13){: .btn .btn--success}
-[Previous question](#q11){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q13){: .btn .btn--success}
+[Question précédente](#q11){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (13).jpg)
 {:class="img-responsive"}
@@ -338,9 +338,9 @@ $$\nabla p$$
 
 <a id='q13'></a>
 # QUESTION 13
-[Next question](#q14){: .btn .btn--success}
-[Previous question](#q12){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q14){: .btn .btn--success}
+[Question précédente](#q12){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (15).jpg)
 {:class="img-responsive"}
@@ -391,9 +391,9 @@ $$\nabla p$$
 
 <a id='q14'></a>
 # QUESTION 14
-[Next question](#q15){: .btn .btn--success}
-[Previous question](#q13){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q15){: .btn .btn--success}
+[Question précédente](#q13){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (16).jpg)
 {:class="img-responsive"}
@@ -448,9 +448,9 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 
 <a id='q15'></a>
 # QUESTION 15
-[Next question](#q16){: .btn .btn--success}
-[Previous question](#q14){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Prochaine question](#q16){: .btn .btn--success}
+[Question précédente](#q14){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (17).jpg)
 {:class="img-responsive"}
@@ -497,8 +497,8 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,1.5,f_temps,vecteur_initial_U0)
 
 <a id='q16'></a>
 # QUESTION 16
-[Previous question](#q15){: .btn .btn--info}
-[Back to top](#link){: .btn .btn--warning }
+[Question précédente](#q15){: .btn .btn--info}
+[Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (18).jpg)
 {:class="img-responsive"}
