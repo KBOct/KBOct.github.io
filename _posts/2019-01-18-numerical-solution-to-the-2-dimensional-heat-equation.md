@@ -415,6 +415,19 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 ## Commentaire : On remarque que la fonction chaleur instationnaire converge vers la fonction stationnaire a partir d'un certain rang.
 ```
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 0.1).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 0.5).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 1.0).png)
+{:class="img-responsive"}
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 15 (T valant 1.5).png)
+{:class="img-responsive"}
+
+
 # QUESTION 16
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (18).jpg)
@@ -431,5 +444,47 @@ def f_temps(x,y,t):
         return 0
 
 [x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
-U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.0,f_temps,vecteur_initial_U0)
 ```
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 1 (T valant 0).png)
+{:class="img-responsive"}
+
+```python
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.01,f_temps,vecteur_initial_U0)
+```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 2 (T valant 0.01).png)
+{:class="img-responsive"}
+
+```python
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.05,f_temps,vecteur_initial_U0)
+```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 3 (T valant 0.05).png)
+{:class="img-responsive"}
+
+```python
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.1,f_temps,vecteur_initial_U0)
+```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 4 (T valant 0.1).png)
+{:class="img-responsive"}
+
+```python
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.25,f_temps,vecteur_initial_U0)
+```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 5 (T valant 0.25).png)
+{:class="img-responsive"}
+
+```python
+[x,y,triangle,sb]=maillage_rectangle(3.,2.,20,20)
+U = Chaleur_Instationnaire(x,y,triangle,sb,10.,0.5,f_temps,vecteur_initial_U0)
+```
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/image Question 16 - 6 (T valant 0.5).png)
+{:class="img-responsive"}
