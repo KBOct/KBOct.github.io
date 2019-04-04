@@ -54,22 +54,22 @@ $$M = \left(
 
 Par les formules de Cramér on a :
 
-$$\alpha = \frac{1}{det(M)} \vert \left(
+$$\alpha = \frac{1}{det(M)} \left| \left(
 \begin{array}{* {9}c}
 p(\hat{x_0},\hat{y_0}) & \hat{y_0} & 1 \\
 p(\hat{x_1},\hat{y_1}) & \hat{y_1} & 1 \\
 p(\hat{x_2},\hat{y_2}) & \hat{y_2} & 1
 \end{array}
-\right) \vert$$
+\right) \right|$$
 
 et
-$$\beta = \frac{1}{det(A)} \vert \left(
+$$\beta = \frac{1}{det(A)} \left|\left(
 \begin{array}{* {9}c}
 \hat{x_0} & p(\hat{x_0},\hat{y_0}) & 1 \\
 \hat{x_1} & p(\hat{x_1},\hat{y_1}) & 1 \\
 \hat{x_2} & p(\hat{x_2},\hat{y_2}) & 1
 \end{array}
-\right) \vert$$
+\right) \right|$$
 
 
 Puis :
@@ -87,9 +87,6 @@ $$\Rightarrow \nabla p = \left(
 \beta
 \end{array}
 \right)$$
-
-
-{: .text-center}
 
 <a id='q7'></a>
 [Question précédente](#q6){: .btn .btn--info}
