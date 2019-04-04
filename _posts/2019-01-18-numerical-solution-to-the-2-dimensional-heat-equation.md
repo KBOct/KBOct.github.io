@@ -11,7 +11,7 @@ mathjax: true
 ---
 <a id='q1'></a>
 # INTRO PARTIE 1
-[Prochaine question](#q2){: .btn .btn--success}
+[Question précédente](#q2){: .btn .btn--info}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
 
@@ -76,8 +76,8 @@ mathjax: true
 ```
 <a id='q2'></a>
 # QUESTION 2
-[Prochaine question](#q3){: .btn .btn--success}
-[Question précédente](#q1){: .btn .btn--info}
+[Question précédente](#q3){: .btn .btn--info}
+[Prochaine question](#q1){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (2).jpg)
@@ -98,8 +98,8 @@ mathjax: true
 
 <a id='q3'></a>
 # QUESTION 3
-[Prochaine question](#q4){: .btn .btn--success}
-[Question précédente](#q2){: .btn .btn--info}
+[Question précédente](#q4){: .btn .btn--info}
+[Prochaine question](#q2){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (3).jpg)
@@ -121,8 +121,8 @@ mathjax: true
 
 <a id='q4'></a>
 # QUESTION 4
-[Prochaine question](#q5){: .btn .btn--success}
-[Question précédente](#q3){: .btn .btn--info}
+[Question précédente](#q5){: .btn .btn--info}
+[Prochaine question](#q3){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (4).jpg)
@@ -138,8 +138,8 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 
 <a id='q5'></a>
 # QUESTION 5
-[Prochaine question](#q6){: .btn .btn--success}
-[Question précédente](#q4){: .btn .btn--info}
+[Question précédente](#q6){: .btn .btn--info}
+[Prochaine question](#q4){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (6).jpg)
@@ -147,8 +147,8 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 
 <a id='q6'></a>
 # QUESTION 6
-[Prochaine question](#q7){: .btn .btn--success}
-[Question précédente](#q5){: .btn .btn--info}
+[Question précédente](#q7){: .btn .btn--info}
+[Prochaine question](#q5){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (7).jpg)
@@ -180,8 +180,8 @@ $$\nabla p$$
 
 <a id='q7'></a>
 # QUESTION 7
-[Prochaine question](#q8){: .btn .btn--success}
-[Question précédente](#q6){: .btn .btn--info}
+[Question précédente](#q8){: .btn .btn--info}
+[Prochaine question](#q6){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (8).jpg)
@@ -191,8 +191,8 @@ $$\nabla p$$
 
 <a id='q8'></a>
 # QUESTION 8
-[Prochaine question](#q9){: .btn .btn--success}
-[Question précédente](#q7){: .btn .btn--info}
+[Question précédente](#q9){: .btn .btn--info}
+[Prochaine question](#q7){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (9).jpg)
@@ -202,8 +202,8 @@ $$\nabla p$$
 
 <a id='q9'></a>
 # QUESTION 9
-[Prochaine question](#q10){: .btn .btn--success}
-[Question précédente](#q8){: .btn .btn--info}
+[Question précédente](#q10){: .btn .btn--info}
+[Prochaine question](#q8){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (10).jpg)
@@ -274,8 +274,8 @@ $$\nabla p$$
 
 <a id='q10'></a>
 # QUESTION 10
-[Prochaine question](#q11){: .btn .btn--success}
-[Question précédente](#q9){: .btn .btn--info}
+[Question précédente](#q11){: .btn .btn--info}
+[Prochaine question](#q9){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (11).jpg)
@@ -297,8 +297,8 @@ $$\nabla p$$
 ```
 <a id='q11'></a>
 # QUESTION 11
-[Prochaine question](#q12){: .btn .btn--success}
-[Question précédente](#q10){: .btn .btn--info}
+[Question précédente](#q12){: .btn .btn--info}
+[Prochaine question](#q10){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (12).jpg)
@@ -316,8 +316,8 @@ $$\nabla p$$
 
 <a id='q12'></a>
 # QUESTION 12
-[Prochaine question](#q13){: .btn .btn--success}
-[Question précédente](#q11){: .btn .btn--info}
+[Question précédente](#q13){: .btn .btn--info}
+[Prochaine question](#q11){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (13).jpg)
@@ -341,8 +341,8 @@ $$\nabla p$$
 
 <a id='q13'></a>
 # QUESTION 13
-[Prochaine question](#q14){: .btn .btn--success}
-[Question précédente](#q12){: .btn .btn--info}
+[Question précédente](#q14){: .btn .btn--info}
+[Prochaine question](#q12){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (15).jpg)
@@ -394,8 +394,8 @@ $$\nabla p$$
 
 <a id='q14'></a>
 # QUESTION 14
-[Prochaine question](#q15){: .btn .btn--success}
-[Question précédente](#q13){: .btn .btn--info}
+[Question précédente](#q15){: .btn .btn--info}
+[Prochaine question](#q13){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (16).jpg)
@@ -451,8 +451,8 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,2.0,f_temps,vecteur_initial_U0)
 
 <a id='q15'></a>
 # QUESTION 15
-[Prochaine question](#q16){: .btn .btn--success}
-[Question précédente](#q14){: .btn .btn--info}
+[Question précédente](#q16){: .btn .btn--info}
+[Prochaine question](#q14){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (17).jpg)
@@ -500,7 +500,7 @@ U = Chaleur_Instationnaire(x,y,triangle,sb,10.,1.5,f_temps,vecteur_initial_U0)
 
 <a id='q16'></a>
 # QUESTION 16
-[Question précédente](#q15){: .btn .btn--info}
+[Prochaine question](#q15){: .btn .btn--success}
 [Revenir en haut](#link){: .btn .btn--warning }
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (18).jpg)
