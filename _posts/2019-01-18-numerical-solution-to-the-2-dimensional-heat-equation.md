@@ -155,7 +155,9 @@ Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant 
 {:class="img-responsive"}
 
 $$\forall x, y \in \mathbb{R}^2$$,
+
 $$p(x,y)=\alpha x + \beta y + \gamma$$
+
 or $$(\hat{x_0},\hat{y_0}), (\hat{x_1},\hat{y_1})$$ et $$(\hat{x_2},\hat{y_2})$$ sont les sommets d'un triangle : ils sont donc linéairement indépendants.
 
 Le système $$(S)$$ admet ainsi une unique solution, il est donc de Cramér.
@@ -168,7 +170,8 @@ Par les formules de Cramér on a :
 
 $$\alpha$$
 
-et $$\beta$$
+et
+$$\beta$$
 
 
 Puis :
