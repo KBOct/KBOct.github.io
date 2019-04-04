@@ -129,7 +129,7 @@ mathjax: true
 {:class="img-responsive"}
 
 Les fichiers de maillage lus par `importe_maillage` sont des tableaux contenant les coordonnées des sommets des traingles du maillage (à $$3$$ colonnes et $$N_t$$ lignes)
-
+{: .text-center}
 
 # INTRO PARTIE 2
 
@@ -177,6 +177,9 @@ $$\beta$$
 Puis :
 
 $$\nabla p$$
+
+
+{: .text-center}
 
 <a id='q7'></a>
 # QUESTION 7
