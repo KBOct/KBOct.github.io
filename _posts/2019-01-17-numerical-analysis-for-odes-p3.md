@@ -179,8 +179,8 @@ vini=zeros(1,3)
 
 Chacune des hématies s'agglomère à l'hématie qui est initialement la plus proche et les hématies agglomérées en forment une nouvelle qui aura le même comportement :
 
-- L'hématie $$2$$ s'agglomère à l'hématie $$3$$ parce \
-qu'elles sont plus proches que la $$1$$ et la $$2$$ \ $$(x^0_3-x^0_2=0,18<x^0_2-x^0_1=0,28)$$ ou la $$3$$ et le globule à l'extrémité en position $$1$$ \ $$(x^0_3-x^0_2=0,18<1-x^0_3=0,27)$$
+- L'hématie $$2$$ s'agglomère à l'hématie $$3$$ parce
+qu'elles sont plus proches que la $$1$$ et la $$2$$ $$(x^0_3-x^0_2=0,18<x^0_2-x^0_1=0,28)$$ ou la $$3$$ et le globule à l'extrémité en position $$1$$ $$(x^0_3-x^0_2=0,18<1-x^0_3=0,27)$$
 
 - Puis le globule aggloméré en position médiane au temps $$k, x^k_{2,3}\approx 0,64$$ est alors plus proche du globule à l'extrémité en position $$1$$ que du globule $$1 (1-x^k_{2,3}=0,36<0,37=x^k_{2,3}-x^0_1<x^k_{2,3}-x^k_1$$ : la dernière inégalité étant visible sur la figure au moment où les courbes des hématies $$2$$ et $$3$$ se rejoignent), il vient donc s'agglomérer au globule en position $$1$$
 
@@ -197,10 +197,6 @@ Remarque : si les $$3$$ hématies ainsi que celles aux extrémités sont équidi
 
 
 {% highlight matlab linenos %}
-//#####################################################
-//Question d) (code fonctionnel)
-//#####################################################
-
 function [TPS,TRAJ]=MGlobules(K,deltat,M,alpha,xini,vini)
 // Positions des globules aux extremités x0 et x4 nécessaires pour les calculs concernant le globule 1 et le globule 3
     x0=0.0;

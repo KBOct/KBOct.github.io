@@ -9,11 +9,9 @@ header:
 excerpt: "Here, I compute the Numerical solution to the 2-dimensional heat equation using the finite elements method in Python"
 mathjax: true
 ---
-<a id='q1'></a>
-
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (0).jpg)
 {:class="img-responsive"}
-
+<a id='q1'></a>
 [Prochaine question](#q2){: .btn .btn--success}
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (1).jpg)
 {:class="img-responsive"}
