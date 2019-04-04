@@ -187,7 +187,13 @@ $$\nabla p$$
 ![alt]({{ site.url }}{{ site.baseurl }}/images/2 - heat equation/ANEDP (8).jpg)
 {:class="img-responsive"}
 
-## **REPONSE ECRITE**
+Notons $$A=(\hat{x_0},\hat{y_0})$$, $$B=(\hat{x_1},\hat{y_1})$$, $$C=(\hat{x_2},\hat{y_2})$$.
+
+Si on pose $$D$$ tel que :
+
+$$\overrightarrow{AB}+\overrightarrow{AC}=\overrightarrow{BD}$$
+
+alors $$Aire(ABCD)=2\ Aire(ABC)=2\ \vert K \vert$$
 
 <a id='q8'></a>
 # QUESTION 8
