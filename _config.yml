@@ -134,6 +134,9 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kboct/"
 
+head_scripts:
+  - assets/js/cookieconsent.min.js
+  - assets/js/cookieconsent.js
 
 # Site Footer
 footer:
