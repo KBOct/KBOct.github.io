@@ -14,13 +14,6 @@ We reserve the right to change this policy at any given time. If you want to mak
 
 ### What User Data We Collect
 
-We do not collect presonal user data **BUT** we use the following *third-party trackers* to display fonts and maths:
+We do not collect personal user data **BUT** we use the following *third-party cookies* to display fonts and maths:
 - cdnjs.cloudflare.com
-- xen-media.com
 - use.fontawesome.com
-- cdn.mathjax.org
-
-
-### Our Cookie Policy
-
-[This website does not store cookies](/images/screenshot_siteinfo.JPG).
