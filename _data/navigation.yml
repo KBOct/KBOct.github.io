@@ -9,8 +9,8 @@ main:
     url: /data-science/
   - title: "Numerical Analysis"
     url: /numerical-analysis/
-  - title: "Browse"
-    url: /categories/
+  #- title: "Browse"
+  #  url: /categories/
   # - title: "Sitemap"
   #   url: /sitemap/
   - title: "Privacy Policy"

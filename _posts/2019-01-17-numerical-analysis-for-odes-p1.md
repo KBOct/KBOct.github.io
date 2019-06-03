@@ -60,7 +60,7 @@ $$ln(\frac{x}{x^{ini}})-ln(\frac{1-x}{1-x^{ini}})=at$$
 Donc, pour $$t\ \in \ I$$ :
 $$x(t)=\frac{x^{ini}}{x^{ini}+({1-x}^{ini})e^{-at}}$$
 
-### Question b
+### Solution de l'EDO
 
 Définition de la fonction de population solution non constante de l'EDO (1), obtenue précédemment par résolution analytique :
 
@@ -120,7 +120,7 @@ Solutions de l'EDO (1) et leurs approximations :
 
 Les solutions tendent toutes vers la solution constante de valeur 1 et l'approximation par la méthode du point milieu de chacune des solutions est très bonne avec les paramètres utilisés .
 
-### Question c
+### Ordre de la méthode
 
 Déterminons l'ordre de la méthode du point milieu en traçant l'erreur de consistance en échelle logarithmique :
 
@@ -180,20 +180,20 @@ Comme toutes les courbes d'erreurs sont parallèles à la courbe $$O({\Delta t}^
 
 ## Cas de deux populations avec interaction de type proie/prédateur
 
-### Analyse théorique
+<!-- ### Analyse théorique -->
 
-#### Question a
+<!-- #### Question a -->
 <!-- rajouter TEX -->
 
-#### Question b
+<!-- #### Question b -->
 <!-- rajouter TEX -->
 
-#### Question c
+<!-- #### Question c -->
 <!-- rajouter TEX -->
 
-### Analyse numérique
+### Implémentation de la fonction solution
 
-#### Question a
+<!-- #### Question a -->
 <!-- voir CR -->
 
 {% highlight matlab linenos %}
@@ -210,7 +210,7 @@ endfunction
 
 {% endhighlight %}
 
-### Question b
+### Solutions graphiques
 
 Solutions graphiques du système différentiel ordinaire (2) pour les schémas d'Euler explicite et du point milieu :
 
@@ -252,9 +252,9 @@ Xini=[1/4;3/4]
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/3.jpg)
 {:class="img-responsive"}
 
-### Question c
+### Schéma du point milieu
 
-Le schéma du point milieu préserve mieux la périodicité (comme en atteste la figure précédente) que le schéma d'Euler explicite. En effet, la solution approchée par Euler, une fois implémentée dans la définition de la fonction φ (voir code) fait qu'elle n'est pas constante contrairement à ce qui a été démontré précédemment (et des changements de paramètres n'influent que très peu sur le résultat obtenu et rendent les calculs très coûteux, ce qui justifie le choix du changement de schéma).
+Le schéma du point milieu préserve mieux la périodicité (comme en atteste la figure précédente) que le schéma d'Euler explicite. En effet, la solution approchée par Euler, une fois implémentée dans la définition de la fonction $$\phi$$ (voir code) fait qu'elle n'est pas constante contrairement à ce qui a été démontré précédemment (et des changements de paramètres n'influent que très peu sur le résultat obtenu et rendent les calculs très coûteux, ce qui justifie le choix du changement de schéma).
 Par contre en calculant $$\phi$$ par la méthode du point milieu, on obtient une valeur "quasi-constante" :
 
 {% highlight matlab linenos %}
@@ -271,7 +271,7 @@ end
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/4.jpg)
 {:class="img-responsive"}
 
-### Question d
+### Schéma de Crank-Nicolson
 
 On retrace l'approximation des solutions par le schéma de Crank-Nicolson cette fois-ci :
 
@@ -306,9 +306,9 @@ endfunction
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/5.jpg)
 {:class="img-responsive"}
 
-### Question e
+### Comparaison des méthodes
 
-L'approximation des solutions est meilleure avec le nouveau schéma. L'erreur faite sur la valeur constante de φ est infime par rapport à celle du point milieu avec le schéma de Crank-Nicolson, même avec T=5000 :
+L'approximation des solutions est meilleure avec le nouveau schéma. L'erreur faite sur la valeur constante de $$\phi$$ est infime par rapport à celle du point milieu avec le schéma de Crank-Nicolson, même avec T=5000 :
 
 {% highlight matlab linenos %}
 
