@@ -23,7 +23,7 @@ x^\prime_2 \left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)-b_1x_2\left(t
 \left(x_1(0),x_2(0)\right)=(x^{ini}_1,x^{ini}_2) \end{array}
 \right.$$
 
-### Question a
+### 1. Influence des espèces
 
 Quand $$b_1=b_2=0$$ :
 
@@ -35,14 +35,14 @@ x^\prime_2 \left(t\right)=a_2x_2\left(t\right)(1-x_2\left(t\right)) \\
 
 et on retrouve le modèle logistique de la première partie. Les espèces n'ont aucune influence mutuelle.
 
-### Question b
+### 2. Fonction auxiliaire
 
 Une fonction $$G : \mathbb{R} \times  \mathbb{R}^2 \rightarrow \mathbb{R}^2$$ telle que $$({x_1}^′(t), {x_2}^′(t)) = G(t, (x_1(t), x_2(t)))$$
 est donnée par :
 
 $$G\left(t,\left(\genfrac{}{}{0pt}{}{x_1(t)}{x_2(t)}\right)\right)=\left(\genfrac{}{}{0pt}{}{a_1x_1(t)(1-{x_1\left(t\right)-b}_1x_2(t))}{a_2x_2(t)(1-{x_2\left(t\right)-b}_2x_1(t))}\right)$$
 
-### Question c
+### 3. Champs de vecteurs selon les paramètres
 
 {% highlight matlab linenos %}
 
@@ -81,11 +81,11 @@ Pour le deuxième jeu de paramètres, on a :
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-2.jpg)
 {:class="img-responsive"}
 
-### Question d
+### 4. Points attracteurs
 
 Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{4} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
 
-### Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres
+### 5. Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres
 
 Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres :
 
