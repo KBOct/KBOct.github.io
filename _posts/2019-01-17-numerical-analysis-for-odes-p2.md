@@ -42,7 +42,7 @@ est donnée par :
 
 $$G\left(t,\left(\genfrac{}{}{0pt}{}{x_1(t)}{x_2(t)}\right)\right)=\left(\genfrac{}{}{0pt}{}{a_1x_1(t)(1-{x_1\left(t\right)-b}_1x_2(t))}{a_2x_2(t)(1-{x_2\left(t\right)-b}_2x_1(t))}\right)$$
 
-### 3. Champs de vecteurs selon les paramètres
+### Champs de vecteurs selon les paramètres
 
 {% highlight matlab linenos %}
 
@@ -81,11 +81,11 @@ Pour le deuxième jeu de paramètres, on a :
 ![alt]({{ site.url }}{{ site.baseurl }}/images/1- numerical analysis for ODEs/2-2.jpg)
 {:class="img-responsive"}
 
-### 4. Points attracteurs
+### Points attracteurs
 
 Dans le premier cas, le point attracteur est $$(0;1)$$. Dans le deuxième cas, le point attracteur est $$\left(\frac{3}{8};\frac{3}{4} \right)$$. Le premier cas représente l'extinction de l'espèce $$x_1$$ alors que le deuxième constitue une sorte d'équilibre entre les deux espèces.
 
-### 5. Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres
+### Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres
 
 Vérification numérique à travers le schéma de Runge-Kutta pour le premier jeu de paramètres :
 

@@ -15,7 +15,7 @@ mathjax: true
 
 # Partie 3 : Modélisation des globules rouges
 
-NB : **Cette partie est indépendante des précédentes.** On s’intéresse à la modélisation du phénomène d’agglomération des globules rouges. Ces derniers vont être modélisés par des particules ponctuelles
+Dans cette partie, on s’intéresse à la modélisation du phénomène d’agglomération des globules rouges. Ces derniers vont être modélisés par des particules ponctuelles
 interagissant par une force d’interaction liée à la distance entre deux globules rouges voisins.
 
 ## Description du modèle
