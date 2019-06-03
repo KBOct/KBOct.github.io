@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Kenny Bazile-Octuvon"
-  avatar           : "/images/0_006_2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : # "/images/0_006_2.jpg" path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Quantitative Finance and Data Science Portfolio"
   location         : "Paris, France"
   email            :
@@ -126,7 +126,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/KBOct"
+      #url: "https://github.com/KBOct"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
