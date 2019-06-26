@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "About"
-    description: "A little bit about who I am"
-    url: /about/
+  #- title: "About"
+  #  description: "A little bit about who I am"
+  #  url: /about/
   - title: "Quantitative Finance"
     url: /quant-finance/
   - title: "Data Science"
