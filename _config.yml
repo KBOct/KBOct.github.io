@@ -18,11 +18,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US" #"fr-FR"
-title                    : "kbit.fr"
+title                    : "Kenny Bazile-Octuvon"
 title_separator          : "-"
-name                     : "Kenny Bazile-Octuvon"
+name                     : ""
 description              : "Portfolio"
-url                      : "http://www.quantready.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://kboct.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kenny Bazile-Octuvon"
+  name             : ""
   avatar           : # "/images/0_006_2.jpg" path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Quantitative Finance and Data Science Portfolio"
   location         : "Paris, France"
