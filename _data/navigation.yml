@@ -4,7 +4,7 @@ main:
   #  description: "A little bit about who I am"
   #  url: /about/
   - title: "IT"
-    url: /it/
+    url: https://webcakes.000webhostapp.com/index.html
   - title: "Quantitative Finance"
     url: /quant-finance/
   - title: "Data Science"
