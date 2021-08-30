@@ -4,7 +4,7 @@ main:
   #  description: "A little bit about who I am"
   #  url: /about/
   - title: "About Me"
-    url: /cv/index.html
+    url: /cv/index_en.html
   - title: "Cybersecurity"
     url: /cybersecurity/
   - title: "Quantitative Finance"
