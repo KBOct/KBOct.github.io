@@ -3,8 +3,10 @@ main:
   #- title: "About"
   #  description: "A little bit about who I am"
   #  url: /about/
-  - title: "Cybersecurity"
+  - title: "About Me"
     url: /cv/index.html
+  - title: "Cybersecurity"
+    url: /cybersecurity/
   - title: "Quantitative Finance"
     url: /quant-finance/
   - title: "Data Science"
