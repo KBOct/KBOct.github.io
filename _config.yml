@@ -21,7 +21,7 @@ locale                   : "en-US" #"fr-FR"
 title                    : "Kenny Bazile-Octuvon"
 title_separator          : "-"
 name                     : ""
-description              : "Portfolio"
+description              : "Blog"
 url                      : "http://kboct.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : ""
   avatar           : # "/images/0_006_2.jpg" path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "IT, Quantitative Finance and Data Science Portfolio"
+  bio              : "Cybersecurity, Quantitative Finance and Data Science Blog"
   location         : "Paris, France"
   email            :
   links:
