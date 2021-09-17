@@ -108,7 +108,7 @@ analytics:
 author:
   name             : ""
   avatar           : # "/images/0_006_2.jpg" path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Cybersecurity, Quantitative Finance and Data Science Blog"
+  bio              : "Quantitative Finance and Data Science Blog"
   location         : "Paris, France"
   email            :
   links:
