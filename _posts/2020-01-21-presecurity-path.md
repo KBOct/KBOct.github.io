@@ -13,7 +13,7 @@ excerpt: "I completed the Pre Security path on TryHackMe"
 #mathjax: true
 ---
 
-I completed the Pre Security path on TryHackMe
+I completed the Pre Security learning path on TryHackMe which teaches the pre-requisite technical knowledge to get started in cyber security.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/THM-BPDUTNRC5R.png)
 {:class="img-responsive"}
