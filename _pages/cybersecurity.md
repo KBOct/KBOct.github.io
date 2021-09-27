@@ -1,10 +1,11 @@
 ---
 layout: archive
 permalink: /cybersecurity/
-title: "Cybersecurity Posts"
 author_profile: true
+title: "Cybersecurity Posts"
 header:
-  image: "/images/cyber-security-mod.jpg"
+  image: /images/cyber-security-mod.jpg
+  caption: "Image by: [**TheDigitalArtist**](https://pixabay.com/users/TheDigitalArtist-202249/)"
 ---
 {% include group-by-array collection=site.posts field="categories" %}
 
