@@ -14,6 +14,7 @@ excerpt: "I completed the Pre Security path on TryHackMe"
 ---
 
 I completed the Pre Security learning path on TryHackMe which teaches the pre-requisite technical knowledge to get started in cyber security.
+It explains how the web works and goes over network fundamentals as well as Linux and Windows fundamentals.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/THM-BPDUTNRC5R.png)
 {:class="img-responsive"}
