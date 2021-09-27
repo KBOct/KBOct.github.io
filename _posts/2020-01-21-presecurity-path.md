@@ -14,3 +14,6 @@ excerpt: "I completed the Pre Security path on TryHackMe"
 ---
 
 I completed the Pre Security path on TryHackMe
+
+![alt]({{ site.url }}{{ site.baseurl }}/images/THM-BPDUTNRC5R.png)
+{:class="img-responsive"}
