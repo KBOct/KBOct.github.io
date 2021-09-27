@@ -5,8 +5,8 @@ main:
   #  url: /about/
   # - title: "About Me"
     # url: /cv/index_en.html
-  # - title: "Cybersecurity"
-    # url: /cybersecurity/
+  - title: "Cybersecurity"
+    url: /cybersecurity/
   - title: "Quantitative Finance"
     url: /quant-finance/
   - title: "Data Science"
