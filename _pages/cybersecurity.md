@@ -4,7 +4,7 @@ permalink: /cybersecurity/
 title: "Cybersecurity Posts"
 author_profile: true
 header:
-  image: "/images/QUANT1.jpg"
+  image: "/images/cyber-security-mod.jpg"
 ---
 {% include group-by-array collection=site.posts field="categories" %}
 
